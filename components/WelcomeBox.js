@@ -7,16 +7,15 @@ class WelcomeBox extends React.Component{
         <div className="border-black boxpadding">
 
 
-        <img src="/static/tv77_logo_cropped.png"></img>
-        <Fade />
-        <h1>TV 77 Niederbiel</h1>
+            <img src="/static/tv77_logo_cropped.png"></img>
+            <h1>TV 77 Niederbiel</h1>
 
-        <button className="button-bright">
-            Schnupperkurse
-        </button>
-        <button className="button-bright">
-            Mitglied werden
-        </button>
+            <button className="button-bright">
+                Schnupperkurse
+            </button>
+            <button className="button-bright">
+                Mitglied werden
+            </button>
 
 
 
@@ -32,9 +31,6 @@ class WelcomeBox extends React.Component{
                 color: white;
                 font-size: 60px;
                 font-family: Chalkduster;
-            }
-            .boxpadding {
-                padding:10px;
             }
 
             p  {

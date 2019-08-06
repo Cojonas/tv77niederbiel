@@ -1,12 +1,16 @@
 import Header from "./Header";
+
 import Media from "react-media";
 
 import Footer from "./Footer";
+
+
 
 class Layout extends React.Component {
     constructor(props) {
         super(props);
         this.handleScroll = this.handleScroll.bind(this);
+        this.onScrollDownTop = this.props.onScrollDownTop;
         this.state = {
             isScrolledDown: true
         }
@@ -31,13 +35,7 @@ class Layout extends React.Component {
         const scrolled = winScroll / height;
 
         if  (scrolled < 0.36) {
-            /*
-            this.setState(
-                {
-                    isScrolledDown: false
-                }
-            );
-            */
+            this.onScrollDownTop();
         } else {
             /*
             this.setState({

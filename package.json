@@ -24,6 +24,6 @@
     "react-facebook": "^8.0.4",
     "react-media": "^1.9.2",
     "react-transition-group": "^4.2.2",
-    "style-loader": "^0.23.1"
+    "style-loader": "^1.0.0"
   }
 }
