@@ -14,40 +14,9 @@ class ContentSection extends React.Component {
         return <>
 
             <Col xs="12">
-                <div className="full-width content-section">
-
-                    <Row>
-                        <Col xs="12" md="4">
-                            <img src="/static/tennis_background.jpg"/>
-                        </Col>
-                        <Col xs="12" md="8">
-                             <h1>{this.props.header}</h1>
-
-                            <div className="content">
-                                {this.props.children}
-                            </div>
-
-
-                            <div className="more-button">
-
-
-                            </div>
-
-                        </Col>
-                        <Col xs="12">
-                        <Link href={this.props.link}><button className="button-dark">Mehr</button></Link>
-                        </Col>
-
-
-                    </Row>
-
-
-                 
-
+                <div className="full-width content-section ">
+                    {this.props.children}
                 </div>
-
-
-
             </Col>
 
 
@@ -58,7 +27,10 @@ class ContentSection extends React.Component {
                     padding: 30px;
                     border-bottom: 1px solid black;
                     position: relative;
-                    text-alignment: left;
+                    text-align: left;
+                }
+                .content-section:hover {
+                    text-decoration: underline;
                 }
                 .more-button {
                     position: absolute;

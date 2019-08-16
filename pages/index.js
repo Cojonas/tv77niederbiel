@@ -1,102 +1,154 @@
 import Layout from "../components/Layout";
-import WelcomeBox from "../components/WelcomeBox";
 import ContentSection from "../components/ContentSection";
 
-import {Row, Container, Button} from "react-bootstrap"
+import {Row, Container, Col} from "react-bootstrap"
 
-import React, { useState } from 'react';
-import { CSSTransition } from 'react-transition-group';
+import React from 'react';
+
+import { FacebookProvider, Page } from 'react-facebook';
+import Link from "next/link";
 
 
 class Index extends React.Component{
 
     constructor(props){
       super(props)
-      this.state = {
-        showWelcome: false
-      }
     }
 
-    componentDidMount(){
-      this.setShowWelcome(true)
-    }
+  
 
-    setShowWelcome(value){
-      this.setState({showWelcome: value})
-    }
-
-    hideWelcome(){
-      this.setShowWelcome(false);
-    }
 
     render() {
-
+      const aboutItems = [
+        {
+          title: "Ergebnisse im überblick"
+        },
+        {
+          title: "Der Vorstand"
+        },
+        {
+          title: "Kontakt"
+        },
+        {
+          title: "Über uns"
+        },
+      ]
     return (
-      <Layout onScrollDownTop={ () => this.hideWelcome}>
-        <div className="front-page-background">
-          <center>    
-            
-        <CSSTransition
-              in={this.state.showWelcome}
-              timeout={1000}
-              classNames="welcome"
-              unmountOnExit
-              onEnter={() => this.setShowWelcome(true)}
-            >
-            <div className="box">
-                <WelcomeBox />
-                <Button onClick={() => this.setShowWelcome(false)}
-        >
-        hide 
-      </Button>
-                </div>
-            </CSSTransition>
-            <div className="box">
-            <Button onClick={() => this.setShowWelcome(true)}
-        >
-        show 
-      </Button>
-              </div>
-           </center>
-        </div>
+      <Layout navName="Start">
+
         <div className="content-container">
           <center>
-          <Container fluid>
-          <Row>
-            <ContentSection header="Über uns" link="/about">
-            Der Ort Niederbiel gehört zur Stadt Solms  Externer Link und liegt wunderschön ruhig im Lahntal in der Nähe der Bundesstraße 49 zwischen Giessen im Osten und Limburg im Westen. 
-    Zunächst legte man auf dem vereinseigenen Gelände etwas abseits der Wohngebiete zwei Sandplätze an (Fertigstellung im Juli 1978), bevor man im August 1980 das Clubhaus einweihen konnte. Im Frühjahr 1981 wurde die Anlage schließlich durch den Bau zweier weiterer Plätze vervollständigt. Seither sorgen die Vereinsmitglieder größtenteils selbst für die Pflege der Anlage, wobei die Plätze ab dem Jahr 2015 vollständig durch eine Fachfirma spielbereit gemacht werden.
+          <Container >
+          <Row noGutters>
+            <ContentSection header="Aktuelles" link="/about">
+              <Row>
 
+                <Col xs="12" md="6">
+                  <h1>Aktuelles</h1>
+                  <p>
+                  Wir halten Sie bei Facebook regelmäßig auf dem Laufenden
+              Geben Sie auch gerne ein Like bei Facebook!
+            
+            
+              </p>
+              <p>
+              Natürlich können Sie unsere unsere Seite auch benutzen, wenn Sie nicht bei Facebook sind.
+
+              </p>
+                </Col>
+
+                <Col xs="12" md="6">
+                  <FacebookProvider appId="716448928794798">
+                    <Page href="https://www.facebook.com/TV-77-Niederbiel-612990049042372/" tabs="timeline"/>
+                  </FacebookProvider>    
+                </Col>
+                </Row>
               </ContentSection >
               <ContentSection header="Unsere Anlage" link="/anlage">
+              <Row noGutters>
+
+
+              <Col xs="12" md="6">
+                  <h1>Über uns</h1>
+                  <p>
+                    Wir stellen uns vor.            
+              </p>
+              <img src="/static/clubheim_tisch.jpg" >
+                  </img>
+
+                </Col>
+                <Col xs="12" md="6">
+
+                  {
+                    aboutItems.map((item) => {
+                     return  <div className="link-holder"><a href="/team">{item.title}</a></div>
+                    })
+                  }
+
+               
+              
+
+
+                  </Col>
+                </Row>
+
               </ContentSection>
-              <ContentSection header="Aktuelles" link="/anlage">
+              <ContentSection header="Teams" link="/teams">
+              <Row>
+
+              <Col xs="12" md="6">
+                <h1>Team-Tennis</h1>
+                  <p>
+                  Jede Saison stellen wir einige Mannschaften unterschiedlicher Altersklassen. 
+                  Hier können Sie sich einen Überblick verschaffen und aktuelle Ergebnisse einsehen.           
+              </p>
+
+              </Col>
+
+
+
+
+
+                <Col xs="12" md="6">
+                  <ul>
+                    {}
+                  <li><a href="/teams">Ergebnisse im Überblick</a></li>
+                  <li><a href="/teams">Herren</a></li>
+                  <li> <a href="/teams">Herren 40er</a></li>
+                  <li> <a href="/teams">Herren 60er</a></li>
+                  <li>  <a href="/teams">Damen</a></li>
+                  </ul>
+              
+                  </Col>
+              </Row>
               </ContentSection>
           </Row>
           </Container>
           </center>
     </div>
 
+     
+
         <style jsx>
           {`
-              .front-page-background {
-                height:70vh;
-                width:auto;
-                background-color: #11161f;
-                -webkit-background-size: cover;
-                -moz-background-size: cover;
-                -o-background-size: cover;
-                background-size: cover;
-              
-              }
+
               .content-container {
-                max-width: 700px;
+                max-width: 900px;
                 margin: auto;
+                background-color: white;
+                -webkit-box-shadow: 0px 6px 37px 0px rgba(0,0,0,0.75);
+                -moz-box-shadow: 0px 6px 37px 0px rgba(0,0,0,0.75);
+                box-shadow: 0px 6px 37px 0px rgba(0,0,0,0.75);
+
+                position: relative;
+                top: -20px;
+            
+
               }
     
             .box {
               position: relative; 
-              top: 200px;
+              top: 10px;
               opacity: 1;
               margin: auto;
             }
@@ -105,16 +157,31 @@ class Index extends React.Component{
               top: -1000px;
             }
             .welcome-enter-active {
-              top: 200px;
-              transition: top 1000ms;
+              top: 10px;
+              transition: top 200ms
             }
             .welcome-exit {
               opacity: 1;
             }
             .welcome-exit-active {
               opacity: 0;
-              transition: opacity 200ms;
+              transition: opacity 1000ms;
             }
+            .welcome-exit-done {
+              opacity: 0; 
+            }
+
+            a {
+              width:100%;
+              color: black
+            }
+            a:hover {
+              color: black
+            }
+            .link-holder {
+            }
+
+            
 
             
     

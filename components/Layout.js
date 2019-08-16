@@ -4,82 +4,70 @@ import Media from "react-media";
 
 import Footer from "./Footer";
 
+import VisibilitySensor from "react-visibility-sensor";
+
 
 
 class Layout extends React.Component {
     constructor(props) {
         super(props);
-        this.handleScroll = this.handleScroll.bind(this);
-        this.onScrollDownTop = this.props.onScrollDownTop;
+        this.onChange = this.onChange.bind(this);
+        this.affixRef = React.createRef();
+
         this.state = {
-            isScrolledDown: true
+            isTop: true
         }
+
     }
 
-    componentDidMount() {
-        window.addEventListener('scroll', this.handleScroll);
-    };
-
-    componentWillUnmount() {
-        window.removeEventListener('scroll', this.handleScroll);
-    };
-
-    handleScroll(event) {
-        const winScroll =
-            document.body.scrollTop || document.documentElement.scrollTop
-
-        const height =
-            document.documentElement.scrollHeight -
-            document.documentElement.clientHeight
-
-        const scrolled = winScroll / height;
-
-        if  (scrolled < 0.36) {
-            this.onScrollDownTop();
-        } else {
-            /*
-            this.setState({
-                isScrolledDown:  true
-            })
-            */
-
-        }
-        
+    onChange(isVisible) {
+        this.setState({
+            isTop: isVisible
+        })
     }
+
+
+
+
 
     render() {
 
         return <>
-        <head>
-        <link
-                rel="stylesheet"
-                href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-                integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-                crossOrigin="anonymous"
-            />
+            <head>
+                <link
+                    rel="stylesheet"
+                    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+                    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+                    crossOrigin="anonymous"
+                />
 
-            <meta name="viewport" content="width=device-width, initial-scale=1" />
+                <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        </head>
-       
-
-            <div className="sticky">
+            </head>
+            <VisibilitySensor onChange={this.onChange}>
+                <div className="top-background-tiny" />
+            </VisibilitySensor>
+        
 
             <Media query="(max-width: 599px)">
-                    {
-                        matches => matches ? (<Header mobile="true" ></Header>) : (<Header mobile="false"></Header>)
-                    }
-                </Media>
+                {
+                    matches => matches
+                        ? (<Header navName={this.props.navName} isTop={this.state.isTop} mobile="true" ></Header>)
+                        : (<Header navName={this.props.navName} isTop={this.state.isTop} mobile="false"></Header>)
+                }
+            </Media>
+        
 
+
+
+            <div className="top-background">
             </div>
 
-
-
-            <div className="content">
-
-
+            <div className="content-box">
                 {this.props.children}
             </div>
+
+
 
             <div className="footer-section">
 
@@ -90,7 +78,37 @@ class Layout extends React.Component {
 
             <style jsx>
                 {`
-        
+                .top-background-tiny {
+                    background-color: red;
+                    height: 1px;
+                    width:100%;
+
+                }
+                .top-background {
+                    background-image: url("/static/tennis_court_sand.jpg");
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-attachment: fixed;
+                    background-size: cover;
+                    width: 100%; 
+                    height: 80px;
+                    z-index:1000;
+
+                }
+                .top-background-color {
+                    background-color: #20232a;
+                    height: 100px;
+                    width:100%;
+                }
+
+                .detector-box{
+                    height: 100px; 
+                    top: 100px;
+                    left: 0px;
+
+                    width: auto;
+                    background-color: transparent;
+                }
                 .scrollimage {
                     height: 10px;
                 }
@@ -98,6 +116,16 @@ class Layout extends React.Component {
                     width: 100%; 
                     height: auto;
                 }
+
+                .content-box {
+                    background-color: #dbdbd7;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-attachment: fixed;
+                    background-size: cover;
+                }
+
+
 
                 `}
             </style>
@@ -113,6 +141,8 @@ class Layout extends React.Component {
                     border: none;
                     margin: 5px !important;
                 }
+
+        
 
                 .button-dark {
                     height: 50px; 
@@ -154,7 +184,7 @@ class Layout extends React.Component {
             </style>
 
 
-      
+
         </>
 
     }

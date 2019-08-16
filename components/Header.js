@@ -1,5 +1,7 @@
 import Link from "next/link";
 import BurgerIcon from "../components/BurgerIcon"
+import { CSSTransition } from 'react-transition-group';
+import { Col, Row } from "react-bootstrap";
 const sites = [
     {
         id: "1",
@@ -28,93 +30,130 @@ class Header extends React.Component {
 
     constructor(props) {
         super(props)
+        this.isTop = this.props.isTop;
+        this.navName = this.props.navName;
+
+        this.state = {
+            visible: true,
+            isTop: this.props.isTop
+        }
+
+        this.setExpanded = this.setExpanded.bind(this);
+
+
+    }
+
+    componentWillReceiveProps(props) {
+        this.setState({
+            isTop: props.isTop
+        })
+    }
+
+    setExpanded(expand) {
+        this.setState({
+            expanded: expand
+        });
     }
 
 
 
-    render() {
-        const isMobile = (this.props.mobile == "true")
 
+
+
+    render() {
+        let navLinkSpan;
+        if (!this.state.isTop) {
+            navLinkSpan = <span className="white-text"> > {this.navName}</span>
+        } else {
+            navLinkSpan = <></>
+        }
         return <>
 
             <div className="header">
-                <div className="logo-container">
-                    <img src="static/tv77_logo_cropped.png"></img>
-                </div>
-                <div className="links-container">
-                {
-                    isMobile ? (<BurgerIcon  />) : sites.map((item) => {
-                     return<Link key={item.key} href={item.href}><a className="button1">{item.display}</a></Link>
-                    })
-                }
-                </div>
+            <div className="logo-container">    
+                                <img className="logo-img" src="/static/tv77_logo_cropped.png" /><span>TV 77 Niederbiel</span>
+                            </div>
 
-               
+
+
+
+
             </div>
+
+
 
 
 
             <style jsx>
 
                 {`
+                .header{
+                    background-color: #20232a;
+                    width: 100%;
+                    height: auto;
+                    z-index:1000;
+                    position: -webkit-sticky; /* Safari */
+                    position: sticky;
+                    top: 0;
+                }
+                .logo-img  {
+                    width: auto;
+                    height: 100px;
+                    padding: 10px;
+                }
+                span {
+                    color: white;
+                }
+                                
+                .logo-text {
+                    width: auto;
+                    height: auto;
+                }
+
                 .logo-container {
-                    position: fixed;
-                    left: 10vw; 
-                    top: 10px;
+                    width: 100%;
+                    height: auto;
+                    display: block;
                 }
-                .links-container {
-                    position: fixed; 
-                    right: 1vw;
-                    top: 12px;
+                .right {    
+                    right: 0
                 }
+                   
                 a {
                     color: black;
                 }
 
-            a.button1{
-                 display:inline-block;
-                 padding:0.35em 1.2em;
-                 border:0em solid #fff;
-                 margin:0.2em 0.3em 0.3em 0;
-                 border-radius:0.12em;
-                 box-sizing: border-box;
-                 text-decoration:none;
-                 font-family:'Roboto',sans-serif;
-                 font-weight:300;
-                 color:#fff;
-                 text-align:center;
-                 transition: all 0.2s;
-                }
-                a.button1:hover{
-                 color:#000;
-                 background-color:#f2f542;
-                }
-                a.button1:click{
-                     color:#000;
-                     background-color:#f2f542;
-                }
-    
-                @media all and (max-width:30em){
-                 a.button1{
-                  display:block;
-                  margin:0.4em auto;
-                 }
+                .white-text {
+                    color: white !important;
                 }
 
-                .header{
-                    height: 70Px;
-                    color: #000;
-                    background-color: #20232a;
-                    position: fixed;
-                    width: 100vw;
-                    z-index: 1000;
-                    border: 1px solid black;
 
+                .shrink-enter{
+                    padding: 90px 20px; 
                 }
+                .shrink-enter-active{
+                    padding: 5px;
+                    transition: padding 200ms;
+                }
+
+                .shrink-enter-done {
+                    padding: 5px !important;
+                }
+                .shrink-exit{
+                    padding: 5px; 
+                }
+                .shrink-exit-active{
+                    padding: 90px 20px;
+                    transition: padding 200ms;
+                }
+
+                .shrink-exit-done {
+                    padding: 90px 20px;
+                }
+
             
             `}
             </style>
-
 
 
         </>
