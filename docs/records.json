@@ -1,0 +1,31 @@
+{
+  "modules": {
+    "byIdentifier": {},
+    "usedIds": {}
+  },
+  "chunks": {
+    "byName": {
+      "commons": 0,
+      "static/runtime/webpack.js": 1,
+      "static/VDpz-SWk79GGXVQT_E5jt/pages/_app.js": 2,
+      "static/VDpz-SWk79GGXVQT_E5jt/pages/_error.js": 3,
+      "static/VDpz-SWk79GGXVQT_E5jt/pages/about.js": 4,
+      "static/VDpz-SWk79GGXVQT_E5jt/pages/anlage.js": 5,
+      "static/VDpz-SWk79GGXVQT_E5jt/pages/contact-us.js": 6,
+      "static/VDpz-SWk79GGXVQT_E5jt/pages/index.js": 7,
+      "static/runtime/main.js": 8
+    },
+    "bySource": {},
+    "usedIds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ]
+  }
+}
