@@ -1,7 +1,6 @@
-import Link from "next/link";
 import BurgerIcon from "../components/BurgerIcon"
-import { CSSTransition } from 'react-transition-group';
-import { Col, Row } from "react-bootstrap";
+import Media from 'react-media';
+
 const sites = [
     {
         id: "1",
@@ -35,13 +34,14 @@ class Header extends React.Component {
 
         this.state = {
             visible: true,
-            isTop: this.props.isTop
+            isTop: this.props.isTop,
         }
 
         this.setExpanded = this.setExpanded.bind(this);
 
-
     }
+
+
 
     componentWillReceiveProps(props) {
         this.setState({
@@ -57,9 +57,6 @@ class Header extends React.Component {
 
 
 
-
-
-
     render() {
         let navLinkSpan;
         if (!this.state.isTop) {
@@ -67,22 +64,31 @@ class Header extends React.Component {
         } else {
             navLinkSpan = <></>
         }
+
+
         return <>
 
             <div className="header">
-            <div className="logo-container">    
-                                <img className="logo-img" src="/static/tv77_logo_cropped.png" /><span>TV 77 Niederbiel</span>
+                    <img className="logo-img" src="/static/tv77logo.png" />
+                    <Media query="(max-width: 599px)">
+                        {matches =>
+                            !matches ? (
+                            <div className="nav-container">
+                                {
+                                    sites.map((item)  => <button className="navbar-item"href={item.href}>{item.display} </button> )
+                                }
                             </div>
+                            ) : (
+                                <div className="nav-container">
+                                    <BurgerIcon />
+                                </div>
+                            )
+                        }
+                    </Media>
 
-
-
-
+              
 
             </div>
-
-
-
-
 
             <style jsx>
 
@@ -98,10 +104,13 @@ class Header extends React.Component {
                 }
                 .logo-img  {
                     width: auto;
-                    height: 100px;
+                    height: 60px;
                     padding: 10px;
                 }
                 span {
+                    color: white;
+                }
+                p {
                     color: white;
                 }
                                 
@@ -111,9 +120,36 @@ class Header extends React.Component {
                 }
 
                 .logo-container {
-                    width: 100%;
-                    height: auto;
-                    display: block;
+                }
+
+                .nav-container {
+                    position: absolute;
+                    top: 0px;
+                    right: 0px;
+                    height: 100%;
+                    width: 50%;
+                    display: flex;
+                }
+                .center-v {
+                    vertical-align: middle;
+                }
+                .navbar-item {
+                    border: none;
+                    color: white;
+                    height: 100%; 
+                    flex-grow: 1;
+                    background-color: transparent;
+                }
+                .navbar-item:hover {
+                    border-bottom: 5px solid   #ff5c00;
+                    transform: scale(1.1);
+                    color :  #ff5c00;
+                }
+                .navbar-item > a {
+                    color: white;
+                    width: 100%; 
+                    height: 100%;
+                    text-align: center;
                 }
                 .right {    
                     right: 0

@@ -2,11 +2,8 @@ import Layout from "../components/Layout";
 import ContentSection from "../components/ContentSection";
 
 import {Row, Container, Col} from "react-bootstrap"
-
 import React from 'react';
-
 import { FacebookProvider, Page } from 'react-facebook';
-import Link from "next/link";
 
 
 class Index extends React.Component{
@@ -44,6 +41,8 @@ class Index extends React.Component{
               <Row>
 
                 <Col xs="12" md="6">
+                <div className="border-left-thick">
+
                   <h1>Aktuelles</h1>
                   <p>
                   Wir halten Sie bei Facebook regelmäßig auf dem Laufenden
@@ -55,6 +54,7 @@ class Index extends React.Component{
               Natürlich können Sie unsere unsere Seite auch benutzen, wenn Sie nicht bei Facebook sind.
 
               </p>
+              </div>
                 </Col>
 
                 <Col xs="12" md="6">
@@ -65,25 +65,29 @@ class Index extends React.Component{
                 </Row>
               </ContentSection >
               <ContentSection header="Unsere Anlage" link="/anlage">
-              <Row noGutters>
+              <Row >
 
 
               <Col xs="12" md="6">
+              <div className="border-left-thick">
+
                   <h1>Über uns</h1>
                   <p>
-                    Wir stellen uns vor.            
-              </p>
+                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.              </p>
+                  </div>
               <img src="/static/clubheim_tisch.jpg" >
                   </img>
 
                 </Col>
                 <Col xs="12" md="6">
-
-                  {
-                    aboutItems.map((item) => {
-                     return  <div className="link-holder"><a href="/team">{item.title}</a></div>
-                    })
-                  }
+                  <ul>
+                    {
+                      aboutItems.map((item) => {
+                      return  <h1 className="link-holder fromLeft"><a href="/team">{item.title}</a></h1>
+                      })
+                    }
+                  </ul>
+                  
 
                
               
@@ -97,12 +101,15 @@ class Index extends React.Component{
               <Row>
 
               <Col xs="12" md="6">
-                <h1>Team-Tennis</h1>
-                  <p>
-                  Jede Saison stellen wir einige Mannschaften unterschiedlicher Altersklassen. 
-                  Hier können Sie sich einen Überblick verschaffen und aktuelle Ergebnisse einsehen.           
-              </p>
+                <div className="border-left-thick">
+                  <h1>Team-Tennis</h1>
+                    <p>
+                    Jede Saison stellen wir einige Mannschaften unterschiedlicher Altersklassen. 
+                    Hier können Sie sich einen Überblick verschaffen und aktuelle Ergebnisse einsehen.           
+                </p>
 
+                </div>
+              
               </Col>
 
 
@@ -110,15 +117,14 @@ class Index extends React.Component{
 
 
                 <Col xs="12" md="6">
-                  <ul>
-                    {}
-                  <li><a href="/teams">Ergebnisse im Überblick</a></li>
-                  <li><a href="/teams">Herren</a></li>
-                  <li> <a href="/teams">Herren 40er</a></li>
-                  <li> <a href="/teams">Herren 60er</a></li>
-                  <li>  <a href="/teams">Damen</a></li>
+                <ul>
+                    {
+                      aboutItems.map((item) => {
+                      return  <h1 className="link-holder fromLeft"><a href="/team">{item.title}</a></h1>
+                      })
+                    }
                   </ul>
-              
+                  
                   </Col>
               </Row>
               </ContentSection>
@@ -145,7 +151,13 @@ class Index extends React.Component{
             
 
               }
-    
+              .border-left-thick {
+                border-left: 5px solid #ff5c00;
+                padding-left: 20px;
+
+              }
+
+              
             .box {
               position: relative; 
               top: 10px;
@@ -176,11 +188,17 @@ class Index extends React.Component{
               color: black
             }
             a:hover {
-              color: black
+              color: black; 
+              text-decoration: none;
             }
             .link-holder {
-            }
+              font-size: 1.2em;
+              margin: 15px; 
+              padding: 5px; 
+              -webkit-box-shadow: 2px 1px 7px 1px rgba(0,0,0,0.61); 
+              box-shadow: 2px 1px 7px 1px rgba(0,0,0,0.61);
 
+            }
             
 
             

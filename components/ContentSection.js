@@ -1,5 +1,4 @@
 
-import Link from "next/link";
 import { Container, Row, Col } from "react-bootstrap";
 
 
@@ -25,12 +24,8 @@ class ContentSection extends React.Component {
             
                 .content-section {
                     padding: 30px;
-                    border-bottom: 1px solid black;
                     position: relative;
                     text-align: left;
-                }
-                .content-section:hover {
-                    text-decoration: underline;
                 }
                 .more-button {
                     position: absolute;

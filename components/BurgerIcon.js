@@ -13,15 +13,19 @@ class BurgerIcon extends React.Component  {
             <style jsx>
                 {`
                 .burger-container {
-                    width: 41px;
-                    height:30px;
+                    width: auto;
+                    height:24px;
+                    position: absolute; 
+                    top: 0px; right: 0px;
+                    margin-top: 18px;
+                    margin-right: 10px;
                 }
 
                 .burger-line {
                     width: 35px;
                     height: 2px;
                     background-color: white;
-                    margin: 6px 0;
+                    margin: 4px 0;
                   
                 }
                 `}

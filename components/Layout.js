@@ -26,10 +26,6 @@ class Layout extends React.Component {
         })
     }
 
-
-
-
-
     render() {
 
         return <>
@@ -80,7 +76,7 @@ class Layout extends React.Component {
                 {`
                 .top-background-tiny {
                     background-color: red;
-                    height: 1px;
+                    height: 0px;
                     width:100%;
 
                 }
@@ -91,7 +87,7 @@ class Layout extends React.Component {
                     background-attachment: fixed;
                     background-size: cover;
                     width: 100%; 
-                    height: 80px;
+                    height: 200px;
                     z-index:1000;
 
                 }
@@ -133,40 +129,35 @@ class Layout extends React.Component {
             <style jsx global>
 
                 {`
-                .button-bright {
-                    
-                    height: 50px; 
-                    width: auto; 
-                    background-color: white;
-                    border: none;
-                    margin: 5px !important;
-                }
-
+              
+                h1:after {
+                    display:block;
+                    content: '';
+                    border-bottom: solid 3px #ff5c00;
+                    transform: scaleX(0);  
+                    transition: transform 250ms ease-in-out;
+                  }
+                  h1:hover:after { transform: scaleX(1); }
+                  h1.fromRight:after{ transform-origin:100% 50%; }
+                  h1.fromLeft:after{  transform-origin:  0% 50%; }
         
+   
+                  p:after {
+                    display:block;
+                    content: '';
+                    border-bottom: sopd 3px #ff5c00;
+                    transform: scaleX(0);  
+                    transition: transform 250ms ease-in-out;
+                  }
+                  p:after { transform: scaleX(1); }
+                  p.fromRight:after{ transform-origin:100% 50%; }
+                  p.fromLeft:after{  transform-origin:  0% 50%; }
+                
 
-                .button-dark {
-                    height: 50px; 
-                    width: auto; 
-                    background-color: #11161f;
-                    color: white;
-                    border: none;
-                    margin: 5px !important;
-                }
-                p {
-                    margin:0px;
-                }
+              
+                  body {
+                    font-family:  "Impact" !important;
 
-
-                  html {
-                    font-family: 
-                    -apple-system,        // Safari for OS X and iOS (San Francisco)
-                    BlinkMacSystemFont,   // Chrome < 56 for OS X (San Francisco)
-                    "Segoe UI",           // Windows
-                    Roboto,               // Android
-                    "Helvetica Neue",     // Basic web fallback
-                    Arial, 
-                    sans-serif;
-               
                   }
 
                   .footer-section {
