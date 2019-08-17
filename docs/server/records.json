@@ -21,13 +21,13 @@
   },
   "chunks": {
     "byName": {
-      "static/VDpz-SWk79GGXVQT_E5jt/pages/_app.js": 0,
-      "static/VDpz-SWk79GGXVQT_E5jt/pages/_document.js": 1,
-      "static/VDpz-SWk79GGXVQT_E5jt/pages/_error.js": 2,
-      "static/VDpz-SWk79GGXVQT_E5jt/pages/about.js": 3,
-      "static/VDpz-SWk79GGXVQT_E5jt/pages/anlage.js": 4,
-      "static/VDpz-SWk79GGXVQT_E5jt/pages/contact-us.js": 5,
-      "static/VDpz-SWk79GGXVQT_E5jt/pages/index.js": 6
+      "static/MmvkUgJwrqnWdhu21p-By/pages/_app.js": 0,
+      "static/MmvkUgJwrqnWdhu21p-By/pages/_document.js": 1,
+      "static/MmvkUgJwrqnWdhu21p-By/pages/_error.js": 2,
+      "static/MmvkUgJwrqnWdhu21p-By/pages/about.js": 3,
+      "static/MmvkUgJwrqnWdhu21p-By/pages/anlage.js": 4,
+      "static/MmvkUgJwrqnWdhu21p-By/pages/contact-us.js": 5,
+      "static/MmvkUgJwrqnWdhu21p-By/pages/index.js": 6
     },
     "bySource": {},
     "usedIds": [

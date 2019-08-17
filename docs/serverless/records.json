@@ -1,0 +1,23 @@
+{
+  "modules": {
+    "byIdentifier": {},
+    "usedIds": {}
+  },
+  "chunks": {
+    "byName": {
+      "pages/_error.js": 0,
+      "pages/about.js": 1,
+      "pages/anlage.js": 2,
+      "pages/contact-us.js": 3,
+      "pages/index.js": 4
+    },
+    "bySource": {},
+    "usedIds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  }
+}
