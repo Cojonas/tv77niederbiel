@@ -25,6 +25,7 @@
     "react-dom": "^16.8.6",
     "react-facebook": "^8.0.4",
     "react-media": "^1.9.2",
+    "react-responsive-carousel": "^3.1.50",
     "react-transition-group": "^4.2.2",
     "react-visibility-sensor": "^5.1.1",
     "style-loader": "^1.0.0"

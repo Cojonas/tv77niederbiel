@@ -69,7 +69,7 @@ class Header extends React.Component {
         return <>
 
             <div className="header">
-                    <img className="logo-img" src="/static/tv77logo.png" />
+                    <img className="logo-img" src={process.env.assetPrefix + "static/tv77logo.png"} />
                     <Media query="(max-width: 599px)">
                         {matches =>
                             !matches ? (

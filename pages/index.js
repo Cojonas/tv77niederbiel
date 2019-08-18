@@ -5,6 +5,8 @@ import {Row, Container, Col} from "react-bootstrap"
 import React from 'react';
 import { FacebookProvider, Page } from 'react-facebook';
 
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from 'react-responsive-carousel';
 
 class Index extends React.Component{
 
@@ -18,16 +20,54 @@ class Index extends React.Component{
     render() {
       const aboutItems = [
         {
-          title: "Ergebnisse im überblick"
+          title: "Über uns "
         },
         {
-          title: "Der Vorstand"
+          title: "Die Anlage"
+        },
+        {
+          title: "Anfahrt"
         },
         {
           title: "Kontakt"
         },
         {
-          title: "Über uns"
+          title: "Unser Vorstand"
+        },
+        {
+          title: "Mitglied werden"
+        }
+      ]
+      const teams =  [
+        {
+          title: "Ergebnisse im Überblick"
+        },
+        {
+          title: "Damen"
+        },
+        {
+          title: "Herren"
+        },
+        {
+          title: "Herren 40"
+        },
+        {
+          title: "Herren 50"
+        },
+        {
+          title: "Herren 60"
+        },
+      ]
+      const aktuelles =  [
+       
+        {
+          title: "Facebook"
+        },
+        {
+          title: "Veranstaltungen"
+        },
+        {
+          title: "Angebote"
         },
       ]
     return (
@@ -55,12 +95,22 @@ class Index extends React.Component{
 
               </p>
               </div>
+              <ul>
+                      {
+                        aktuelles.map((item) => {
+                        return  <h1 className="link-holder fromLeft"><a href="/team">{item.title}</a></h1>
+                        })
+                      }
+                    </ul>
+               
                 </Col>
 
                 <Col xs="12" md="6">
-                  <FacebookProvider appId="716448928794798">
+           
+
+                    <FacebookProvider appId="716448928794798">
                     <Page href="https://www.facebook.com/TV-77-Niederbiel-612990049042372/" tabs="timeline"/>
-                  </FacebookProvider>    
+                  </FacebookProvider> 
                 </Col>
                 </Row>
               </ContentSection >
@@ -75,8 +125,7 @@ class Index extends React.Component{
                   <p>
                   Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.              </p>
                   </div>
-              <img src="/static/clubheim_tisch.jpg" >
-                  </img>
+
 
                 </Col>
                 <Col xs="12" md="6">
@@ -97,12 +146,35 @@ class Index extends React.Component{
                 </Row>
 
               </ContentSection>
+              <div style={{"padding": "30px"}}> 
+
+
+              <Carousel >
+            
+         
+          <div>
+            <img src="static/clubheim_drinnen.jpg" />
+            <p className="legend">Legend 3</p>
+          </div>
+          <div>
+            <img src="static/clubheim_drinnen2.jpg" />
+            <p className="legend">Legend 3</p>
+          </div>
+          <div>
+            <img src="static/teamfoto_herren.jpeg" />
+            <p className="legend">Legend 3</p>
+          </div>
+   
+            </Carousel>
+              </div>
+
+
               <ContentSection header="Teams" link="/teams">
               <Row>
 
               <Col xs="12" md="6">
                 <div className="border-left-thick">
-                  <h1>Team-Tennis</h1>
+                  <h1>Teams</h1>
                     <p>
                     Jede Saison stellen wir einige Mannschaften unterschiedlicher Altersklassen. 
                     Hier können Sie sich einen Überblick verschaffen und aktuelle Ergebnisse einsehen.           
@@ -119,7 +191,7 @@ class Index extends React.Component{
                 <Col xs="12" md="6">
                 <ul>
                     {
-                      aboutItems.map((item) => {
+                      teams.map((item) => {
                       return  <h1 className="link-holder fromLeft"><a href="/team">{item.title}</a></h1>
                       })
                     }
@@ -137,7 +209,14 @@ class Index extends React.Component{
 
         <style jsx>
           {`
-
+             
+              
+              /* Fix for IE10 */
+              .carousel  {
+                width: 100% !important;
+                max-height: 100% !important;
+              }
+              
               .content-container {
                 max-width: 900px;
                 margin: auto;
@@ -157,7 +236,10 @@ class Index extends React.Component{
 
               }
 
-              
+              ul {
+                margin: 0px;
+                padding: 0px;
+              }
             .box {
               position: relative; 
               top: 10px;

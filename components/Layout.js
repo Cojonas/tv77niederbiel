@@ -26,8 +26,23 @@ class Layout extends React.Component {
         })
     }
 
-    render() {
 
+    render() {
+        var topBackgroundStyle = {
+            
+            
+            'background-image': 'url(' + process.env.assetPrefix + 'static/tennis_court_sand.jpg)',
+            "background-position": 'center',
+            "background-repeat": 'no-repeat',
+            "background-attachment": 'fixed',
+            "background-size": 'cover',
+            "width": '100%', 
+            "height": '200px',
+            "-index":'1000',
+
+        
+        
+        } 
         return <>
             <head>
                 <link
@@ -56,7 +71,7 @@ class Layout extends React.Component {
 
 
 
-            <div className="top-background">
+            <div style={topBackgroundStyle} >
             </div>
 
             <div className="content-box">
@@ -81,7 +96,6 @@ class Layout extends React.Component {
 
                 }
                 .top-background {
-                    background-image: url("/static/tennis_court_sand.jpg");
                     background-position: center;
                     background-repeat: no-repeat;
                     background-attachment: fixed;
