@@ -28,21 +28,6 @@ class Layout extends React.Component {
 
 
     render() {
-        var topBackgroundStyle = {
-            
-            
-            'background-image': 'url(' + process.env.assetPrefix + 'static/tennis_court_sand.jpg)',
-            "background-position": 'center',
-            "background-repeat": 'no-repeat',
-            "background-attachment": 'fixed',
-            "background-size": 'cover',
-            "width": '100%', 
-            "height": '200px',
-            "-index":'1000',
-
-        
-        
-        } 
         return <>
             <head>
                 <link
@@ -55,9 +40,6 @@ class Layout extends React.Component {
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
 
             </head>
-            <VisibilitySensor onChange={this.onChange}>
-                <div className="top-background-tiny" />
-            </VisibilitySensor>
         
 
             <Media query="(max-width: 599px)">
@@ -67,12 +49,15 @@ class Layout extends React.Component {
                         : (<Header navName={this.props.navName} isTop={this.state.isTop} mobile="false"></Header>)
                 }
             </Media>
+
+            <VisibilitySensor onChange={this.onChange}>
+                <div className="top-background-tiny" />
+            </VisibilitySensor>
+
         
 
 
 
-            <div style={topBackgroundStyle} >
-            </div>
 
             <div className="content-box">
                 {this.props.children}
@@ -90,21 +75,12 @@ class Layout extends React.Component {
             <style jsx>
                 {`
                 .top-background-tiny {
-                    background-color: red;
-                    height: 0px;
+                    background-color: #20232a;
+                    height: 1px;
                     width:100%;
 
                 }
-                .top-background {
-                    background-position: center;
-                    background-repeat: no-repeat;
-                    background-attachment: fixed;
-                    background-size: cover;
-                    width: 100%; 
-                    height: 200px;
-                    z-index:1000;
 
-                }
                 .top-background-color {
                     background-color: #20232a;
                     height: 100px;

@@ -1,6 +1,7 @@
 import BurgerIcon from "../components/BurgerIcon"
 import Media from 'react-media';
 
+import {CSSTransition} from "react-transition-group"
 const sites = [
     {
         id: "1",
@@ -69,7 +70,10 @@ class Header extends React.Component {
         return <>
 
             <div className="header">
-                    <img className="logo-img" src={process.env.assetPrefix + "static/tv77logo.png"} />
+            <CSSTransition in={!this.state.isTop} classNames="my-node" timeout={1000} >
+                <div>
+                <img className="logo-img" src={process.env.assetPrefix + "static/tv77logo.png"} />
+
                     <Media query="(max-width: 599px)">
                         {matches =>
                             !matches ? (
@@ -86,7 +90,12 @@ class Header extends React.Component {
                         }
                     </Media>
 
-              
+
+                </div>
+
+
+                    </CSSTransition>
+
 
             </div>
 
@@ -94,7 +103,7 @@ class Header extends React.Component {
 
                 {`
                 .header{
-                    background-color: #20232a;
+                    background-color: #212529;
                     width: 100%;
                     height: auto;
                     z-index:1000;
@@ -106,6 +115,7 @@ class Header extends React.Component {
                     width: auto;
                     height: 60px;
                     padding: 10px;
+                    
                 }
                 span {
                     color: white;
@@ -164,28 +174,50 @@ class Header extends React.Component {
                 }
 
 
-                .shrink-enter{
-                    padding: 90px 20px; 
+                .logoheader-enter{
+                    opacity: 0; 
                 }
-                .shrink-enter-active{
-                    padding: 5px;
-                    transition: padding 200ms;
-                }
-
-                .shrink-enter-done {
-                    padding: 5px !important;
-                }
-                .shrink-exit{
-                    padding: 5px; 
-                }
-                .shrink-exit-active{
-                    padding: 90px 20px;
-                    transition: padding 200ms;
+                .logoheader-enter-active{
+                    opacity: 1;
+                    transition: opacity 200ms;
                 }
 
-                .shrink-exit-done {
-                    padding: 90px 20px;
+                .logoheader-enter-done {
+                    opacity: 1;
                 }
+                .logoheader-exit{
+                    opacity: 1;
+                }
+                .logoheader-exit-active{
+                    opacitiy: 0;
+                    transition: opacity 200ms;
+                }
+
+                .logoheader-exit-done {
+                    opacity: 0;
+                }
+
+                .my-node-enter {
+                    opacity: 0;
+                  }
+                  .my-node-enter-active {
+                    opacity: 1;
+                    transition: opacity 200ms;
+                  }
+                  .my-node-enter-done {
+                      opacity: 1;
+                  }
+                  .my-node-exit {
+                    opacity: 1;
+                  }
+                  .my-node-exit-active {
+                    opacity: 0;
+                    transition: opacity 200ms;
+                  }
+                  .my-node-exit-done {
+                      opacity: 0;
+                  }
+                  
 
             
             `}
