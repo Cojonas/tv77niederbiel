@@ -1,0 +1,42 @@
+  h1 {
+    border-bottom: solid 3px #ff5c00;
+
+  }
+  a {
+    color: black;
+
+  }
+  body {
+    font-family: 16px/22px 'Lato',sans-serif;
+    color: white; 
+
+    background: black;
+  }
+
+  .butn {
+    -webkit-border-radius: 6;
+    -moz-border-radius: 6;
+    border-radius: 6px;
+    font-family: Courier New;
+    font-size: 15px;
+    color: #fff;
+    background: #ff5c00;
+    padding: 6px 11px 6px 11px;
+    text-decoration: none;
+  }
+  
+  .butn:hover {
+    background: #ff5900;
+    text-decoration: none;
+  }
+  .fb-post>span {
+    max-width: 100%;
+}
+.fb-post iframe {
+  border: 0;
+  display: block;
+  margin: 0 auto;
+}
+
+  
+

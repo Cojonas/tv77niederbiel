@@ -1,17 +1,16 @@
-class BurgerIcon extends React.Component  {
-    
+function BurgerIcon() {
 
-    render() {
-        return <>
 
-            <div className="burger-container">
-                <div className="burger-line"></div>
-                <div className="burger-line"></div>
-                <div className="burger-line"></div>
-            </div>
+    return <>
 
-            <style jsx>
-                {`
+        <div className="burger-container">
+            <div className="burger-line"></div>
+            <div className="burger-line"></div>
+            <div className="burger-line"></div>
+        </div>
+
+        <style jsx>
+            {`
                 .burger-container {
                     width: auto;
                     height:24px;
@@ -29,9 +28,9 @@ class BurgerIcon extends React.Component  {
                   
                 }
                 `}
-            </style>
-        </>
-    }
+        </style>
+    </>
+
 }
 
 

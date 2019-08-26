@@ -1,8 +1,7 @@
 
 
-class Banner extends React.Component {
-    render() {
-        return <>
+function Banner() {
+    return <>
         <div className="banner-box">
             <p> asdfasdfasdf</p>
 
@@ -23,9 +22,9 @@ class Banner extends React.Component {
             `}
         </style>
 
-        </>
+    </>
 
-    }
 }
+
 
 export default Banner;

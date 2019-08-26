@@ -1,8 +1,11 @@
 import BurgerIcon from "../components/BurgerIcon"
 import Media from 'react-media';
+import { Row, Col } from "react-bootstrap"
 
-import {CSSTransition} from "react-transition-group"
+import {Icon} from "antd"
+
 const sites = [
+
     {
         id: "1",
         href: "/",
@@ -26,96 +29,93 @@ const sites = [
 ]
 
 
-class Header extends React.Component {
+function Header(props) {
 
-    constructor(props) {
-        super(props)
-        this.isTop = this.props.isTop;
-        this.navName = this.props.navName;
 
-        this.state = {
-            visible: true,
-            isTop: this.props.isTop,
-        }
 
-        this.setExpanded = this.setExpanded.bind(this);
-
+    let navLinkSpan;
+    if (props.isTop) {
+        navLinkSpan = <span className="white-text"> > {props.navName}</span>
+    } else {
+        navLinkSpan = <></>
     }
 
 
+    return <>
 
-    componentWillReceiveProps(props) {
-        this.setState({
-            isTop: props.isTop
-        })
-    }
+        <div className="header">
+            <div>
+                <Row >
 
-    setExpanded(expand) {
-        this.setState({
-            expanded: expand
-        });
-    }
+                    <Col  xs={{ span: 2 }}>
+                        <img className="logo-img" src={process.env.assetPrefix + "static/logo_white.png"} />
+                    </Col>
 
+                    
+                        <Media query="(max-width: 900px)">
+                            {matches =>
+                                !matches ? <>
+                                    <Col xs={{ span: 7, offset: 1 }} md={{ span: 6, offset: 2  }}
+                                    >                                               
+                
+                                    <div className="nav-container">
+                                        {
+                                            sites.map((item) => <button key={item.id} className="navbar-item" href={item.href}>{item.display} </button>)
+                                        }
 
-
-    render() {
-        let navLinkSpan;
-        if (!this.state.isTop) {
-            navLinkSpan = <span className="white-text"> > {this.navName}</span>
-        } else {
-            navLinkSpan = <></>
-        }
-
-
-        return <>
-
-            <div className="header">
-            <CSSTransition in={!this.state.isTop} classNames="my-node" timeout={1000} >
-                <div>
-                <img className="logo-img" src={process.env.assetPrefix + "static/tv77logo.png"} />
-
-                    <Media query="(max-width: 599px)">
-                        {matches =>
-                            !matches ? (
-                            <div className="nav-container">
-                                {
-                                    sites.map((item)  => <button className="navbar-item"href={item.href}>{item.display} </button> )
-                                }
-                            </div>
-                            ) : (
-                                <div className="nav-container">
-                                    <BurgerIcon />
-                                </div>
-                            )
-                        }
-                    </Media>
+                                    </div>
 
 
-                </div>
+                                    </Col>
+
+                                    <Col xs={{ span:1, offset:1}}>
+                                        <div className="navbar-icon">
+                                            <Icon type="facebook" style={{   fontSize: '40px', color: 'white' }} theme="outlined" />
+                                        </div>
+
+                                    </Col>
 
 
-                    </CSSTransition>
+                                </> : (<></>
 
+                                    )
+
+                            }
+                        </Media>
+
+                </Row>
 
             </div>
 
-            <style jsx>
 
-                {`
+        </div>
+
+        <style jsx>
+
+            {`
                 .header{
-                    background-color: #212529;
+                    background: #2b2b2b;
                     width: 100%;
                     height: auto;
                     z-index:1000;
                     position: -webkit-sticky; /* Safari */
                     position: sticky;
                     top: 0;
+                    border-bottom: 3px solid white;
                 }
                 .logo-img  {
                     width: auto;
-                    height: 60px;
-                    padding: 10px;
+                    height: 80px;
                     
+                }
+                .gradient-stripe {
+                    
+                    height: 10px;
+                    z-index:1000;
+                    color: white;
+                    text-align: center;
+    
+    
                 }
                 span {
                     color: white;
@@ -123,46 +123,51 @@ class Header extends React.Component {
                 p {
                     color: white;
                 }
+                
                                 
-                .logo-text {
-                    width: auto;
-                    height: auto;
-                }
 
-                .logo-container {
-                }
 
                 .nav-container {
-                    position: absolute;
-                    top: 0px;
-                    right: 0px;
+                    width: 100%;     
                     height: 100%;
-                    width: 50%;
                     display: flex;
                 }
-                .center-v {
-                    vertical-align: middle;
-                }
+              
                 .navbar-item {
                     border: none;
                     color: white;
                     height: 100%; 
-                    flex-grow: 1;
+                    margin: 0px 30px;
+                    padding: 10px 0px;
                     background-color: transparent;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    font-size: 1.2em;
+                }
+
+                .navbar-icon {
+
+                    border: none;
+                    color: white;
+                    height: 100%; 
+                    margin: 0px 30px;
+                    padding: 10px 0px;
+                    background-color: transparent;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    font-size: 1.2em;
+
+
                 }
                 .navbar-item:hover {
                     border-bottom: 5px solid   #ff5c00;
                     transform: scale(1.1);
-                    color :  #ff5c00;
                 }
                 .navbar-item > a {
                     color: white;
                     width: 100%; 
                     height: 100%;
                     text-align: center;
-                }
-                .right {    
-                    right: 0
                 }
                    
                 a {
@@ -171,31 +176,9 @@ class Header extends React.Component {
 
                 .white-text {
                     color: white !important;
-                }
+                }                
 
 
-                .logoheader-enter{
-                    opacity: 0; 
-                }
-                .logoheader-enter-active{
-                    opacity: 1;
-                    transition: opacity 200ms;
-                }
-
-                .logoheader-enter-done {
-                    opacity: 1;
-                }
-                .logoheader-exit{
-                    opacity: 1;
-                }
-                .logoheader-exit-active{
-                    opacitiy: 0;
-                    transition: opacity 200ms;
-                }
-
-                .logoheader-exit-done {
-                    opacity: 0;
-                }
 
                 .my-node-enter {
                     opacity: 0;
@@ -221,11 +204,11 @@ class Header extends React.Component {
 
             
             `}
-            </style>
+        </style>
 
 
-        </>
-    }
+    </>
+
 };
 
 export default Header;

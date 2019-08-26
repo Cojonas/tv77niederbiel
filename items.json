@@ -1,0 +1,55 @@
+{
+    "listItems": {
+        "aboutItems" : [
+            {
+              "title": "Über uns"
+            },
+            {
+              "title": "Die Anlage"
+            },
+            {
+              "title": "Anfahrt"
+            },
+            {
+              "title": "Kontakt"
+            },
+            {
+              "title": "Unser Vorstand"
+            },
+            {
+              "title": "Mitglied werden"
+            }
+          ],
+        "teams": [
+            {
+              "title": "Ergebnisse im Überblick"
+            },
+            {
+              "title": "Damen"
+            },
+            {
+              "title": "Herren"
+            },
+            {
+              "title": "Herren 40"
+            },
+            {
+              "title": "Herren 50"
+            },
+            {
+              "title": "Herren 60"
+            }
+          ],
+          "aktuelles": [
+            {
+              "title": "Facebook"
+            },
+            {
+              "title": "Veranstaltungen"
+            },
+            {
+              "title": "Schnupperangebote"
+            }
+          ]
+    }
+}

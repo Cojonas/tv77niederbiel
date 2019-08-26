@@ -1,29 +1,26 @@
 
-import { Container, Row, Col } from "react-bootstrap";
+import { Col } from "react-bootstrap";
+
+function ContentSection(props) {
+
+    return <>
+
+        <Col xs="12">
+            <div className="full-width content-section ">
+                {props.children}
+            </div>
+        </Col>
 
 
-class ContentSection extends React.Component {
+        <style jsx>
+            {`
 
+             
 
-    constructor(props) {
-        super(props)
-    }
-
-    render() {
-        return <>
-
-            <Col xs="12">
-                <div className="full-width content-section ">
-                    {this.props.children}
-                </div>
-            </Col>
-
-
-            <style jsx global>
-                {`
+  
             
                 .content-section {
-                    padding: 30px;
+                    padding: 30px 0px;
                     position: relative;
                     text-align: left;
                 }
@@ -38,13 +35,13 @@ class ContentSection extends React.Component {
                 }
                  
                 `}
-            </style>
+        </style>
 
 
 
 
-        </>
-    }
+    </>
 }
+
 
 export default ContentSection;
