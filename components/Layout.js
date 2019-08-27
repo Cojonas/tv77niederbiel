@@ -4,8 +4,7 @@ import Media from "react-media";
 
 import Footer from "./Footer";
 
-import Drawer from 'rc-drawer';
-
+import Drawer from "./Drawer"
 
 import "../bootstrap.min.css"
 import "../App.css"
@@ -16,24 +15,41 @@ import { useState } from "react";
 
 
 function Layout(props) {
+    const sites = [
 
+        {
+            id: "1",
+            href: "/",
+            display: "Start"
+        },
+        {
+            id: "2",
+            href: "/about",
+            display: "Über uns"
+        },
+        {
+            id: "3",
+            href: "/teams",
+            display: "Teams"
+        },
+        {
+            id: "4",
+            href: "/contact-us",
+            display: "Kontakt"
+        }
+    ]
 
     const [isTop, setIsTop] = useState(true)
-
+    const [isDrawerOpen, setIsDrawerOpen] = useState(false)
 
 
     return <>
 
-    <Drawer width="20vw" wrapperClassName="drawer-wrapper"
->
+        <Drawer sites={sites} isDrawerOpen={isDrawerOpen} closeDrawer={()=> setIsDrawerOpen(false)} />
 
-        <p>sdfasdf</p>
-    </Drawer>
-        <Media query="(max-width: 599px)">
-            {
-                matches => matches
-                    ? (<Header navName={props.navName} isTop={isTop} mobile="true" ></Header>)
-                    : (<Header navName={props.navName} isTop={isTop} mobile="false"></Header>)
+        <Media query="(max-width: 900px)">
+            {   
+                matches => <Header sites={sites} openDrawer={() => setIsDrawerOpen(true)}  navName={props.navName} isTop={isTop} mobile={matches} ></Header>
             }
         </Media>
 
@@ -53,11 +69,9 @@ function Layout(props) {
         <center>
 
         <div className="content-box">
-
                 <div className="content-container">
                     {props.children}
                 </div>
-
             </div>
         </center>
 
@@ -67,6 +81,9 @@ function Layout(props) {
 
         <style jsx>
             {`
+           
+          
+              
                 .top-background-tiny {
                     background-color: #20232a;
                     height: 1px;

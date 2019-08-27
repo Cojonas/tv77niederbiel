@@ -2,15 +2,16 @@
     border-bottom: solid 1px #ff5c00;
 
   }
-  a {
-    color: black;
-
-  }
   body {
     font-family: 16px/22px 'Lato',sans-serif;
     color: white; 
 
     background: #222;
+  }
+
+  .row {
+    margin-right: 0px !important; 
+    margin-left: 0px !important;
   }
 
   .butn {
@@ -39,4 +40,16 @@
 }
 
   
+
+.navbar-item {
+  border: none;
+  color: white;
+  height: 100%; 
+  margin: auto;
+  padding-top: 20px;  
+  background-color: transparent;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.2em;
+}
 

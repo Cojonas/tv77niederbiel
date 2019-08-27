@@ -16,7 +16,7 @@ function BurgerIcon() {
                     height:24px;
                     position: absolute; 
                     top: 0px; right: 0px;
-                    margin-top: 18px;
+                    margin-top: 28px;
                     margin-right: 10px;
                 }
 

@@ -2,31 +2,9 @@ import BurgerIcon from "../components/BurgerIcon"
 import Media from 'react-media';
 import { Row, Col } from "react-bootstrap"
 
-import {Icon} from "antd"
+import { Icon } from "antd"
 
-const sites = [
 
-    {
-        id: "1",
-        href: "/",
-        display: "Start"
-    },
-    {
-        id: "2",
-        href: "/about",
-        display: "Über uns"
-    },
-    {
-        id: "3",
-        href: "/teams",
-        display: "Teams"
-    },
-    {
-        id: "4",
-        href: "/contact-us",
-        display: "Kontakt"
-    }
-]
 
 
 function Header(props) {
@@ -41,47 +19,61 @@ function Header(props) {
     }
 
 
+
     return <>
 
         <div className="header">
-            <div onClick={() => props.onChange()}>
+            <div >
                 <Row >
 
-                    <Col  xs={{ span: 2 }}>
+                    <Col xs={{ span: 2 }}>
                         <img className="logo-img" src={process.env.assetPrefix + "static/logo_white.png"} />
                     </Col>
+                     {
+                         !props.mobile ?                     
+                         
+                         <Col className="justify-content-center" xs={{ span: 6, offset: 1 }}
+                         >
+                             <div className="nav-container">
+                                 {
+                                     props.sites.map((item) => <a key={item.id} className="navbar-item" href={item.href}>{item.display} </a>)
+                                 }
+     
+                             </div>
+     
+     
+     
+                         </Col>
+                         :                          <Col className="justify-content-center" xs={{ span: 6, offset: 1 }}></Col>
 
-                    
-                        <Media query="(max-width: 900px)">
-                            {matches =>
-                                !matches ? <>
-                                    <Col xs={{ span: 7, offset: 1 }} md={{ span: 6, offset: 2  }}
-                                    >                                               
-                
-                                    <div className="nav-container">
-                                        {
-                                            sites.map((item) => <button key={item.id} className="navbar-item" href={item.href}>{item.display} </button>)
-                                        }
+     
+                     }
+                    <Col xs={{ span: 1, offset: 2 }}>
+                        <div className="navbar-icon">
 
-                                    </div>
+                            {
+                                !props.mobile ?
+                                    <Icon type="facebook" style={{ fontSize: '40px', color: 'white' }} theme="outlined" />
 
 
-                                    </Col>
+                                    : <BurgerIcon />
 
-                                    <Col xs={{ span:1, offset:1}}>
-                                        <div className="navbar-icon">
-                                            <Icon type="facebook" style={{   fontSize: '40px', color: 'white' }} theme="outlined" />
-                                        </div>
-
-                                    </Col>
-
-
-                                </> : (<>                                    <BurgerIcon  />
-</>
-                                    )
 
                             }
-                        </Media>
+
+                        </div>
+
+                    </Col>
+
+                    {
+                        !props.mobile ?
+                            <Col xs={{ span: 1, offset: 2 }}>
+                            </Col>
+                            : <></>
+
+                    }
+
+
 
                 </Row>
 
@@ -103,9 +95,16 @@ function Header(props) {
                     top: 0;
                     border-bottom: 1px solid #ff5c00;
                 }
+                .show {
+                    display:block;
+                }
+                .hide {
+                    display: none;
+                }
                 .logo-img  {
                     width: auto;
                     height: 80px;
+                    padding: 10px;
                     
                 }
                 .gradient-stripe {
@@ -117,7 +116,8 @@ function Header(props) {
     
     
                 }
-                span {
+
+                                span {
                     color: white;
                 }
                 p {
@@ -131,20 +131,10 @@ function Header(props) {
                     width: 100%;     
                     height: 100%;
                     display: flex;
+                    text-align: center;
+
                 }
               
-                .navbar-item {
-                    border: none;
-                    color: white;
-                    height: 100%; 
-                    margin: 0px 30px;
-                    padding: 10px 0px;
-                    background-color: transparent;
-                    text-transform: uppercase;
-                    font-weight: bold;
-                    font-size: 1.2em;
-                }
-
                 .navbar-icon {
 
                     border: none;
@@ -160,8 +150,9 @@ function Header(props) {
 
                 }
                 .navbar-item:hover {
-                    border-bottom: 5px solid   #ff5c00;
-                    transform: scale(1.1);
+                    color: #ff5c00;
+                    text-decoration: none;
+                    border-bottom: 2px solid   #ff5c00;
                 }
                 .navbar-item > a {
                     color: white;
@@ -170,9 +161,6 @@ function Header(props) {
                     text-align: center;
                 }
                    
-                a {
-                    color: black;
-                }
 
                 .white-text {
                     color: white !important;
