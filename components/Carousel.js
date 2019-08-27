@@ -1,22 +1,19 @@
 import { Carousel } from 'react-responsive-carousel';
 
 
-function Galery  (){
+function Galery  (props){
     return  <div style={{padding: 15}}>
         <Carousel >
-            <div>
-            <img src="static/teamfoto_herren.jpeg" />
-            <p className="legend">Legend 3</p>
-            </div>
+
+            {
+                props.data.items.map((item) => (           
+                <div>
+                    <img src={ process.env.assetPrefix + item.picture} />
+                    <p className="legend">{item.legend}</p>
+                </div>
+                ))
+            }
                     
-            <div>
-            <img src="static/clubheim_drinnen.jpg" />
-            <p className="legend">Legend 3</p>
-            </div>
-            <div>
-            <img src="static/clubheim_drinnen2.jpg" />
-            <p className="legend">Legend 3</p>
-            </div>
 
         </Carousel>
 

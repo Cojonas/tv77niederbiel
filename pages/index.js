@@ -12,14 +12,51 @@ import Items from "../items.json"
 
 function Index (){
 
+  const generalGalery = {
+    items: [
+      {
+        id:"1",
+        picture: "/static/tennisplatz_niederbiel.jpg",
+        legend: "Unsere Anlage"
+      },
+      {
+        id:"2",
+        picture: "/static/clubheim_draussen.jpg",
+        legend: "Das Clubheim"
+      },
+      {
+        id:"3",
+        picture: "/static/tennisplatz_platz1.jpg",
+        legend: "Unsere Tennisplätze"
+      }
+
+    ]
+  }
+
+
+  const teamGalery =  {
+    items: [
+      {
+        id:"1",
+        picture: "/static/teamfoto_herren.jpeg",
+        legend: "Herren"
+      },
+      {
+        id:"2",
+        picture: "/static/teamfoto_damen.jpeg",
+        legend: "Damen"
+      }
+    ]
+  }
+
     return (
       <Layout navName="Start">
 
 
 
-            <Row noGutters>
+            <Row noGutters >
               <ContentSection header="Aktuelles" link="/about">
-                <Row>
+                <Row className="text-block">
 
                   <Col cols="12" md="6" className="padding-bottom">
 
@@ -27,24 +64,24 @@ function Index (){
                     <span className="bigger">Herzlich Willkommen</span> beim Tennisverein 77 Niederbiel! Wir freuen uns, dass Sie unsere Internetseite besuchen. Auch bei Facebook halten wir sie auf dem laufenden. Über ein Like würden wir sehr freuen !             
 
                       </p>
+                      <Banner>
+
+<h2 style={{color: "white"}} >Schnupperangebot</h2>
+<span>Mietgliedschaft 1 Jahr gratis!</span><br></br>
+<span>Inklusive Trainerstunde</span><br></br>
+
+<a href="/mitlied" className="offer-link">zum angebot</a>
+
+</Banner>
+
 
                     <Banner>
 
-                      <h2>Clubheim mieten</h2>
+                      <h2 style={{color: "white"}}> Clubheim mieten</h2>
                       <span>Großräumige Feierlocation</span><br></br>
                       <span>Mit eigener Küche und Theke</span><br></br>
-                      <a href="/clubheim" className="offer-link">Mehr infos</a>
+                      <a href="/kontakt" className="offer-link">Kontaktieren sie uns</a>
 
-                    </Banner>
-
-
-                    <Banner>
-
-                      <h2>Schnupperkurse</h2>
-                      <span>Mietgliedschaft 1 Jahr gratis!</span><br></br>
-                      <span>Inklusive Trainerstunde</span><br></br>
-
-                      <a href="/schnuppern" className="offer-link">zum angebot</a>
 
                     </Banner>
 
@@ -55,8 +92,7 @@ function Index (){
 
                   </Col>
                   <Col cols="12" md="6"  className="padding-bottom">
-                  <Carousel />
-
+                    <Carousel data={generalGalery} />
 
                   </Col>
 
@@ -65,7 +101,7 @@ function Index (){
 
               </ContentSection >
               <ContentSection header="Unsere Anlage" link="/anlage">
-                <Row >
+                <Row className="text-block">
                 <Col xs="12" md="6" className="padding-bottom">
                     <center>
                       <FacebookProvider appId="716448928794798">
@@ -96,7 +132,7 @@ function Index (){
               </ContentSection>
 
               <ContentSection header="Teams" link="/teams">
-            <Row>
+            <Row className="text-block">
 
               <Col xs="12" md="6">
                   <h1>Teams</h1>
@@ -104,20 +140,13 @@ function Index (){
                   Jede Saison stellen wir einige Mannschaften unterschiedlicher Altersklassen. 
                   Hier können Sie sich einen Überblick verschaffen und aktuelle Ergebnisse einsehen.           
                   </p>
-                  <a href="/schnuppern" className="offer-link">Übersicht</a><br></br>
-                  <a href="/schnuppern" className="offer-link">Damen</a><br></br>
-                  <a href="/schnuppern" className="offer-link">Herren</a><br></br>
-                  <a href="/schnuppern" className="offer-link">Herren 40</a><br></br>
-                  <a href="/schnuppern" className="offer-link">Herren 50</a><br></br>
-                  <a href="/schnuppern" className="offer-link">Herren 60</a><br></br>
-                  <NavBox items={Items.listItems.teams}/>
-
+                  <a href="/teams" className="offer-link">Übersicht</a><br></br>
 
               
               </Col>
 
               <Col xs="12" md="6">
-                <Galery />
+                <Galery data={teamGalery} />
 
               </Col>
               </Row>
@@ -174,23 +203,11 @@ function Index (){
               border: 1px solid #212529;
             }
 
-            .offer-link {
-                font-size: 15px ; 
-                color:  #ff5c00 !important;
-                text-transform: uppercase;
-              }
 
               .offer-link:hover {
                 text-decoration: underline;
               }
 
-              .bigger {
-                font-size: 40px;
-                font-weight: bold;
-                letter-spacing: -2.9px;
-                color: #ff5c00;
-              }
-            
 
             
     

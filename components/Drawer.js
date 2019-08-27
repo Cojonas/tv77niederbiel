@@ -9,7 +9,7 @@ function Drawer(props) {
             {props.sites.map((item) => <div key={item.id} style={{padding: 10}}><a className="drawer-item"  href={item.href}>{item.display}</a></div>)}
 
             <div className="logo-box">
-                <img src="static/logo_white.png">
+                <img src={process.env.assetPrefix + "static/logo_white.png"}>
                 </img>
 
             </div>

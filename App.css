@@ -39,6 +39,11 @@
   margin: 0 auto;
 }
 
+.offer-link {
+  font-size: 15px ; 
+  color:  #ff5c00 !important;
+  text-transform: uppercase;
+}
   
 
 .navbar-item {
@@ -53,3 +58,30 @@
   font-size: 1.2em;
 }
 
+.bigger {
+  font-size: 40px;
+  font-weight: bold;
+  letter-spacing: -2.9px;
+  color: #ff5c00;
+  text-align: left;
+}
+.text-left {
+  text-align: left;
+}
+
+a {
+  color: #ff5c00;
+}
+
+a:hover {
+  color: #ff5c00;
+}
+
+
+.text-block {
+  text-align: justify
+}
+
+h2 {
+  color: #ff5c00;
+}

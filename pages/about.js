@@ -16,33 +16,59 @@ const MyMapComponent = withScriptjs(withGoogleMap((props) =>
 
 
 export default function About() {
+
+  const generalGalery = {
+    items: [
+      {
+        id:"1",
+        picture: "/static/tennisplatz_niederbiel.jpg",
+        legend: "Unsere Anlage"
+      },
+      {
+        id:"2",
+        picture: "/static/clubheim_draussen.jpg",
+        legend: "Das Clubheim"
+      },
+      {
+        id:"3",
+        picture: "/static/tennisplatz_platz1.jpg",
+        legend: "Unsere Tennisplätze"
+      },
+      {
+        id:"4",
+        picture: "/static/clubheim_tisch.jpg",
+        legend: "Clubheim"
+      }
+
+    ]
+  }
+
   return (
     <Layout>
       <h1>Über uns</h1>
-      <div className="left-text">
+      <div className="text-block">
         
       <Row>
         <Col md="12" lg="6">
-        <h2>Die Anlage</h2>
-        <p>Unsere Anlage liegt ruhig am Ortsrand von Niederbiel und bietet dem Aktiven vier stets gut bespielbare Sandplätze.
+        
+        <span className="bigger">Unsere Anlage</span> liegt ruhig am Ortsrand von Niederbiel und bietet dem Aktiven vier stets gut bespielbare Sandplätze.
         <p>Zunächst legte man auf dem vereinseigenen Gelände etwas abseits der Wohngebiete zwei Sandplätze an (Fertigstellung im Juli 1978), bevor man im August 1980 das Clubhaus einweihen konnte. Im Frühjahr 1981 wurde die Anlage schließlich durch den Bau zweier weiterer Plätze vervollständigt. Seither sorgen die Vereinsmitglieder größtenteils selbst für die Pflege der Anlage, wobei die Plätze ab dem Jahr 2015 vollständig durch eine Fachfirma spielbereit gemacht werden.</p>
-        </p>
+        
 
-        <h2>Das Clubheim</h2>
-        <p>        Prunkstück der Anlage ist das vereinseigene Clubhaus mit großem, hellen Gastraum (renoviert im Frühjahr 2008) und geräumigen Umkleideräumen für Damen und Herren mitsamt sanitären Anlagen.
-Besonders beliebt im Sommer - nicht nur bei Vereinsmitgliedern! - ist der Freisitz des Clubhauses im Grünen mit Blick auf die Plätze.
+        
+        <p>   <span className="bigger">Das Clubhaus</span> ist ausgestattet mit großem, hellen Gastraum (renoviert im Frühjahr 2008) und geräumigen Umkleideräumen für Damen und Herren mitsamt sanitären Anlagen.
+          Besonders beliebt im Sommer - nicht nur bei Vereinsmitgliedern! - ist der Freisitz des Clubhauses im Grünen mit Blick auf die Plätze.
 </p>
 
 
         </Col>
         <Col md="12" lg="6">
-        <Galery />
-
+          <Galery data={generalGalery}/>
         </Col>
 
 
 
-      </Row>
+        </Row>
 
       </div>
 
@@ -64,6 +90,7 @@ Besonders beliebt im Sommer - nicht nur bei Vereinsmitgliedern! - ist der Freisi
       </p>
       <style jsx>
         {`
+       
         .left-text {
           text-align: left;
         }`}

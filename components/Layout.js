@@ -33,8 +33,13 @@ function Layout(props) {
             display: "Teams"
         },
         {
-            id: "4",
-            href: "/contact-us",
+            id:"4",
+            href:"/mitglied",
+            display: "Mitgliedschaft"
+        },
+        {
+            id: "5",
+            href: "/kontakt",
             display: "Kontakt"
         }
     ]
@@ -61,7 +66,7 @@ function Layout(props) {
 
             <center>
 
-                <img className="img-foreground" src="static/logo.png" />
+                <img className="img-foreground" src={process.env.assetPrefix + "static/logo_white.png"} />
 
             </center>
 
@@ -77,7 +82,7 @@ function Layout(props) {
 
 
 
-        <Footer />
+        <Footer sites={sites} />
 
         <style jsx>
             {`
@@ -104,7 +109,7 @@ function Layout(props) {
                     background-attachment: fixed;
                     opacity: 0.6;
                     overflow: hidden;
-                    height: 50vh     ;
+                    height: auto     ;
                     padding-top: 50px;
                     width: 100%;
                     color: white;
@@ -113,7 +118,9 @@ function Layout(props) {
                 }
                 .top  .img-foreground {
                   height: 200px; 
-                  padding: 10px;
+                  padding: 20px;
+                  margin: 10px;
+                  margin-bottom: 100px;
                   width: auto; 
                   opacity: 1;
                 }
@@ -146,7 +153,7 @@ function Layout(props) {
                     background-color: #333;
                     position: relative;
                     top: -50px; 
-                    padding: 10px 20px;
+                    padding: 10px 5px;
                     opacity: 1;
                     max-width: 1024px;
                     z-index: 500;

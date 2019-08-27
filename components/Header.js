@@ -32,7 +32,7 @@ function Header(props) {
                      {
                          !props.mobile ?                     
                          
-                         <Col className="justify-content-center" xs={{ span: 6, offset: 1 }}
+                         <Col className="justify-content-center" xs={{ span: 8, offset: 0 }} xl={{ span: 6, offset: 1}}
                          >
                              <div className="nav-container">
                                  {
@@ -44,19 +44,24 @@ function Header(props) {
      
      
                          </Col>
-                         :                          <Col className="justify-content-center" xs={{ span: 6, offset: 1 }}></Col>
+                         :               <Col className="justify-content-center" xs={{ span: 6, offset: 1 }}></Col>
 
      
                      }
-                    <Col xs={{ span: 1, offset: 2 }}>
+                    <Col xs={{ span: 1, offset: 1 }} xl={{span : 1, offset: 2}}>
                         <div className="navbar-icon">
 
                             {
                                 !props.mobile ?
-                                    <Icon type="facebook" style={{ fontSize: '40px', color: 'white' }} theme="outlined" />
+                                    <Icon  type="facebook" style={{ fontSize: '40px', color: 'white' }} theme="outlined" />
 
 
-                                    : <BurgerIcon />
+                                    : 
+                                    
+                                    <div onClick={() => props.openDrawer()} >
+                                        <BurgerIcon  />
+
+                                        </div>
 
 
                             }
@@ -65,13 +70,6 @@ function Header(props) {
 
                     </Col>
 
-                    {
-                        !props.mobile ?
-                            <Col xs={{ span: 1, offset: 2 }}>
-                            </Col>
-                            : <></>
-
-                    }
 
 
 
