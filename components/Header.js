@@ -18,8 +18,8 @@ const sites = [
     },
     {
         id: "3",
-        href: "/anlage",
-        display: "Die Anlage"
+        href: "/teams",
+        display: "Teams"
     },
     {
         id: "4",
@@ -44,7 +44,7 @@ function Header(props) {
     return <>
 
         <div className="header">
-            <div>
+            <div onClick={() => props.onChange()}>
                 <Row >
 
                     <Col  xs={{ span: 2 }}>
@@ -76,8 +76,8 @@ function Header(props) {
                                     </Col>
 
 
-                                </> : (<></>
-
+                                </> : (<>                                    <BurgerIcon  />
+</>
                                     )
 
                             }
@@ -101,7 +101,7 @@ function Header(props) {
                     position: -webkit-sticky; /* Safari */
                     position: sticky;
                     top: 0;
-                    border-bottom: 3px solid white;
+                    border-bottom: 1px solid #ff5c00;
                 }
                 .logo-img  {
                     width: auto;
@@ -150,7 +150,7 @@ function Header(props) {
                     border: none;
                     color: white;
                     height: 100%; 
-                    margin: 0px 30px;
+                    margin: 0px 0px;
                     padding: 10px 0px;
                     background-color: transparent;
                     text-transform: uppercase;
