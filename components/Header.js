@@ -36,7 +36,7 @@ function Header(props) {
                          >
                              <div className="nav-container">
                                  {
-                                     props.sites.map((item) => <a key={item.id} className="navbar-item" href={item.href}>{item.display} </a>)
+                                     props.sites.map((item) => <a key={item.id} className="navbar-item" href={process.env.assetPrefix + item.href}>{item.display} </a>)
                                  }
      
                              </div>

@@ -32,8 +32,8 @@ export default function Impressum() {
           </Col>
           <Col cols="12" md="6">
           <h2>Datenschutz</h2>
-          <p><a href="static/Datenschutzerklaerung_TV77_Niederbiel.pdf">Datenschutzerklärung</a></p>
-          <p><a href="static/Datenschutz_TV77_Niederbiel.pdf">Datenschutz im TV 77 Niederbiel</a></p>
+          <p><a href={ process.env.assetPrefix + "static/Datenschutzerklaerung_TV77_Niederbiel.pdf"}>Datenschutzerklärung</a></p>
+          <p><a href={process.env.assetPrefix + "static/Datenschutz_TV77_Niederbiel.pdf"}>Datenschutz im TV 77 Niederbiel</a></p>
 
 
 

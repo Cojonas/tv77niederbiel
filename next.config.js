@@ -25,6 +25,10 @@ module.exports = withCSS({
     return {
       "/": { page: "/index" },
       "/about": { page: "/about" },
+      "/mitglied": {page: "/mitglied"},
+      "/impressum": {page: "/impressum"},
+      "/kontakt": {page: "/kontakt"},
+      "/teams": {page: "/teams"},
     }
   },
   assetPrefix : !debug ? '/tv77niederbiel/' : '',

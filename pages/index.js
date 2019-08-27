@@ -5,8 +5,9 @@ import Carousel from "../components/Carousel"
 import {Row, Col} from "react-bootstrap"
 import React from 'react';
 import { FacebookProvider, Page } from 'react-facebook';
-import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Galery from "../components/Carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+
 import Banner from "../components/Banner"
 import Items from "../items.json"
 
@@ -16,7 +17,7 @@ function Index (){
     items: [
       {
         id:"1",
-        picture: "/static/tennisplatz_niederbiel.jpg",
+        picture:  "/static/tennisplatz_niederbiel.jpg",
         legend: "Unsere Anlage"
       },
       {
@@ -70,7 +71,7 @@ function Index (){
 <span>Mietgliedschaft 1 Jahr gratis!</span><br></br>
 <span>Inklusive Trainerstunde</span><br></br>
 
-<a href="/mitlied" className="offer-link">zum angebot</a>
+<a href={process.env.assetPrefix +"/mitlied"} className="offer-link">zum angebot</a>
 
 </Banner>
 
@@ -80,7 +81,7 @@ function Index (){
                       <h2 style={{color: "white"}}> Clubheim mieten</h2>
                       <span>Großräumige Feierlocation</span><br></br>
                       <span>Mit eigener Küche und Theke</span><br></br>
-                      <a href="/kontakt" className="offer-link">Kontaktieren sie uns</a>
+                      <a href={process.env.assetPrefix + "/kontakt"} className="offer-link">Kontaktieren sie uns</a>
 
 
                     </Banner>
@@ -123,7 +124,7 @@ function Index (){
 
 </p>
 
-                    <a href="/about" className="offer-link">Mehr</a>
+                    <a href={ process.env.assetPrefix + "/about" }className="offer-link">Mehr</a>
 
 <NavBox items={Items.listItems.aboutItems} />
                   </Col>
@@ -140,7 +141,7 @@ function Index (){
                   Jede Saison stellen wir einige Mannschaften unterschiedlicher Altersklassen. 
                   Hier können Sie sich einen Überblick verschaffen und aktuelle Ergebnisse einsehen.           
                   </p>
-                  <a href="/teams" className="offer-link">Übersicht</a><br></br>
+                  <a href={process.env.assetPrefix + "/teams"} className="offer-link">Übersicht</a><br></br>
 
               
               </Col>

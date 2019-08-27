@@ -6,7 +6,7 @@ function Drawer(props) {
 
         <div id="mySidenav" className={props.isDrawerOpen ? "sidenav drawer-open" : "sidenav drawer-closed"}>
             <a href="javascript:void(0)" className="closebtn" onClick={() => {props.closeDrawer()}}>&times;</a>
-            {props.sites.map((item) => <div key={item.id} style={{padding: 10}}><a className="drawer-item"  href={item.href}>{item.display}</a></div>)}
+            {props.sites.map((item) => <div key={item.id} style={{padding: 10}}><a className="drawer-item"  href={process.env.assetPrefix + item.href}>{item.display}</a></div>)}
 
             <div className="logo-box">
                 <img src={process.env.assetPrefix + "static/logo_white.png"}>

@@ -11,7 +11,7 @@ export default function Mitglied() {
                         <p>
                             <span className="bigger">Werden Sie Mitglied</span> beim Tennisverein 77 Niederbiel!
                         </p>
-                        <p>Für einen Beitritt sind die <a href="static/Beitrittserklaerung2019.pdf">Beitrittserklärung</a> und die <a href="static/Einzugsermaechtigung2019.pdf">Einzugsermächtigung</a> auszufüllen</p>
+                        <p>Für einen Beitritt sind die <a href={process.env.assetPrefix +"static/Beitrittserklaerung2019.pdf"}>Beitrittserklärung</a> und die <a href={process.env.assetPrefix + "static/Einzugsermaechtigung2019.pdf"}>Einzugsermächtigung</a> auszufüllen</p>
 
 
 
@@ -24,7 +24,7 @@ export default function Mitglied() {
                             <span>Mietgliedschaft 1 Jahr gratis!</span><br></br>
                             <span>Inklusive Trainerstunde</span><br></br>
 
-                            <span href="/contact-us" className="offer-link">Sprechen Sie uns dazu einfach beim Abgeben der Beitrittserklärung an!</span>
+                            <span href={process.env.assetPrefix + "/contact-us"} className="offer-link">Sprechen Sie uns dazu einfach beim Abgeben der Beitrittserklärung an!</span>
                         </Banner>
 
                     </Col>

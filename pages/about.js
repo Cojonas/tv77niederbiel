@@ -2,6 +2,7 @@ import Layout from "../components/Layout";
 import Galery from "../components/Carousel"
 import { withScriptjs, withGoogleMap, GoogleMap, Marker } from "react-google-maps"
 import { Row, Col } from "react-bootstrap";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 const MyMapComponent = withScriptjs(withGoogleMap((props) =>
 <GoogleMap
