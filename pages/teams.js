@@ -10,7 +10,7 @@ export default function Teams() {
         <div className="left-text">
             <Row noGutters>
             {
-              TeamItems.teams.map((item) => <Col cols="12" md="6" xl="4"><TeamCard data={item}></TeamCard></Col>)
+              TeamItems.teams.map((item) => <Col cols="12" md="6"><TeamCard data={item}></TeamCard></Col>)
           }
 
 

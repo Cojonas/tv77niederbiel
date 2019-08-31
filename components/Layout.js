@@ -38,6 +38,11 @@ function Layout(props) {
             display: "Mitgliedschaft"
         },
         {
+            id:"6",
+            href:"/vereinsheim",
+            display: "Vereinsheim"
+        },
+        {
             id: "5",
             href: "/kontakt",
             display: "Kontakt"
@@ -52,7 +57,7 @@ function Layout(props) {
 
         <Drawer sites={sites} isDrawerOpen={isDrawerOpen} closeDrawer={()=> setIsDrawerOpen(false)} />
 
-        <Media query="(max-width: 900px)">
+        <Media query="(max-width: 922px)">
             {   
                 matches => <Header sites={sites} openDrawer={() => setIsDrawerOpen(true)}  navName={props.navName} isTop={isTop} mobile={matches} ></Header>
             }

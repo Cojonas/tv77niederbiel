@@ -3,18 +3,27 @@ import {Icon} from "antd"
 
 function ContactBanner(props) {
 
+    const Phone = props.phone ? <div className="contact-icon" ><Icon type="phone" /> {props.phone}</div> : <></>
+
+    const Mail = props.mail ? <div className="contact-icon" ><Icon type="mail" /> {props.mail}</div>: <></>
+
     return (
         <div className="contact">
             <p> {props.name}  </p>
+            <div>            
+                {
+                    Phone
+                }
 
-            <div className="contact-icon" >
-                <Icon type="phone" /> {props.phone}
-          
-    </div>
 
-            <div className="contact-icon" >
-                <Icon type="mail" /> {props.mail}
-    </div>
+            </div>
+            <div>
+                {
+                    Mail
+                }
+            </div>
+
+
     <style jsx>
 
 {`       
@@ -30,7 +39,7 @@ function ContactBanner(props) {
         padding: 5px 15px;
     }
     p {
-        padding: 0px 10px;
+        padding: 0px ;
         font-weight: bold;
     }
 `}

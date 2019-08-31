@@ -28,7 +28,7 @@ export default function About() {
       {
         id:"2",
         picture: "/static/clubheim_draussen.jpg",
-        legend: "Das Clubheim"
+        legend: "Das Vereinsheim"
       },
       {
         id:"3",
@@ -38,7 +38,7 @@ export default function About() {
       {
         id:"4",
         picture: "/static/clubheim_tisch.jpg",
-        legend: "Clubheim"
+        legend: "Das Vereinsheim"
       }
 
     ]
@@ -57,7 +57,7 @@ export default function About() {
         
 
         
-        <p>   <span className="bigger">Das Clubhaus</span> ist ausgestattet mit großem, hellen Gastraum (renoviert im Frühjahr 2008) und geräumigen Umkleideräumen für Damen und Herren mitsamt sanitären Anlagen.
+        <p>   <span className="bigger">Das Clubhaus</span> ist ausgestattet mit einem großem, hellen Gastraum (renoviert im Frühjahr 2008) und geräumigen Umkleideräumen für Damen und Herren mitsamt sanitären Anlagen.
           Besonders beliebt im Sommer - nicht nur bei Vereinsmitgliedern! - ist der Freisitz des Clubhauses im Grünen mit Blick auf die Plätze.
 </p>
 

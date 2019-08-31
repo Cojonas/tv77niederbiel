@@ -10,7 +10,7 @@ function Footer(props) {
                         <Col cols="6" style={{ padding: 20 }}>
 
                             {
-                                props.sites.map((item) => <p><a className="a-footer" href={item.href}>{item.display}</a></p>)
+                                props.sites.map((item) => <p key={item.id}><a className="a-footer" href={process.env.assetPrefix + item.href}>{item.display}</a></p>)
                             }
 
 
@@ -18,13 +18,14 @@ function Footer(props) {
                         </Col>
                         <Col style={{ padding: 30, textAlign: "center" }} cols="12" md="6">
 
-                        <p><a className="a-footer" href="/impressum">Datenschutz / Impressum</a></p>
+                        <p><a className="a-footer" href={process.env.assetPrefix +"/impressum"}>Datenschutz / Impressum</a></p>
+                        <p><a className="a-footer" href="https://www.facebook.com/TV-77-Niederbiel-612990049042372/">Facebook</a></p>
 
                             <div style={{ position: "relative", bottom: 0, right: 0 }}>
                                 <span >                            © TV 77 Niederbiel 2019
                             </span>
 
-                                <img src="static/logo_white.png"></img>
+                                <img src={process.env.assetPrefix + "static/logo_white.png"}></img>
 
                             </div>
 

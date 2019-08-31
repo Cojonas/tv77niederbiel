@@ -11,9 +11,9 @@ const About = props => {
 
         <Row>
         <Col cols="12" md="6">
-          <ContactBanner name="Uwe Schneider"  phone="06442 12345" mail="uweschneider@gmx.de"/>
+          <ContactBanner name="Uwe Schneider"  phone="+49 163 7575518" mail="info@tv-niederbiel.de"/>
 
-          <ContactBanner name="Stefan Jackwert"  phone="06442 54321" mail="jacko@gmx.de"/>
+          <ContactBanner name="Stefan Jackwerth"  phone="+49 160 96309623" mail="info@tv-niederbiel.de"/>
           </Col>
 
           <Col cols="12" md="6">
@@ -51,12 +51,12 @@ const About = props => {
 
             <tr>
                 <td className="important">Schriftführer</td>
-                <td>Stefan Herherth</td>
+                <td>Stephan Herherth</td>
             </tr>
 
             <tr>
                 <td className="important">Sportwart</td>
-                <td>Steffen Klinkel</td>
+                <td>Stephen Klinkel</td>
             </tr>
 
             <tr>

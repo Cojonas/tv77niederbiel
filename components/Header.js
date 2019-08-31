@@ -24,15 +24,15 @@ function Header(props) {
 
         <div className="header">
             <div >
-                <Row >
+                <Row className="justify-content-between" noGutters>
 
-                    <Col xs={{ span: 2 }}>
-                        <img className="logo-img" src={process.env.assetPrefix + "static/logo_white.png"} />
+                    <Col xs={{ span: 1 }}>
+                        <img onClick={() => window.location.href= process.env.assetPrefix + "/" } className="logo-img" src={process.env.assetPrefix + "static/logo_white.png"} />
                     </Col>
                      {
                          !props.mobile ?                     
-                         
-                         <Col className="justify-content-center" xs={{ span: 8, offset: 0 }} xl={{ span: 6, offset: 1}}
+
+                         <Col className="justify-content-center" xs={{ span: 10 }} xl={{ span: 8}}
                          >
                              <div className="nav-container">
                                  {
@@ -44,28 +44,23 @@ function Header(props) {
      
      
                          </Col>
-                         :               <Col className="justify-content-center" xs={{ span: 6, offset: 1 }}></Col>
+                        : <Col  xs={{ span: 10}}></Col>
 
      
                      }
-                    <Col xs={{ span: 1, offset: 1 }} xl={{span : 1, offset: 2}}>
+                    <Col xs={{ span: 1, offset: 0 }} md={{ span: 1}} xl={{span : 1}}>
                         <div className="navbar-icon">
-
                             {
                                 !props.mobile ?
-                                    <Icon  type="facebook" style={{ fontSize: '40px', color: 'white' }} theme="outlined" />
-
-
+                                    <div onClick={() => window.location.href = "https://www.facebook.com/TV-77-Niederbiel-612990049042372/"}>
+                                        <Icon  type="facebook" style={{ fontSize: '40px', color: 'white', float: "right", paddingRight: 15}} theme="outlined" />
+                                    </div>
                                     : 
                                     
                                     <div onClick={() => props.openDrawer()} >
                                         <BurgerIcon  />
-
-                                        </div>
-
-
+                                    </div>
                             }
-
                         </div>
 
                     </Col>
@@ -102,7 +97,8 @@ function Header(props) {
                 .logo-img  {
                     width: auto;
                     height: 80px;
-                    padding: 10px;
+                    padding: 10px 0px;
+                    
                     
                 }
                 .gradient-stripe {

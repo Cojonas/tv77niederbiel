@@ -5,7 +5,7 @@
   body {
     font-family: 16px/22px 'Lato',sans-serif;
     color: white; 
-
+    text-align: left;
     background: #222;
   }
 
@@ -56,6 +56,8 @@
   text-transform: uppercase;
   font-weight: bold;
   font-size: 1.2em;
+  letter-spacing: -1.4px;
+
 }
 
 .bigger {

@@ -23,6 +23,11 @@ function TeamCard(props) {
                 <td className="important">  Liga</td>
                 <td>{props.data.liga}</td>
             </tr>
+            <tr>
+                <td className="important">Trainingszeiten</td>
+                <td>{props.data.training}</td>
+            </tr>
+
 
             <a href={props.data.href} className="offer-link">Ergebnisse</a>
       

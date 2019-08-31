@@ -20,9 +20,9 @@ export default function Mitglied() {
                     <Col cols="12" md="6">
                         <Banner>
 
-                            <h2>Schnupperangebot</h2>
-                            <span>Mietgliedschaft 1 Jahr gratis!</span><br></br>
-                            <span>Inklusive Trainerstunde</span><br></br>
+                            <h2 style={{color: "white"}}>Schnupperangebot</h2>
+                            <span>Erst probieren, dann entscheiden!</span><br></br>
+                <span>Erhalten Sie eine gratis Trainerstunde. Entscheiden Sie sich für eine Mitgliedschaft, zahlen Sie für das Beitrittsjahr nur die Hälfte!</span><br></br>
 
                             <span href={process.env.assetPrefix + "/contact-us"} className="offer-link">Sprechen Sie uns dazu einfach beim Abgeben der Beitrittserklärung an!</span>
                         </Banner>

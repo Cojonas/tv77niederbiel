@@ -2,52 +2,67 @@
     "listItems": {
         "aboutItems" : [
             {
+              "id": "1",
               "title": "Über uns"
             },
             {
+              "id": "2",
               "title": "Die Anlage"
             },
             {
+              "id": "3",
               "title": "Anfahrt"
             },
             {
+              "id": "4",
               "title": "Kontakt"
             },
             {
+              "id": "5",
               "title": "Unser Vorstand"
             },
             {
+              "id": "6",
               "title": "Mitglied werden"
             }
           ],
         "teams": [
             {
+              "id": "1",
               "title": "Ergebnisse im Überblick"
             },
             {
+              "id": "2",
               "title": "Damen"
             },
             {
+              "id": "3",
               "title": "Herren"
             },
             {
+              "id": "4",
               "title": "Herren 40"
             },
             {
+              "id": "5",
               "title": "Herren 50"
             },
             {
+              "id": "6",
               "title": "Herren 60"
             }
           ],
           "aktuelles": [
             {
+              "id": "1",
               "title": "Facebook"
             },
             {
+              "id": "2",
               "title": "Veranstaltungen"
             },
             {
+              "id": "3",
               "title": "Schnupperangebote"
             }
           ]
