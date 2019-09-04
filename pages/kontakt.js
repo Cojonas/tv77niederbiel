@@ -51,7 +51,7 @@ const About = props => {
 
             <tr>
                 <td className="important">Schriftführer</td>
-                <td>Stephan Herherth</td>
+                <td>Stephan Herhert</td>
             </tr>
 
             <tr>

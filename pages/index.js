@@ -80,7 +80,7 @@ function Index() {
                 <span>Erst probieren, dann entscheiden!</span><br></br>
                 <span>Erhalten Sie eine gratis Trainerstunde. Entscheiden Sie sich für eine Mitgliedschaft, zahlen Sie für das Beitrittsjahr nur die Hälfte!</span><br></br>
 
-                <a href={process.env.assetPrefix + "/mitlied"} className="offer-link">zum angebot</a>
+                <a href={process.env.assetPrefix + "/mitglied"} className="offer-link">zum angebot</a>
 
               </Banner>
 
@@ -90,7 +90,7 @@ function Index() {
                 <h2 style={{ color: "white" }}> Vereinsheim mieten</h2>
                 <span>Auch Nicht-Mitlgieder können unser Vereinsheim mieten. Dieses hat Platz für ca. 50 Personen.</span><br></br>
                 <span>Mit eigener Küche und moderner Theke!</span><br></br>
-                <a href={process.env.assetPrefix + "/kontakt"} className="offer-link">Zum Angebot</a>
+                <a href={process.env.assetPrefix + "/vereinsheim"} className="offer-link">Zum Angebot</a>
 
 
               </Banner>
