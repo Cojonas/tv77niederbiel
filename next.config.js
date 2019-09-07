@@ -33,9 +33,11 @@ module.exports = withCSS({
 
     }
   },
-  assetPrefix : !debug ? '/tv77niederbiel/' : '',
+  //assetPrefix : !debug ? '/tv77niederbiel/' : '',
+  assetPrefix : !debug ? '' : '',
   env : {
-    assetPrefix : !debug ? '/tv77niederbiel/' : ''
+    //assetPrefix : !debug ? '/tv77niederbiel/' : ''
+    assetPrefix : !debug ? '' : ''
   },
     
 

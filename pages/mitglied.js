@@ -24,7 +24,6 @@ export default function Mitglied() {
                             <span>Erst probieren, dann entscheiden!</span><br></br>
                 <span>Erhalten Sie eine gratis Trainerstunde. Entscheiden Sie sich für eine Mitgliedschaft, zahlen Sie für das Beitrittsjahr nur die Hälfte!</span><br></br>
 
-                            <span href={process.env.assetPrefix + "/contact-us"} className="offer-link">Sprechen Sie uns dazu einfach beim Abgeben der Beitrittserklärung an!</span>
                         </Banner>
 
                     </Col>
