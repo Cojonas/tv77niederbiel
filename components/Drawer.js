@@ -6,7 +6,7 @@ function Drawer(props) {
 
         <div id="mySidenav" className={props.isDrawerOpen ? "sidenav drawer-open" : "sidenav drawer-closed"}>
             <a href="javascript:void(0)" className="closebtn" onClick={() => {props.closeDrawer()}}>&times;</a>
-            {props.sites.map((item) => <div key={item.id} style={{padding: 10}}><a className="drawer-item"  href={process.env.assetPrefix + item.href}>{item.display}</a></div>)}
+            {props.sites.map((item) => <div className="drawer-item"   key={item.id} style={{padding: 10}}><a href={process.env.assetPrefix + item.href}>{item.display}</a></div>)}
 
             <div className="logo-box">
                 <img src={process.env.assetPrefix + "static/logo_white.png"}>
@@ -32,7 +32,7 @@ function Drawer(props) {
               }
 
               .drawer-open{
-                  width: 300px;
+                  width: 100%;
               }
               .drawer-closed{
                   width: 0;
@@ -56,9 +56,10 @@ function Drawer(props) {
             .drawer-item {
                 border: none;
                 color: white;
-                height: 100%; 
+                height: auto; 
                 width: 100%;
-                
+                margin: auto 0px;
+                text-align: center;
                 background-color: transparent;
                 text-transform: uppercase;
                 font-weight: bold;
@@ -68,6 +69,10 @@ function Drawer(props) {
 
             .drawer-item:hover {
                 color: #ff5c00;
+                background-color: #444;
+            }
+            .drawer-item  a {
+                color: white;
             }
             
             `}

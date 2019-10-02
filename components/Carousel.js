@@ -7,14 +7,13 @@ function Galery  (props){
 
             {
                 props.data.items.map((item) => (           
-                <div>
+                <div key={item.picture}>
                     <img src={ process.env.assetPrefix + item.picture} />
                     <p className="legend">{item.legend}</p>
                 </div>
                 ))
             }
-                    
-
+                
         </Carousel>
    
     </div>
