@@ -2,7 +2,7 @@ import { Carousel } from 'react-responsive-carousel';
 
 
 function Galery  (props){
-    return  <div style={{padding: 15}}>
+    return  <div >
         <Carousel >
 
             {
@@ -16,7 +16,7 @@ function Galery  (props){
                     
 
         </Carousel>
-
+   
     </div>
 
 }

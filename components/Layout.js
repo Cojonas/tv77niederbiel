@@ -58,6 +58,12 @@ function Layout(props) {
         <Head>
             <meta charset="UTF-8" />
             <meta name="viewport" content="width=device-width, initial-scale=1" />
+            <title>TV 77 Niederbiel</title>
+            <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon" />
+            <link rel="icon" href="/static/favicon.ico" type="image/x-icon" />
+            <meta name="msapplication-TileColor" content="#ffffff"/>    
+            <meta name="theme-color" content="#000"/>
+
         </Head>
 
         <Drawer sites={sites} isDrawerOpen={isDrawerOpen} closeDrawer={()=> setIsDrawerOpen(false)} />
@@ -103,6 +109,7 @@ function Layout(props) {
                     background-color: #20232a;
                     height: 1px;
                     width:100%;
+
 
                 }
 
@@ -158,15 +165,15 @@ function Layout(props) {
                     background-size: cover;
                 }
                 .content-box {
-                    -webkit-box-shadow: 5px 3px 15px -5px #000000; 
-                    box-shadow: 5px 3px 15px -5px #000000;
-                    background-color: #333;
+                    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
                     position: relative;
-                    top: -50px; 
-                    padding: 10px 5px;
+                    top: -50px;
+                    background: #222;
+                    padding: 10px 0px;
                     opacity: 1;
                     max-width: 1024px;
                     z-index: 500;
+                    
                   }
     
 

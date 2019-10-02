@@ -21,7 +21,7 @@ function BurgerIcon() {
                 }
 
                 .burger-line {
-                    width: 35px;
+                    width: 25px;
                     height: 2px;
                     background-color: white;
                     margin: 4px 0;

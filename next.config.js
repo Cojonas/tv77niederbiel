@@ -30,7 +30,6 @@ module.exports = withCSS({
       "/kontakt": {page: "/kontakt"},
       "/teams": {page: "/teams"},
       "/vereinsheim": {page: "/vereinsheim"},
-
     }
   },
   //assetPrefix : !debug ? '/tv77niederbiel/' : '',

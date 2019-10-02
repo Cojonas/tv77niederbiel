@@ -1,19 +1,7 @@
 import Layout from "../components/Layout";
 import Galery from "../components/Carousel"
-import { withScriptjs, withGoogleMap, GoogleMap, Marker } from "react-google-maps"
 import { Row, Col } from "react-bootstrap";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-
-const MyMapComponent = withScriptjs(withGoogleMap((props) =>
-<GoogleMap
-  defaultZoom={13}
-  defaultCenter={{ lat: 50.5615634, lng: 8.3983103 }}
->
-  {props.isMarkerShown && <Marker position={{ lat: 50.5615634, lng: 8.3983103 }} />}
-</GoogleMap>
-))
-
-
 
 
 export default function About() {
@@ -57,9 +45,6 @@ export default function About() {
         
 
         
-        <p>   <span className="bigger">Das Clubhaus</span> ist ausgestattet mit einem großem, hellen Gastraum (renoviert im Frühjahr 2008) und geräumigen Umkleideräumen für Damen und Herren mitsamt sanitären Anlagen.
-          Besonders beliebt im Sommer - nicht nur bei Vereinsmitgliedern! - ist der Freisitz des Clubhauses im Grünen mit Blick auf die Plätze.
-</p>
 
 
         </Col>
@@ -70,25 +55,30 @@ export default function About() {
 
 
         </Row>
+        <Row>
+          <Col md="12" lg="6">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2534.6340800385597!2d8.396305965917366!3d50.559574537376655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47bc45eea5e3ac5f%3A0x37eff8c2874dfbc3!2sTennisverein%2077%20Niederbiel!5e0!3m2!1sen!2sus!4v1569541915015!5m2!1sen!2sus" width="100%" height="400" frameborder="1" style={{border:0}} allowfullscreen=""></iframe>            <br></br>
+
+          </Col>
+          <Col md="12" lg="6">
+          <p>   <span className="bigger">Das Vereinsheim</span> ist ausgestattet mit einem großem, hellen Gastraum (renoviert im Frühjahr 2008) und geräumigen Umkleideräumen für Damen und Herren mitsamt sanitären Anlagen.
+          Besonders beliebt im Sommer - nicht nur bei Vereinsmitgliedern! - ist der Freisitz des Vereinsheims im Grünen mit Blick auf die Plätze.
+      </p>
+      <p>
+        Das Vereinsheim ist Montags, Dienstags, Freitags, Samstags und Sonntags ab 18 Uhr bewirtet.
+      </p>
+
+          </Col>
+        </Row>
 
       </div>
-
-
-      <h2>Anfahrt</h2>
-      <p>Der Ort Niederbiel gehört zur Stadt Solms und liegt wunderschön ruhig im Lahntal in der Nähe der Bundesstraße 49 zwischen Giessen im Osten und Limburg im Westen.
-      </p>
- 
-          <MyMapComponent 
-            googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyAeFY2tXUCqkNuMp5wIN2hrotK4mnvZgqk&v=3.exp&libraries=geometry,drawing,places"
-            loadingElement={<div style={{ height: `100%` }} />}
-            containerElement={<div style={{ height: `400px` }} />}
-            mapElement={<div style={{ height: `100%` }} />}
-            isMarkerShown 
-            />
-            <br></br>
-      <p>Ein Besuch bei uns lohnt sich jederzeit und wenn Sie gerne mehr über uns wissen möchten, nehmen Sie einfach Kontakt mit uns auf!
+      <div style={{padding: 10}}>
+      <p style={{fontWeight: "bold"}}>Ein Besuch bei uns lohnt sich jederzeit und wenn Sie gerne mehr über uns wissen möchten, nehmen Sie einfach Kontakt mit uns auf!
       
       </p>
+
+</div>
+
       <style jsx>
         {`
        

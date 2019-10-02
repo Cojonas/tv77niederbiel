@@ -66,16 +66,23 @@ function Index() {
 
 
       <Row noGutters >
-        <ContentSection header="Aktuelles" link="/about">
+        <ContentSection link="/about">
           <Row className="text-block">
+          <Col cols="12" md="6" className="padding-bottom">
+            <p>
+                <span className="bigger">Herzlich Willkommen</span> beim Tennisverein 77 Niederbiel! Wir freuen uns, dass Sie unsere Internetseite besuchen. Auch bei Facebook halten wir sie auf dem Laufenden. Über ein Like würden wir uns sehr freuen!
+                      </p>
+              <Carousel data={generalGalery} />
+
+            </Col>
 
             <Col cols="12" md="6" className="padding-bottom">
 
-              <p>
-                <span className="bigger">Herzlich Willkommen</span> beim Tennisverein 77 Niederbiel! Wir freuen uns, dass Sie unsere Internetseite besuchen. Auch bei Facebook halten wir sie auf dem Laufenden. Über ein Like würden wir uns sehr freuen!
-                      </p>
+
               <Banner>
 
+
+             
                 <h2 style={{ color: "white" }} >Schnupperangebot</h2>
                 <span>Erst probieren, dann entscheiden!</span><br></br>
                 <span>Erhalten Sie eine gratis Trainerstunde. Entscheiden Sie sich für eine Mitgliedschaft, zahlen Sie für das Beitrittsjahr nur die Hälfte!</span><br></br>
@@ -88,7 +95,7 @@ function Index() {
               <Banner>
 
                 <h2 style={{ color: "white" }}> Vereinsheim mieten</h2>
-                <span>Auch Nicht-Mitlgieder können unser Vereinsheim mieten. Dieses hat Platz für ca. 50 Personen.</span><br></br>
+                <span>Auch Nicht-Mitglieder können unser Vereinsheim mieten. Dieses hat Platz für ca. 50 Personen.</span><br></br>
                 <span>Mit eigener Küche und moderner Theke!</span><br></br>
                 <a href={process.env.assetPrefix + "/vereinsheim"} className="offer-link">Zum Angebot</a>
 
@@ -101,10 +108,6 @@ function Index() {
 
 
             </Col>
-            <Col cols="12" md="6" className="padding-bottom">
-              <Carousel data={generalGalery} />
-
-            </Col>
 
 
           </Row>
@@ -112,15 +115,15 @@ function Index() {
         </ContentSection >
         <ContentSection header="Unsere Anlage" link="/anlage">
           <Row className="text-block">
-            <Col xs="12" md="6" className="padding-bottom">
+            <Col xs="12" md="6" style={{paddingBottom: 30}}>
               <center>
                 <FacebookProvider appId="716448928794798">
                   <Page href="https://www.facebook.com/TV-77-Niederbiel-612990049042372/" tabs="timeline" />
                 </FacebookProvider>
               </center>
-            </Col>
+            </Col> 
 
-            <Col xs="12" md="6" className="padding-bottom">
+            <Col xs="12" md="6" className="padding-bottom ripple">
               <h1>Über uns</h1>
               <p>
                 Der TV 77 Niederbiel ist ein Tennisverein mit derzeit rund 135 Mitgliedern, wovon gut 50% aktiven Status besitzen.
@@ -128,10 +131,10 @@ function Index() {
 
               <p>Der Ort Niederbiel gehört zur Stadt Solms und liegt wunderschön ruhig im Lahntal in der Nähe der Bundesstraße 49 zwischen Giessen im Osten und Limburg im Westen.
 
-</p>
-              <p>Prunkstück der Anlage ist das vereinseigene Clubhaus mit großem, hellen Gastraum (renoviert im Frühjahr 2008) und geräumigen Umkleideräumen für Damen und Herren mitsamt sanitären Anlagen. Besonders beliebt im Sommer - nicht nur bei Vereinsmitgliedern! - ist der Freisitz des Clubhauses im Grünen mit Blick auf die Plätze.
+              </p>
+              <p>Prunkstück der Anlage ist das Vereinsheim mit großem, hellen Gastraum (renoviert im Frühjahr 2008) und geräumigen Umkleideräumen für Damen und Herren mitsamt sanitären Anlagen. Besonders beliebt im Sommer - nicht nur bei Vereinsmitgliedern! - ist der Freisitz des Clubhauses im Grünen mit Blick auf die Plätze.
               
-</p>
+              </p>
 
               <a href={process.env.assetPrefix + "/about"} className="offer-link">Mehr</a>
 
@@ -144,21 +147,22 @@ function Index() {
         <ContentSection header="Teams" link="/teams">
           <Row className="text-block">
 
-            <Col xs="12" md="6">
-              <h1>Teams</h1>
+            <Col xs="12" md="6" >
+            <div >
+            <h1 className="ripple">Teams</h1>
               <p>
                 Jede Saison stellen wir einige Mannschaften unterschiedlicher Altersklassen.
                 Hier können Sie sich einen Überblick verschaffen und aktuelle Ergebnisse einsehen.
                   </p>
-              <a href={process.env.assetPrefix + "/teams"} className="offer-link">Übersicht</a><br></br>
-
+            </div>
 
             </Col>
 
             <Col xs="12" md="6">
               <Galery data={teamGalery} />
-
             </Col>
+            <a href={process.env.assetPrefix + "/teams"} className="offer-link">Übersicht</a><br></br>
+
           </Row>
 
         </ContentSection>
@@ -169,6 +173,19 @@ function Index() {
 
       <style jsx>
         {`
+              .ripple {
+                  background-position: center;
+                  transition: background 0.8s;
+                  border-radius: 10px;
+              }
+              .ripple:hover {
+                  background: #333 radial-gradient(circle, transparent 1%, #333 1%) center/15000%;
+              }
+              .ripple:active {
+                  background-color: #444;
+                  background-size: 100%;
+                  transition: background 0s;
+              }
               .accent-line {
                 height: 1px;
                 width: 10vh;

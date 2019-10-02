@@ -15,15 +15,19 @@ function ContentSection(props) {
         <style jsx>
             {`
 
-             
 
-  
+
+                
             
                 .content-section {
-                    padding: 30px 0px;
+                    padding: 15px 0px;
                     position: relative;
                     text-align: left;
+                    background: #222;
+                    margin: 10px 5px;
+
                 }
+
                 .more-button {
                     position: absolute;
                     right: 0px;

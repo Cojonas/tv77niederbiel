@@ -29,7 +29,7 @@ function ContactBanner(props) {
 {`       
     .contact  {
         border: 1px solid black;  
-        background: #222;
+        background: #111;
         padding: 10px;
         margin: 5px;
     }

@@ -1,12 +1,13 @@
   h1 {
     border-bottom: solid 1px #ff5c00;
 
+
   }
   body {
     font-family: 16px/22px 'Lato',sans-serif;
     color: white; 
     text-align: left;
-    background: #222;
+    background: #333;
   }
 
   .row {
@@ -40,9 +41,14 @@
 }
 
 .offer-link {
+  padding: 10px;
   font-size: 15px ; 
   color:  #ff5c00 !important;
   text-transform: uppercase;
+}
+
+ul.thumbs.animated{
+  display: none !important; 
 }
   
 
@@ -64,8 +70,8 @@
   font-size: 40px;
   font-weight: bold;
   letter-spacing: -2.9px;
-  color: #ff5c00;
   text-align: left;
+  text-shadow: 1px 1px;
 }
 .text-left {
   text-align: left;

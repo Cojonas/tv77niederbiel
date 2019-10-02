@@ -52,6 +52,14 @@ export default function Vereinsheim() {
         <Layout >
             <Row style={{ textAlign: "left" }}>
                 <Col cols="12" md="6">
+                    <Banner>
+                        <h2 className="bigger" >
+                            Öffnungszeiten
+                        </h2>
+                        <p>Montag, Dienstag, Freitag, Samstag und Sonntag ab 18 Uhr mit eigener Bewirtung!</p>
+                        <p>Nur in den Monaten Mai bis einschließlich September</p>
+                    </Banner>
+                    <Banner>
                     <p>
                         <span className="bigger">Mieten Sie unser Vereinsheim!</span>
                     </p>
@@ -66,6 +74,9 @@ export default function Vereinsheim() {
                     <ContactBanner name="Thilo Junker" phone="+49 171 6408085"/>
                     <ContactBanner name="Stefan Jackwerth" phone="+49 160 96309623"/>
 
+
+                    </Banner>
+                
                 </Col>
                 <Col md="12" lg="6">
                     <Galery data={galery} />
