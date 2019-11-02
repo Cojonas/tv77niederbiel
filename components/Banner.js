@@ -1,5 +1,4 @@
 import React from "react"
-import { OmitProps } from "antd/lib/transfer/renderListBody";
 
 function Banner(props) {
     return (
@@ -22,7 +21,7 @@ function Banner(props) {
 
             }
 
-                     .ripple {
+            .ripple {
                     background-position: center;
                     transition: background 0.8s;
                 }
@@ -38,7 +37,8 @@ function Banner(props) {
                 background-color: #333;
                 margin: 5px 0px;
                 border-radius: 10px;
-                float: left; 
+                float: left;
+                text-align: left;
                 width: 100%; 
                 height: 100%;
                 padding: 20px;

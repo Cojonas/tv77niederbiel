@@ -163,6 +163,7 @@ function Layout(props) {
                     background-repeat: no-repeat;
                     background-attachment: fixed;
                     background-size: cover;
+                    text-align:center;
                 }
                 .content-box {
                     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);

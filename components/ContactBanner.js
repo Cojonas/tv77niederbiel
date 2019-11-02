@@ -1,14 +1,16 @@
 import React from "react"
 import {Icon} from "antd"
+import Banner from "./Banner"
 
 function ContactBanner(props) {
 
     const Phone = props.phone ? <div className="contact-icon" ><Icon type="phone" /> {props.phone}</div> : <></>
 
-    const Mail = props.mail ? <div className="contact-icon" ><Icon type="mail" /> {props.mail}</div>: <></>
+    const Mail = props.mail ? <div className="contact-icon" ><Icon  type="mail" /> {props.mail}</div>: <></>
 
     return (
-        <div className="contact">
+        <div >
+            <Banner>
             <p> {props.name}  </p>
             <div>            
                 {
@@ -23,6 +25,9 @@ function ContactBanner(props) {
                 }
             </div>
 
+
+            </Banner>
+        
 
     <style jsx>
 
@@ -41,6 +46,8 @@ function ContactBanner(props) {
     p {
         padding: 0px ;
         font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: -1px;
     }
 `}
 </style>

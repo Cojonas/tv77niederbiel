@@ -1,15 +1,6 @@
 {
     "teams": [
         {
-            "name": "Herren",
-            "href": "https://htv.liga.nu/cgi-bin/WebObjects/nuLigaTENDE.woa/wa/groupPage?championship=TB+Mittelhessen+19&group=39",
-            "liga": "Kreisliga C", 
-            "leader": "Stephan Herhert",
-            "phoneNumber": "015161475221",
-            "picture": "static/teamfoto_herren.jpeg",
-            "training": "Montag 18-20 Uhr"
-        },
-        {
             "name": "Damen",
             "href": "https://htv.liga.nu/cgi-bin/WebObjects/nuLigaTENDE.woa/wa/groupPage?championship=TB+Mittelhessen+19&group=13",
             "liga": "Kreisliga C", 
@@ -18,6 +9,16 @@
             "picture": "static/teamfoto_herren.jpeg",
             "training": "Freitag 16-18 Uhr"
         },
+        {
+            "name": "Herren",
+            "href": "https://htv.liga.nu/cgi-bin/WebObjects/nuLigaTENDE.woa/wa/groupPage?championship=TB+Mittelhessen+19&group=39",
+            "liga": "Kreisliga C", 
+            "leader": "Stephan Herhert",
+            "phoneNumber": "015161475221",
+            "picture": "static/teamfoto_herren.jpeg",
+            "training": "Montag 18-20 Uhr"
+        },
+
         {
             "name": "Herren 40",
             "href": "https://htv.liga.nu/cgi-bin/WebObjects/nuLigaTENDE.woa/wa/groupPage?championship=TB+Mittelhessen+19&group=56",

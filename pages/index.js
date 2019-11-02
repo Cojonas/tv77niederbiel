@@ -64,37 +64,42 @@ function Index() {
     <Layout navName="Start">
 
 
-
-      <Row noGutters >
-        <ContentSection link="/about">
-          <Row className="text-block">
-          <Col cols="12" md="6" className="padding-bottom">
-            <p>
-                <span className="bigger">Herzlich Willkommen</span> beim Tennisverein 77 Niederbiel! Wir freuen uns, dass Sie unsere Internetseite besuchen. Auch bei Facebook halten wir sie auf dem Laufenden. Über ein Like würden wir uns sehr freuen!
-                      </p>
-              <Carousel data={generalGalery} />
+        
+          <Row className="text-block justify-content-md-center" align="center">
+            <Col xs="12" lg="7"  >
+              <span className="bigger">Herzlich Willkommen</span>
+              <p>
+                beim Tennisverein 77 Niederbiel! Wir freuen uns, dass Sie unsere Internetseite besuchen. Auch bei Facebook halten wir sie auf dem Laufenden. Über ein Like würden wir uns sehr freuen!
+              </p>
 
             </Col>
+            <Col xs="12" md="10" lg="8" className="padding-bottom">
 
-            <Col cols="12" md="6" className="padding-bottom">
+              <Carousel data={generalGalery} />
+            </Col>
+          </Row>
 
+          <Row className="text-block justify-content-md-center" >
+            <Col xs="12">
+            <h1>Aktuelles</h1>
+
+            </Col>
+            <Col xs="12" md="6" >
 
               <Banner>
 
 
-             
-                <h2 style={{ color: "white" }} >Schnupperangebot</h2>
+
+                <h2 className="banner-header" style={{ color: "white" }} >Schnupperangebot</h2>
                 <span>Erst probieren, dann entscheiden!</span><br></br>
                 <span>Erhalten Sie eine gratis Trainerstunde. Entscheiden Sie sich für eine Mitgliedschaft, zahlen Sie für das Beitrittsjahr nur die Hälfte!</span><br></br>
 
                 <a href={process.env.assetPrefix + "/mitglied"} className="offer-link">zum angebot</a>
 
               </Banner>
-
-
               <Banner>
 
-                <h2 style={{ color: "white" }}> Vereinsheim mieten</h2>
+                <h2 className="banner-header" style={{ color: "white" }}> Vereinsheim mieten</h2>
                 <span>Auch Nicht-Mitglieder können unser Vereinsheim mieten. Dieses hat Platz für ca. 50 Personen.</span><br></br>
                 <span>Mit eigener Küche und moderner Theke!</span><br></br>
                 <a href={process.env.assetPrefix + "/vereinsheim"} className="offer-link">Zum Angebot</a>
@@ -102,29 +107,27 @@ function Index() {
 
               </Banner>
 
-
-
-              <NavBox items={Items.listItems.aktuelles} />
-
-
             </Col>
 
-
-          </Row>
-
-        </ContentSection >
-        <ContentSection header="Unsere Anlage" link="/anlage">
-          <Row className="text-block">
-            <Col xs="12" md="6" style={{paddingBottom: 30}}>
-              <center>
+            <Col xs="12" md="6" style={{ paddingTop: 10 }}>
+            <center>
                 <FacebookProvider appId="716448928794798">
                   <Page href="https://www.facebook.com/TV-77-Niederbiel-612990049042372/" tabs="timeline" />
                 </FacebookProvider>
               </center>
-            </Col> 
+            </Col>
+          </Row>
 
-            <Col xs="12" md="6" className="padding-bottom ripple">
-              <h1>Über uns</h1>
+
+
+          <Row className="justify-content-md-center">
+          <Col xs="12">
+          <h1>Über uns</h1>
+
+            </Col>
+
+
+            <Col xs="12" md="10" lg="8" className="ripple info-text">
               <p>
                 Der TV 77 Niederbiel ist ein Tennisverein mit derzeit rund 135 Mitgliedern, wovon gut 50% aktiven Status besitzen.
                     </p>
@@ -133,46 +136,58 @@ function Index() {
 
               </p>
               <p>Prunkstück der Anlage ist das Vereinsheim mit großem, hellen Gastraum (renoviert im Frühjahr 2008) und geräumigen Umkleideräumen für Damen und Herren mitsamt sanitären Anlagen. Besonders beliebt im Sommer - nicht nur bei Vereinsmitgliedern! - ist der Freisitz des Clubhauses im Grünen mit Blick auf die Plätze.
-              
+
               </p>
 
               <a href={process.env.assetPrefix + "/about"} className="offer-link">Mehr</a>
 
               <NavBox items={Items.listItems.aboutItems} />
             </Col>
+
           </Row>
 
-        </ContentSection>
 
-        <ContentSection header="Teams" link="/teams">
-          <Row className="text-block">
-
-            <Col xs="12" md="6" >
-            <div >
-            <h1 className="ripple">Teams</h1>
-              <p>
-                Jede Saison stellen wir einige Mannschaften unterschiedlicher Altersklassen.
-                Hier können Sie sich einen Überblick verschaffen und aktuelle Ergebnisse einsehen.
-                  </p>
-            </div>
+          <Row className="justify-content-md-center">
+          <Col xs="12">
+            <h1>Teams</h1>
 
             </Col>
 
-            <Col xs="12" md="6">
+            <Col xs="12" md="10" lg="8">
+              <div >
+                <p>
+                  Jede Saison stellen wir einige Mannschaften unterschiedlicher Altersklassen.
+                  Hier können Sie sich einen Überblick verschaffen und aktuelle Ergebnisse einsehen.
+                  </p>
+                <a href={process.env.assetPrefix + "/teams"} className="offer-link">Übersicht</a><br></br>
+
+              </div>
+
+
+            </Col>
+
+            <Col xs="12" md="10" lg="8">
               <Galery data={teamGalery} />
             </Col>
-            <a href={process.env.assetPrefix + "/teams"} className="offer-link">Übersicht</a><br></br>
 
           </Row>
 
-        </ContentSection>
-      </Row>
 
 
 
 
       <style jsx>
         {`
+          .banner-header {
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: -2px;
+            font-size: 26px;
+        
+          }
+          .row {
+            padding: 10px 0px; 
+          }
               .ripple {
                   background-position: center;
                   transition: background 0.8s;
@@ -234,7 +249,7 @@ function Index() {
               .offer-link:hover {
                 text-decoration: underline;
               }
-
+            
 
             
     

@@ -20,7 +20,6 @@ function BurgerIcon() {
                     margin-right: 10px;
                     padding: 5px;
                     border-radius: 10px;
-                    background: #111;
                 }
                 .ripple {
                     background-position: center;
