@@ -25,14 +25,14 @@ function Banner(props) {
                     background-position: center;
                     transition: background 0.8s;
                 }
-                .ripple:hover {
-                    background: #222 radial-gradient(circle, transparent 1%, #222 1%) center/15000%;
-                }
-                .ripple:active {
-                    background-color: #111;
-                    background-size: 100%;
-                    transition: background 0s;
-                }
+            .ripple:hover {
+                background: #222 radial-gradient(circle, transparent 1%, #222 1%) center/15000%;
+            }
+            .ripple:active {
+                background-color: #111;
+                background-size: 100%;
+                transition: background 0s;
+            }
             .infos {
                 background-color: #333;
                 margin: 5px 0px;

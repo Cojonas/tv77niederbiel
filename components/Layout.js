@@ -103,14 +103,10 @@ function Layout(props) {
         <style jsx>
             {`
            
-          
-              
                 .top-background-tiny {
                     background-color: #20232a;
                     height: 1px;
                     width:100%;
-
-
                 }
 
                 .top-background-color {
@@ -141,23 +137,6 @@ function Layout(props) {
                   width: auto; 
                   opacity: 1;
                 }
-
-                .detector-box{
-                    height: 100px; 
-                    top: 100px;
-                    left: 0px;
-
-                    width: auto;
-                    background-color: transparent;
-                }
-                .scrollimage {
-                    height: 10px;
-                }
-                .fitscreen {
-                    width: 100%; 
-                    height: auto;
-                }
-
                 .content-container {
                     background-position: center;
                     background-repeat: no-repeat;
@@ -175,10 +154,7 @@ function Layout(props) {
                     max-width: 1024px;
                     z-index: 500;
                     
-                  }
-    
-
-
+                  
 
                 `}
         </style>

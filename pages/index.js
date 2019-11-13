@@ -21,11 +21,6 @@ function Index() {
         legend: "Unsere Anlage"
       },
       {
-        id: "3",
-        picture: "/static/tennisplatz_platz1.jpg",
-        legend: "Unsere Tennisplätze"
-      },
-      {
         id: "2",
         picture: "/static/clubheim_draussen.jpg",
         legend: "Das Vereinsheim"
@@ -80,7 +75,7 @@ function Index() {
           </Row>
 
           <Row className="text-block justify-content-md-center" >
-            <Col xs="12">
+            <Col xs="12" md="8" >
             <h1>Aktuelles</h1>
 
             </Col>
@@ -121,7 +116,7 @@ function Index() {
 
 
           <Row className="justify-content-md-center">
-          <Col xs="12">
+          <Col xs="12" md="6">
           <h1>Über uns</h1>
 
             </Col>
@@ -148,7 +143,7 @@ function Index() {
 
 
           <Row className="justify-content-md-center">
-          <Col xs="12">
+          <Col xs="12" md="6" >
             <h1>Teams</h1>
 
             </Col>

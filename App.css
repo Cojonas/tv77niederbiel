@@ -5,12 +5,14 @@
     letter-spacing: -2.9px;
   }
   body {
-    font-family: 16px/22px 'Lato',sans-serif;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif	;
     color: white; 
     text-align: left;
     background: #333;
   }
 
+  p::-moz-selection { background: white}
+  p::selection { background: white; }
   .row {
     margin-right: 0px !important; 
     margin-left: 0px !important;
@@ -74,7 +76,6 @@ ul.thumbs.animated{
   font-size: 40px;
   font-weight: bold;
   letter-spacing: -2.9px;
-  text-transform: uppercase;
   text-align: left;
 }
 .text-left {

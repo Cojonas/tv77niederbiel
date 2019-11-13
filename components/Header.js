@@ -97,38 +97,22 @@ function Header(props) {
                 .logo-img  {
                     width: auto;
                     height: 80px;
-                    padding: 10px 0px;
+                    padding: 10px;
                     
                     
                 }
-                .gradient-stripe {
-                    
-                    height: 10px;
-                    z-index:1000;
-                    color: white;
-                    text-align: center;
-    
-    
-                }
-
-                                span {
+                span {
                     color: white;
                 }
                 p {
                     color: white;
-                }
-                
-                                
-
-
+                }          
                 .nav-container {
                     width: 100%;     
                     height: 100%;
                     display: flex;
                     text-align: center;
-
-                }
-              
+                }              
                 .navbar-icon {
 
                     border: none;
@@ -140,8 +124,6 @@ function Header(props) {
                     text-transform: uppercase;
                     font-weight: bold;
                     font-size: 1.2em;
-
-
                 }
                 .navbar-item:hover {
                     color: #ff5c00;
@@ -154,37 +136,9 @@ function Header(props) {
                     height: 100%;
                     text-align: center;
                 }
-                   
-
                 .white-text {
                     color: white !important;
-                }                
-
-
-
-                .my-node-enter {
-                    opacity: 0;
-                  }
-                  .my-node-enter-active {
-                    opacity: 1;
-                    transition: opacity 200ms;
-                  }
-                  .my-node-enter-done {
-                      opacity: 1;
-                  }
-                  .my-node-exit {
-                    opacity: 1;
-                  }
-                  .my-node-exit-active {
-                    opacity: 0;
-                    transition: opacity 200ms;
-                  }
-                  .my-node-exit-done {
-                      opacity: 0;
-                  }
-                  
-
-            
+                }
             `}
         </style>
 

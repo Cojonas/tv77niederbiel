@@ -39,13 +39,11 @@ function Drawer(props) {
               }
               
               .sidenav .closebtn {
-                color: #ff5c00;
-
+                color: white;
                 position: absolute;
-                top: 0;
-                right: 25px;
+                top: 5px;
+                right: 20px;
                 font-size: 36px;
-                margin-left: 50px;
               }
               .sidenav .logo-box {
                 padding: 20px;
