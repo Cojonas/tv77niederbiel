@@ -1,5 +1,4 @@
 import Layout from "../components/Layout";
-import ContentSection from "../components/ContentSection";
 import NavBox from "../components/NavBox"
 import Carousel from "../components/Carousel"
 import { Row, Col } from "react-bootstrap"
@@ -31,7 +30,7 @@ function Index() {
         legend: "Unser Vereinsheim"
       },
       {
-        id: "3",
+        id: "4",
         picture: "/static/clubheim_drinnen2.jpg",
         legend: "Unser Vereinsheim"
       }
@@ -57,6 +56,8 @@ function Index() {
 
   return (
     <Layout navName="Start">
+          <img className="img-top" src={process.env.assetPrefix + "static/logo_white.png"} />
+
 
 
         
@@ -74,12 +75,13 @@ function Index() {
             </Col>
           </Row>
 
-          <Row className="text-block justify-content-md-center" >
-            <Col xs="12" md="8" >
+            <Row className="text-block justify-content-md-center">
+            <Col xs="12" md="9" >
             <h1>Aktuelles</h1>
 
             </Col>
-            <Col xs="12" md="6" >
+
+            <Col xs="12" md="6" lg="5" >
 
               <Banner>
 
@@ -92,6 +94,9 @@ function Index() {
                 <a href={process.env.assetPrefix + "/mitglied"} className="offer-link">zum angebot</a>
 
               </Banner>
+              </Col>
+              <Col xs="12" md="6" lg="5" >
+
               <Banner>
 
                 <h2 className="banner-header" style={{ color: "white" }}> Vereinsheim mieten</h2>
@@ -104,7 +109,7 @@ function Index() {
 
             </Col>
 
-            <Col xs="12" md="6" style={{ paddingTop: 10 }}>
+            <Col xs="12" style={{ paddingTop: 10 }}>
             <center>
                 <FacebookProvider appId="716448928794798">
                   <Page href="https://www.facebook.com/TV-77-Niederbiel-612990049042372/" tabs="timeline" />
@@ -112,7 +117,6 @@ function Index() {
               </center>
             </Col>
           </Row>
-
 
 
           <Row className="justify-content-md-center">
@@ -173,6 +177,12 @@ function Index() {
 
       <style jsx>
         {`
+
+          .img-top {
+            margin-top: -100px;
+            height: 200px; 
+            width: auto; 
+          }
           .banner-header {
             text-transform: uppercase;
             font-weight: bold;

@@ -7,6 +7,8 @@ export default function Teams() {
       <Layout>
         <h1>Teams</h1>
 
+        <h2>Saison 2019</h2>
+
         <div className="left-text">
             <Row noGutters>
             {

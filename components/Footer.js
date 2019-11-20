@@ -19,6 +19,8 @@ function Footer(props) {
                         <Col style={{ padding: 30, textAlign: "center" }} cols="12" md="6">
 
                         <p><a className="a-footer" href={process.env.assetPrefix +"/impressum"}>Datenschutz / Impressum</a></p>
+                        <p><a className="a-footer" href={process.env.assetPrefix +"/downloads.html"}>Downloads</a></p>
+
                         <p><a className="a-footer" href="https://www.facebook.com/TV-77-Niederbiel-612990049042372/">Facebook</a></p>
 
                             <div style={{ position: "relative", bottom: 0, right: 0 }}>
@@ -45,6 +47,8 @@ function Footer(props) {
                 width: 100%; 
                 background: #111;
                 color: #888; 
+                padding: 30px;
+                margin-top: -120px;
 
             }
             .footer-content {

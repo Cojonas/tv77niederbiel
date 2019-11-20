@@ -10,14 +10,10 @@ function Banner(props) {
         </div>
         <style jsx>
             {`
-            .banner img {
-                height: 250px;
-                width: auto;
-                float: left; 
-            }
             .banner {
                 width: 100%;
                 height: auto; 
+                margin: 0 auto; 
 
             }
 

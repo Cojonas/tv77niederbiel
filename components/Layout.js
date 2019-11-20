@@ -82,7 +82,6 @@ function Layout(props) {
 
             <center>
 
-                <img className="img-foreground" src={process.env.assetPrefix + "static/logo_white.png"} />
 
             </center>
 
@@ -122,7 +121,7 @@ function Layout(props) {
                     background-attachment: fixed;
                     opacity: 0.6;
                     overflow: hidden;
-                    height: auto     ;
+                    height: 300px     ;
                     padding-top: 50px;
                     width: 100%;
                     color: white;
@@ -147,7 +146,7 @@ function Layout(props) {
                 .content-box {
                     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
                     position: relative;
-                    top: -50px;
+                    top: -200px;
                     background: #222;
                     padding: 10px 0px;
                     opacity: 1;

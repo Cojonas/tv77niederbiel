@@ -85,7 +85,7 @@ export default function Vereinsheim() {
                         Wir stellen Ihnen unser Vereinsheim zur Verfügung. Auch Nicht-Mitglieder können das Vereinsheim mieten.
                     </p>
                     <p>
-                        Die schön gelegene Location mit moderner Theke und eigener Küche bietet Platz für bis zu 50 Personen im Innenbereich. Außen befindet sich eine schöne Terasse, auf der optional ein Pavillon aufgebaut werden kann. Geschirr und Besteck sind ebenfalls vorhanden.
+                        Die schön gelegene Location mit moderner Theke und eigener Küche bietet Platz für bis zu 50 Personen im Innenbereich. Außen befindet sich eine schöne Terrasse, auf der optional ein Pavillon aufgebaut werden kann. Geschirr und Besteck sind ebenfalls vorhanden.
                     </p>
                     <p>Gerne können Sie einen Besichtigungstermin nach Wunsch ausmachen.</p>
 
