@@ -1,6 +1,7 @@
 import Layout from "../components/Layout"
 import ContactBanner from "../components/ContactBanner"
 import { Row, Col } from "react-bootstrap"
+
 const About = props => {
   return (
     <Layout>
@@ -30,51 +31,6 @@ const About = props => {
             Telefon Clubhaus: 06442-8383
 
             <br></br>
-            <h2>Vorstandsmitglieder</h2>
-
-            <p>
-            <table>
-            <tr>
-                <td className="important">1. Vorstand</td>
-                <td>Uwe Schneider</td>
-            </tr>
-
-            <tr>
-                <td className="important">2. Vorstand</td>
-                <td>Stefan Jackwerth</td>
-            </tr>
-
-            <tr>
-                <td className="important">Kassierer</td>
-                <td>Simon Rink</td>
-            </tr>
-
-            <tr>
-                <td className="important">Schriftführer</td>
-                <td>Stephan Herhert</td>
-            </tr>
-
-            <tr>
-                <td className="important">Sportwart</td>
-                <td>Stephen Klinkel</td>
-            </tr>
-
-            <tr>
-                <td className="important">1. Beisitzer</td>
-                <td>Thilo Junker</td>
-            </tr>
-
-
-            <tr>
-                <td className="important">2. Beisitzer</td>
-                <td>Martin Weiss</td>
-            </tr>
-
-
-      
-
-            </table>
-            </p>
           
 
           </Col>

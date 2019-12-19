@@ -33,11 +33,11 @@ module.exports = withCSS({
       "/downloads":  { page: "/downloads"}
     }
   },
-  //assetPrefix : !debug ? '/tv77niederbiel/' : '',
-  assetPrefix : !debug ? '' : '',
+  assetPrefix : !debug ? '/tv77niederbiel/' : '',
+  //assetPrefix : !debug ? '' : '',
   env : {
-    assetPrefix : !debug ? '' : ''
     //assetPrefix : !debug ? '' : ''
+    assetPrefix : !debug ? '' : ''
   },
     
 

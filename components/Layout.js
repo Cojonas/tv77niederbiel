@@ -98,6 +98,11 @@ function Layout(props) {
 
 
         <Footer sites={sites} />
+        <style>
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+</style>
+
+
 
         <style jsx>
             {`
@@ -146,7 +151,7 @@ function Layout(props) {
                 .content-box {
                     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
                     position: relative;
-                    top: -200px;
+                    top: -150px;
                     background: #222;
                     padding: 10px 0px;
                     opacity: 1;

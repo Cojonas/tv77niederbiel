@@ -56,14 +56,12 @@ function Index() {
 
   return (
     <Layout navName="Start">
-          <img className="img-top" src={process.env.assetPrefix + "static/logo_white.png"} />
+              
 
-
-
-        
           <Row className="text-block justify-content-md-center" align="center">
             <Col xs="12" lg="7"  >
               <span className="bigger">Herzlich Willkommen</span>
+
               <p>
                 beim Tennisverein 77 Niederbiel! Wir freuen uns, dass Sie unsere Internetseite besuchen. Auch bei Facebook halten wir sie auf dem Laufenden. Über ein Like würden wir uns sehr freuen!
               </p>
@@ -132,12 +130,17 @@ function Index() {
                     </p>
 
               <p>Der Ort Niederbiel gehört zur Stadt Solms und liegt wunderschön ruhig im Lahntal in der Nähe der Bundesstraße 49 zwischen Giessen im Osten und Limburg im Westen.
+              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6263.746061493361!2d8.397502202711472!3d50.5613233742489!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x37eff8c2874dfbc3!2sTennisverein%2077%20Niederbiel!5e1!3m2!1sen!2sus!4v1576791317531!5m2!1sen!2sus"
+               width="100%" 
+               height="300" 
+               frameborder="1" style={{border:0}} allowfullscreen=""></iframe>
 
               </p>
-              <p>Prunkstück der Anlage ist das Vereinsheim mit großem, hellen Gastraum (renoviert im Frühjahr 2008) und geräumigen Umkleideräumen für Damen und Herren mitsamt sanitären Anlagen. Besonders beliebt im Sommer - nicht nur bei Vereinsmitgliedern! - ist der Freisitz des Clubhauses im Grünen mit Blick auf die Plätze.
+              <p>Prunkstück der Anlage ist das Vereinsheim mit großem, hellen Gastraum (renoviert im Frühjahr 2008) und geräumigen Umkleideräumen für Damen und Herren mitsamt sanitären Anlagen. Besonders beliebt im Sommer - nicht nur bei Vereinsmitgliedern - ist der Freisitz des Vereinsheims im Grünen mit Blick auf die Plätze.
 
               </p>
 
+              
               <a href={process.env.assetPrefix + "/about"} className="offer-link">Mehr</a>
 
               <NavBox items={Items.listItems.aboutItems} />
@@ -179,7 +182,7 @@ function Index() {
         {`
 
           .img-top {
-            margin-top: -100px;
+            margin-top: -50px;
             height: 200px; 
             width: auto; 
           }

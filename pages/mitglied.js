@@ -10,12 +10,13 @@ export default function Mitglied() {
                 <Col xs="12">
                     <h1>Mitgliedschaft</h1>
                 </Col>
+                <br></br>
 
                 <Col xs="12" md="10" lg="8">
                     <h2>
                         Werden Sie Mitglied beim Tennisverein 77 Niederbiel!
                         </h2>
-                    <p>Für einen Beitritt sind die Beitrittserklärung und die Einzugsermächtigung auszufüllen</p>
+                    <p>Für einen Beitritt sind die Beitrittserklärung und die Einzugsermächtigung auszufüllen.</p>
                 </Col>
             </Row >
             <Row className="justify-content-md-center">
@@ -42,7 +43,13 @@ export default function Mitglied() {
         .important {
             font-weight: bold;
             padding-right: 10px;
-        }`}
+        }
+        h2{
+            text-transform: none;
+
+        }
+        
+        `}
 
             </style>
         </Layout>

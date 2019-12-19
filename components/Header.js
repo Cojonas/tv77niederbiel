@@ -79,7 +79,7 @@ function Header(props) {
 
             {`
                 .header{
-                    background: #2b2b2b;
+                    background: #222;
                     width: 100%;
                     height: auto;
                     z-index:1000;
