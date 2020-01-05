@@ -1,4 +1,5 @@
 import Header from "./Header";
+import NameBadge from "./NameBadge"
 import Head from 'next/head'
 
 import Media from "react-media";
@@ -12,6 +13,7 @@ import "../App.css"
 
 import VisibilitySensor from "react-visibility-sensor";
 import { useState } from "react";
+import BurgerIcon from "./BurgerIcon";
 
 
 
@@ -34,13 +36,13 @@ function Layout(props) {
             display: "Teams"
         },
         {
-            id:"4",
-            href:"/mitglied",
+            id: "4",
+            href: "/mitglied",
             display: "Mitgliedschaft"
         },
         {
-            id:"6",
-            href:"/vereinsheim",
+            id: "6",
+            href: "/vereinsheim",
             display: "Vereinsheim"
         },
         {
@@ -53,42 +55,86 @@ function Layout(props) {
     const [isTop, setIsTop] = useState(true)
     const [isDrawerOpen, setIsDrawerOpen] = useState(false)
 
+    const [isMobile, setIsMobile] = useState(false)
+
+
+    const [current, setCurrent] = React.useState(0);
+
+    var backgroundStyle = {}
+    if (props.pictures) {
+        backgroundStyle = {
+            backgroundImage: 'url(\"' + props.pictures[current].picture + '\"'
+        }
+
+        React.useEffect(() => {
+
+            const next = (current + 1) % props.pictures.length;
+            const id = setTimeout(() => setCurrent(next), 5000);
+            return () => clearTimeout(id);
+        }, [current]);
+
+
+    } else {
+        backgroundStyle = {
+            backgroundImage: "url(/static/tennis_court_sand.jpg)"
+
+        }
+    }
+
+
+
+
+
+
 
     return <>
         <Head>
             <meta charSet="UTF-8" />
             <meta name="viewport" content="width=device-width, initial-scale=1" />
-            <title>TV 77 Niederbiel</title>
+            <title>TV77 Niederbiel</title>
             <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon" />
             <link rel="icon" href="/static/favicon.ico" type="image/x-icon" />
-            <meta name="msapplication-TileColor" content="#ffffff"/>    
-            <meta name="theme-color" content="#000"/>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 
+            <meta name="msapplication-TileColor" content="#ffffff" />
+            <meta name="theme-color" content="#000" />
         </Head>
 
-        <Drawer sites={sites} isDrawerOpen={isDrawerOpen} closeDrawer={()=> setIsDrawerOpen(false)} />
+        <Drawer sites={sites} isDrawerOpen={isDrawerOpen} closeDrawer={() => setIsDrawerOpen(false)} />
 
-        <Media query="(max-width: 922px)">
-            {   
-                matches => <Header sites={sites} openDrawer={() => setIsDrawerOpen(true)}  navName={props.navName} isTop={isTop} mobile={matches} ></Header>
-            }
-        </Media>
 
-        <VisibilitySensor onChange={(isVisible) => setIsTop(isVisible)}>
-            <div className="top-background-tiny" />
-        </VisibilitySensor>
+        <Media query="(max-width: 922px)" onChange={(matches) => setIsMobile(matches)} />
+
+        {
+            isMobile ? <><BurgerIcon isDrawerOpen={isDrawerOpen} toggleDrawer={() => setIsDrawerOpen(!isDrawerOpen)}></BurgerIcon> <NameBadge /> </>
+
+                : <></>
+        }
+
+        <Header sites={sites} isDrawerOpen={isDrawerOpen} toggleDrawer={() => setIsDrawerOpen(!isDrawerOpen)} navName={props.navName} isTop={isTop} mobile={isMobile} ></Header>
 
         <div className="top">
+            <div style={backgroundStyle} className="backgroundGallery">
 
-            <center>
+                <VisibilitySensor onChange={(isVisible) => setIsTop(isVisible)}>
+                    <div className="top-background-tiny" />
+                </VisibilitySensor>
 
+                <div className="stickyBottom">
+                    <center>
+                        <div className="topTextWrapper">
+                            <span className="bigger">{props.title}</span>
+                        </div>
+                    </center>
+                </div>
 
-            </center>
-
+            </div>
         </div>
-        <center>
 
-        <div className="content-box">
+
+
+        <center>
+            <div className="content-box">
                 <div className="content-container">
                     {props.children}
                 </div>
@@ -96,16 +142,40 @@ function Layout(props) {
         </center>
 
 
+        <div className="footer">
+            <Footer sites={sites} />
+        </div>
 
-        <Footer sites={sites} />
+
         <style>
-@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
-</style>
+            @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+        </style>
 
 
 
         <style jsx>
             {`
+
+
+                .backgroundGallery {
+                    background : url("/static/clubheim_draussen.jpg");
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    min-height: 500px;
+                    position: relative;
+                    
+                }
+                .stickyBottom {
+                    width: 100%;
+                    position: absolute; 
+                    padding: 30px;
+                    bottom: 0;
+                    background: linear-gradient(180deg, rgba(17,17,17,0) 0%, rgba(17,17,17,0.5) 8%, rgba(17,17,17,0.80) 15%, rgba(17,17,17,1) 100%);
+                }
+                .topTextWrapper {
+                    max-width: 1024px;
+                }
            
                 .top-background-tiny {
                     background-color: #20232a;
@@ -120,17 +190,14 @@ function Layout(props) {
                 }
 
                 .top {
-                    background-image: url("static/tennis_court_sand.jpg");
+                    background: #222;
                     background-size: cover;
                     background-repeat: no-repeat;
                     background-attachment: fixed;
-                    opacity: 0.6;
-                    overflow: hidden;
-                    height: 300px     ;
-                    padding-top: 50px;
+                    height: auto     ;
                     width: 100%;
                     color: white;
-                    text-align: center;
+                    text-align: left;
     
                 }
                 .top  .img-foreground {
@@ -146,18 +213,18 @@ function Layout(props) {
                     background-repeat: no-repeat;
                     background-attachment: fixed;
                     background-size: cover;
-                    text-align:center;
+                    text-align:left;
+                    max-width: 1024px;
+
                 }
                 .content-box {
-                    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+                    background: #111;
                     position: relative;
-                    top: -150px;
-                    background: #222;
-                    padding: 10px 0px;
-                    opacity: 1;
-                    max-width: 1024px;
+                    top: -0px;
+                    padding: 10px;
                     z-index: 500;
                     
+                }
                   
 
                 `}

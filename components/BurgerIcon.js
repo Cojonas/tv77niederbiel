@@ -1,45 +1,84 @@
-function BurgerIcon() {
+import { useState } from "react";
 
+function BurgerIcon(props) {
 
     return <>
 
-        <div className="burger-container ripple">
-            <div className="burger-line"></div>
-            <div className="burger-line"></div>
-            <div className="burger-line"></div>
+        <div className="hamburger" onClick={() => props.toggleDrawer()}>
+            <span className={props.isDrawerOpen ? "open" : ""}></span>
+            <span className={props.isDrawerOpen ? "open" : ""}></span>
+            <span className={props.isDrawerOpen ? "open" : ""}></span>
         </div>
 
         <style jsx>
             {`
-                .burger-container {
-                    width: auto;
-                    height:30px;
-                    position: absolute; 
-                    top: 0px; right: 0px;
-                    margin-top: 25px;
-                    margin-right: 10px;
-                    padding: 5px;
-                    border-radius: 10px;
-                }
-                .ripple {
-                    background-position: center;
-                    transition: background 0.8s;
-                }
-                .ripple:hover {
-                    background: #111 radial-gradient(circle, transparent 1%, #111 1%) center/15000%;
-                }
-                .ripple:active {
-                    background-color: #111;
-                    background-size: 100%;
-                    transition: background 0s;
-                }
-                .burger-line {
-                    width: 25px;
-                    height: 2px;
-                    background-color: white;
-                    margin: 2px 0px 5px 0px;
-                    
-                }
+
+                * {
+                    margin: 13px;
+                    padding: 1px; 
+                  }
+                  
+                  
+                  .hamburger {
+                    width: 30px;
+                    position: fixed; 
+                    top: 5px; 
+                    right: 5px;
+                    color: white;
+                    z-index: 2001;
+                  }
+
+                  .hamburger span {
+                    width: 30px;
+                    color: white;
+                    background-color: #fff;
+                    border-radius: 3px;
+                    content: '';
+                    display: block;
+                    height: 5px;
+                    margin: 7px 0;
+                    transition: all .2s ease-in-out;
+                  }
+
+                  .hamburger span.open:nth-child(1) {
+                    transform: translateY(12px) rotate(135deg);
+                  }
+
+                  .hamburger span.open:nth-child(2) {
+                    transform: scale(0);
+                  }
+
+
+                  .hamburger span.open:nth-child(3) {
+                    transform: translateY(-12px) rotate(-135deg);
+                  }
+                  
+                  .nav-icon:after, 
+                  .nav-icon:before, 
+                  .nav-icon div {
+                    background-color: #fff;
+                    border-radius: 3px;
+                    content: '';
+                    display: block;
+                    height: 5px;
+                    margin: 7px 0;
+                    transition: all .2s ease-in-out;
+                  }
+                  
+
+                  .nav-icon:hover:before {
+                    transform: translateY(12px) rotate(135deg);
+                  }
+                  
+                  .nav-icon:hover:after {
+                    transform: translateY(-12px) rotate(-135deg);
+                  }
+                  
+                  .nav-icon:hover div {
+                    transform: scale(0);
+                  }
+                  
+                  
                 `}
         </style>
     </>

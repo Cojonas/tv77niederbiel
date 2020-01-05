@@ -14,7 +14,6 @@ function Banner(props) {
                 width: 100%;
                 height: auto; 
                 margin: 0 auto; 
-
             }
 
             .ripple {
@@ -30,9 +29,9 @@ function Banner(props) {
                 transition: background 0s;
             }
             .infos {
-                background-color: #333;
+                background-color: #222;
                 margin: 5px 0px;
-                border-radius: 10px;
+                border-radius: 2px;
                 float: left;
                 text-align: left;
                 width: 100%; 

@@ -29,30 +29,28 @@ export default function About() {
         picture: "/static/clubheim_tisch.jpg",
         legend: "Das Vereinsheim"
       }
-
     ]
   }
 
   return (
-    <Layout>
-            <h1>Über uns</h1>
+    <Layout title="Über uns" pictures={[{picture: "/static/teamfoto_herren.jpeg"}]}>
 
             <Row className="justify-content-md-center">
 
-        <Col md="12" md="10" lg="8">
+            <Col xs="12" md="6" >
         
-        Unsere Anlage liegt ruhig am Ortsrand von Niederbiel und bietet dem Aktiven vier stets gut bespielbare Sandplätze.
-        <p>Zunächst legte man auf dem vereinseigenen Gelände etwas abseits der Wohngebiete zwei Sandplätze an (Fertigstellung im Juli 1978), bevor man im August 1980 das Clubhaus einweihen konnte. Im Frühjahr 1981 wurde die Anlage schließlich durch den Bau zweier weiterer Plätze vervollständigt. Seither sorgen die Vereinsmitglieder größtenteils selbst für die Pflege der Anlage, wobei die Plätze ab dem Jahr 2015 vollständig durch eine Fachfirma spielbereit gemacht werden.</p>
+        <p>Unsere Anlage liegt ruhig am Ortsrand von Niederbiel und bietet dem Aktiven vier stets gut bespielbare Sandplätze.
+Zunächst legte man auf dem vereinseigenen Gelände etwas abseits der Wohngebiete zwei Sandplätze an (Fertigstellung im Juli 1978), bevor man im August 1980 das Clubhaus einweihen konnte. Im Frühjahr 1981 wurde die Anlage schließlich durch den Bau zweier weiterer Plätze vervollständigt. Seither sorgen die Vereinsmitglieder größtenteils selbst für die Pflege der Anlage, wobei die Plätze ab dem Jahr 2015 vollständig durch eine Fachfirma spielbereit gemacht werden.</p>
         
 
         
 
 
         </Col>
-        <Col xs="12" md="10" lg="8">
+        <Col xs="12" md="6" >
           <Galery data={generalGalery}/>
         </Col>
-        <Col xs="12" md="10" lg="8">
+        <Col xs="12">
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2534.6340800385597!2d8.396305965917366!3d50.559574537376655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47bc45eea5e3ac5f%3A0x37eff8c2874dfbc3!2sTennisverein%2077%20Niederbiel!5e0!3m2!1sen!2sus!4v1569541915015!5m2!1sen!2sus" width="100%" height="400" frameborder="1" style={{border:0}} allowfullscreen=""></iframe>            <br></br>
 
           </Col>
@@ -62,7 +60,7 @@ export default function About() {
 
       <Row className="justify-content-md-center">
          
-          <Col xs="12" md="10" lg="8">
+      <Col xs="12">
           <p>  Das Vereinsheim ist ausgestattet mit einem großem, hellen Gastraum (renoviert im Frühjahr 2008) und geräumigen Umkleideräumen für Damen und Herren mitsamt sanitären Anlagen.
           Besonders beliebt im Sommer - nicht nur bei Vereinsmitgliedern! - ist der Freisitz des Vereinsheims im Grünen mit Blick auf die Plätze.
       </p>

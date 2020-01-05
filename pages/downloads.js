@@ -4,9 +4,8 @@ import { Row, Col } from "react-bootstrap"
 import React from 'react';
 export default function Downloads() {
     return (
-        <Layout>
-            <h1>Downloads</h1>
-            Hier finden Sie alle Downloads
+        <Layout title="Downloads">
+            <p>Hier finden Sie alle Downloads</p>
             <Row>
                 <Col xs="6" sm="6" md="6" lg="3">
                     <DownloadCard title={"Datenschutzerklärung"} href={process.env.assetPrefix + "static/Datenschutzerklaerung_TV77_Niederbiel.pdf"} />

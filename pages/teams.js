@@ -4,8 +4,7 @@ import TeamCard from "../components/TeamCard"
 import {Row, Col } from "react-bootstrap"
 export default function Teams() {
     return (
-      <Layout>
-        <h1>Teams</h1>
+      <Layout title="Unsere Teams" pictures={[{picture: "/static/teamfoto_herren.jpeg"}, {picture: "/static/teamfoto_damen.jpeg"}]}>
 
         <h2>Saison 2019</h2>
 

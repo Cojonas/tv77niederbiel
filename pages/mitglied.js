@@ -5,12 +5,9 @@ import DownloadCard from "../components/DownloadCard";
 import { Row, Col } from "react-bootstrap"
 export default function Mitglied() {
     return (
-        <Layout>
+        <Layout title="Mitgliedschaft">
             <Row className="justify-content-md-center">
-                <Col xs="12">
-                    <h1>Mitgliedschaft</h1>
-                </Col>
-                <br></br>
+
 
                 <Col xs="12" md="10" lg="8">
                     <h2>

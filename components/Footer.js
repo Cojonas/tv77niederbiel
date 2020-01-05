@@ -19,7 +19,7 @@ function Footer(props) {
                         <Col style={{ padding: 30, textAlign: "center" }} cols="12" md="6">
 
                         <p><a className="a-footer" href={process.env.assetPrefix +"/impressum"}>Datenschutz / Impressum</a></p>
-                        <p><a className="a-footer" href={process.env.assetPrefix +"/downloads.html"}>Downloads</a></p>
+                        <p><a className="a-footer" href={process.env.assetPrefix +"/downloads"}>Downloads</a></p>
 
                         <p><a className="a-footer" href="https://www.facebook.com/TV-77-Niederbiel-612990049042372/">Facebook</a></p>
 
@@ -45,10 +45,9 @@ function Footer(props) {
             .footer {
                 height: auto; 
                 width: 100%; 
-                background: #111;
+                background: #222;
                 color: #888; 
                 padding: 30px;
-                margin-top: -120px;
 
             }
             .footer-content {

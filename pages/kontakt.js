@@ -1,12 +1,13 @@
 import Layout from "../components/Layout"
 import ContactBanner from "../components/ContactBanner"
+import SocialMedia from "../components/SocialMedia"
 import { Row, Col } from "react-bootstrap"
 
 const About = props => {
   return (
-    <Layout>
-      <h1>Kontakt</h1>
-
+    <Layout title="Kontakt" >
+      
+      <SocialMedia  style={{padding: 10}}/>
 
       <div className="text-left">
 

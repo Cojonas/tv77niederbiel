@@ -1,5 +1,3 @@
-import BurgerIcon from "../components/BurgerIcon"
-import Media from 'react-media';
 import { Row, Col } from "react-bootstrap"
 
 import { Icon } from "antd"
@@ -9,23 +7,22 @@ import { Icon } from "antd"
 
 function Header(props) {
 
+    let navLinkSpan
 
-
-    let navLinkSpan;
     if (props.isTop) {
         navLinkSpan = <span className="white-text"> > {props.navName}</span>
     } else {
         navLinkSpan = <></>
     }
 
+    const noBgHeader = !props.isDrawerOpen && props.isTop;
+     
 
 
     return <>
 
-        <div className="header">
-            <div >
+        <div className={ noBgHeader ? "header" : "header noOpacity"}>
                 <Row className="justify-content-between" noGutters>
-
                     <Col xs={{ span: 1 }}>
                         <img onClick={() => window.location.href= process.env.assetPrefix + "/" } className="logo-img" src={process.env.assetPrefix + "static/logo_white.png"} />
                     </Col>
@@ -55,11 +52,8 @@ function Header(props) {
                                     <div onClick={() => window.location.href = "https://www.facebook.com/TV-77-Niederbiel-612990049042372/"}>
                                         <Icon  type="facebook" style={{ fontSize: '40px', color: 'white', float: "right", paddingRight: 15}} theme="outlined" />
                                     </div>
-                                    : 
-                                    
-                                    <div onClick={() => props.openDrawer()} >
-                                        <BurgerIcon  />
-                                    </div>
+                                    : <></>
+            
                             }
                         </div>
 
@@ -70,8 +64,6 @@ function Header(props) {
 
                 </Row>
 
-            </div>
-
 
         </div>
 
@@ -79,15 +71,29 @@ function Header(props) {
 
             {`
                 .header{
-                    background: #222;
+                    background: rgb(34, 34, 34, 0.2);
                     width: 100%;
                     height: auto;
                     z-index:1000;
                     position: -webkit-sticky; /* Safari */
-                    position: sticky;
+                    position: fixed;
                     top: 0;
-                    border-bottom: 1px solid #ff5c00;
-                }
+                    -webkit-transition: background-color 200ms ease-out;
+                    -moz-transition: background-color 200ms ease-out;
+                    -o-transition: background-color 200ms ease-out;
+                    transition: background 200ms ease-out:
+                                }
+                 .opacity  {
+                    background-color: rgb(34, 34, 34, 0.2);
+                 }
+
+                 .noOpacity {
+                    background-color: rgb(34,34,34, 1) !important; 
+                    -webkit-box-shadow: 0px 7px 5px 0px rgba(34,34,34,1);
+                    -moz-box-shadow: 0px 7px 5px 0px rgba(34,34,34,1);
+                    box-shadow: 0px 7px 5px 0px rgba(34,34,34,1);
+
+                 }
                 .show {
                     display:block;
                 }
@@ -102,10 +108,10 @@ function Header(props) {
                     
                 }
                 span {
-                    color: white;
+                    color: #888; 
                 }
                 p {
-                    color: white;
+                    color: #888; 
                 }          
                 .nav-container {
                     width: 100%;     

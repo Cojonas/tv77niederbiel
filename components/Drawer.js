@@ -1,13 +1,16 @@
 import React from "react"
 
+import SocialMedia from "../components/SocialMedia"
+
 function Drawer(props) {
 
     return <>
 
         <div id="mySidenav" className={props.isDrawerOpen ? "sidenav drawer-open" : "sidenav drawer-closed"}>
-            <a href="javascript:void(0)" className="closebtn" onClick={() => {props.closeDrawer()}}>&times;</a>
             {props.sites.map((item) => <div className="drawer-item"   key={item.id} style={{padding: 10}}><a href={process.env.assetPrefix + item.href}>{item.display}</a></div>)}
 
+
+            <SocialMedia isDrawerOpen={props.isDrawerOpen} />
             <div className="logo-box">
                 <img src={process.env.assetPrefix + "static/logo_white.png"}>
                 </img>
@@ -19,23 +22,22 @@ function Drawer(props) {
 
             {`
             .sidenav {
-                height: 100vh;
-                width: 0px;
+                height: 0px;
+                width: 100vw;
                 position: fixed;
                 z-index: 1001;
-                top: 0;
-                right: 0;
+                top: 80px;
+                right: 0; 
                 background-color: #222;
                 overflow-x: hidden;
                 transition: 0.5s;
-                padding-top: 60px;
               }
 
               .drawer-open{
-                  width: 100%;
+                  height: 100vh;
               }
               .drawer-closed{
-                  width: 0;
+                  height: 0px;
               }
               
               .sidenav .closebtn {

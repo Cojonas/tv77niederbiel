@@ -3,8 +3,7 @@ import {Row, Col} from "react-bootstrap"
 import DownloadCard from "../components/DownloadCard"
 export default function Impressum() {
     return (
-      <Layout>
-          <h1>Impressum</h1>
+      <Layout title="Impressum">
           <Row className="text-left">
 
 
