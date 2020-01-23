@@ -162,20 +162,19 @@ function Layout(props) {
                     background-size: cover;
                     background-repeat: no-repeat;
                     background-position: center;
-                    min-height: 500px;
+                    min-height: 600px;
                     position: relative;
                     
                 }
                 .stickyBottom {
                     width: 100%;
                     position: absolute; 
-                    padding: 30px;
+                    padding: 30px 10px;
                     bottom: 0;
-                    background: linear-gradient(180deg, rgba(17,17,17,0) 0%, rgba(17,17,17,0.5) 8%, rgba(17,17,17,0.80) 15%, rgba(17,17,17,1) 100%);
+                    background: linear-gradient(180deg, rgba(17,17,17,0) 0%, rgba(17,17,17,0.4) 8%,  rgba(17,17,17,1) 100%);
                 }
                 .topTextWrapper {
                     max-width: 1024px;
-                    padding-top: 40px;
                 }
            
                 .top-background-tiny {

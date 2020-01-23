@@ -41,10 +41,6 @@ export default function About() {
         
         <p>Unsere Anlage liegt ruhig am Ortsrand von Niederbiel und bietet dem Aktiven vier stets gut bespielbare Sandplätze.
 Zunächst legte man auf dem vereinseigenen Gelände etwas abseits der Wohngebiete zwei Sandplätze an (Fertigstellung im Juli 1978), bevor man im August 1980 das Clubhaus einweihen konnte. Im Frühjahr 1981 wurde die Anlage schließlich durch den Bau zweier weiterer Plätze vervollständigt. Seither sorgen die Vereinsmitglieder größtenteils selbst für die Pflege der Anlage, wobei die Plätze ab dem Jahr 2015 vollständig durch eine Fachfirma spielbereit gemacht werden.</p>
-        
-
-        
-
 
         </Col>
         <Col xs="12" md="6" >

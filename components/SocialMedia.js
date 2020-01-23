@@ -14,7 +14,9 @@ function SocialMedia(props) {
 
         <style jsx>
             {`
-
+                div {
+                    padding: 30px 0px;
+                }
                 /* Style all font awesome icons */
                 .fa {
                     padding: 10px;
