@@ -100,7 +100,7 @@ a:hover {
 }
 h1 {
   border-bottom: solid 1px #ff5c00;
-  text-transform: uppercase;
+  text-transform: none;
   font-weight: bold;
   letter-spacing: -2.9px;
   text-align: left ;
@@ -109,7 +109,7 @@ h1 {
 
 h2 {
   color: white;
-  text-transform: uppercase;
+  text-transform: none;
   letter-spacing: -1.5px;
   font-weight:bold;
   font-size: 26px;
