@@ -146,7 +146,7 @@ function Index() {
         <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6263.746061493361!2d8.397502202711472!3d50.5613233742489!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x37eff8c2874dfbc3!2sTennisverein%2077%20Niederbiel!5e1!3m2!1sen!2sus!4v1576791317531!5m2!1sen!2sus"
               width="100%"
               height="300"
-              frameborder="1" style={{ border: 0 }} allowfullscreen=""></iframe>
+              frameBorder="1" style={{ border: 0 }} allowFullScreen=""></iframe>
 
 
         </Col>
