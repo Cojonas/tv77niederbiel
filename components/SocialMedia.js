@@ -3,13 +3,12 @@
 
 function SocialMedia(props) {
 
-
     return <>
         <div>
             <center>
-                <a href="https://m.facebook.com/TV-77-Niederbiel-612990049042372/" className={!props.isDrawerOpen ? "fa fa-facebook notExpanded" : "fa fa-facebook expanded"}></a>
-                <a href="https://goo.gl/maps/gRBMY1v6G6oGcsi69" className="fa fa-google" className={!props.isDrawerOpen ? "fa fa-google notExpanded" : "fa fa-google expanded"}></a>
-                <a href="mailto:info@tv-niederbiel.de" className="fa fa-envelope" className={!props.isDrawerOpen ? "fa fa-envelope notExpanded" : "fa fa-envelope expanded"}></a>
+                <a href="https://m.facebook.com/TV-77-Niederbiel-612990049042372/" className={!props.visible ? "fa fa-facebook notExpanded" : "fa fa-facebook expanded"}></a>
+                <a href="https://goo.gl/maps/gRBMY1v6G6oGcsi69" className="fa fa-google" className={!props.visible ? "fa fa-google notExpanded" : "fa fa-google expanded"}></a>
+                <a href="mailto:info@tv-niederbiel.de" className="fa fa-envelope" className={!props.visible ? "fa fa-envelope notExpanded" : "fa fa-envelope expanded"}></a>
             </center>
         </div>
 

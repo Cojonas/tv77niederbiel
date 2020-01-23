@@ -175,6 +175,7 @@ function Layout(props) {
                 }
                 .topTextWrapper {
                     max-width: 1024px;
+                    padding-top: 40px;
                 }
            
                 .top-background-tiny {

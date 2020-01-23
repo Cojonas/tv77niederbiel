@@ -63,7 +63,7 @@ function Index() {
     <Layout navName="Start" title="Herzlich Willkommen beim TV77 Niederbiel!" pictures={generalGalery.items}
 
 
-    >      <SocialMedia></SocialMedia>
+    >      <SocialMedia visible={true}></SocialMedia>
 
 
 

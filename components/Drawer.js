@@ -10,7 +10,7 @@ function Drawer(props) {
             {props.sites.map((item) => <div className="drawer-item"   key={item.id} style={{padding: 10}}><a href={process.env.assetPrefix + item.href}>{item.display}</a></div>)}
 
 
-            <SocialMedia isDrawerOpen={props.isDrawerOpen} />
+            <SocialMedia visible={props.isDrawerOpen} />
             <div className="logo-box">
                 <img src={process.env.assetPrefix + "static/logo_white.png"}>
                 </img>
