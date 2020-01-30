@@ -48,10 +48,12 @@
 }
 
 .offer-link {
-  padding: 10px;
-  font-size: 15px ; 
+  padding: 0px 10px 10px 0px;
+  font-size: 20px ; 
   color:  #ff5c00 !important;
   text-transform: uppercase;
+  letter-spacing: -1px;
+  float: right;
 }
 
 ul.thumbs.animated{
@@ -72,6 +74,7 @@ ul.thumbs.animated{
   letter-spacing: -1.4px;
 
 }
+
 
 .bigger {
   font-size: 40px;
@@ -96,10 +99,9 @@ a:hover {
 }
 
 .text-block {
-  text-align: center
+  text-align: left;
 }
 h1 {
-  border-bottom: solid 1px #ff5c00;
   text-transform: none;
   font-weight: bold;
   letter-spacing: -2.9px;
@@ -108,7 +110,6 @@ h1 {
 }
 
 h2 {
-  color: white;
   text-transform: none;
   letter-spacing: -1.5px;
   font-weight:bold;
