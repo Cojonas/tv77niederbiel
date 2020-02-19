@@ -8,32 +8,31 @@ function TeamCard(props) {
     return <><div className="container">
         <Banner>
 
-            <h2 style={{color: "white"}}>{props.data.name}</h2>
+            <h2 >{props.data.name}</h2>
 
             <table>
-            <tr>
-                <td className="important">Mannschaftsführer</td>
-                <td>{props.data.leader}</td>
-            </tr>
-            <tr>
-                <td className="important">Telefon</td>
-                <td>{props.data.phoneNumber}</td>
-            </tr>
-            <tr>
-                <td className="important">  Liga</td>
-                <td>{props.data.liga}</td>
-            </tr>
-            <tr>
-                <td className="important">Trainingszeiten</td>
-                <td>{props.data.training}</td>
-            </tr>
+                <tbody>
+                    <tr>
+                        <td className="important">Mannschaftsführer</td>
+                        <td>{props.data.leader}</td>
+                    </tr>
+                    <tr>
+                        <td className="important">Telefon</td>
+                        <td>{props.data.phoneNumber}</td>
+                    </tr>
+                    <tr>
+                        <td className="important">  Liga</td>
+                        <td>{props.data.liga}</td>
+                    </tr>
+                    <tr>
+                        <td className="important">Trainingszeiten</td>
+                        <td>{props.data.training}</td>
+                    </tr>
 
-
-            <a href={props.data.href} className="offer-link">Ergebnisse</a>
-      
-
+                </tbody>
             </table>
-            
+
+            <a href={props.data.href} className="offer-link left">Ergebnisse</a>
 
 
         </Banner>
@@ -57,6 +56,9 @@ function TeamCard(props) {
         }
         span {
             width: 50%;
+        }
+        .offer-link.left {
+            float: left;
         }
         `}
         </style>

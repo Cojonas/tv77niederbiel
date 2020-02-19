@@ -7,7 +7,6 @@ const About = props => {
   return (
     <Layout title="Kontakt" >
       
-      <SocialMedia  style={{padding: 10}}/>
 
       <div className="text-left">
 

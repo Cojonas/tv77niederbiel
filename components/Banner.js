@@ -19,9 +19,9 @@ function Banner(props) {
 
             .ripple {
 
-                    background-position: center;
-                    transition: background 0.8s;
-                }
+                background-position: center;
+                transition: background 0.8s;
+            }
             .ripple:hover {
                 background: rgb(200,200,200, 0.4) radial-gradient(circle, transparent 1%, rgb(200,200,200, 0.4)  1%) center/15000%;
             }
@@ -43,7 +43,7 @@ function Banner(props) {
                 -moz-box-shadow:  4px 3px 14px -5px #fff; 
                 box-shadow:  4px 3px 14px -5px #fff;        
             }
-            .infos:hover {
+             .infos:hover {
                 transform: scale(1.01);
             }
 
