@@ -28,7 +28,7 @@ export default function Mitglied() {
             <Row className="justify-content-md-center">
                 <Col xs="12" md="10" lg="8">
                     <Banner>
-                        <h2 style={{ color: "white" }}>Schnupperangebot</h2>
+                        <h2>Schnupperangebot</h2>
                         <span>Erst probieren, dann entscheiden!</span><br></br>
                         <span>Erhalten Sie eine gratis Trainerstunde. Entscheiden Sie sich für eine Mitgliedschaft, zahlen Sie für das Beitrittsjahr nur die Hälfte!</span><br></br>
                     </Banner>

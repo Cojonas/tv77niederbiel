@@ -18,7 +18,7 @@ const About = props => {
           <ContactBanner name="Stefan Jackwerth"  phone="+49 160 96309623" mail="info@tv-niederbiel.de"/>
           </Col>
 
-          <Col cols="12" md="6">
+          <Col cols="12" md="6" style={{paddingTop: 10}}>
             <h2>Postadresse</h2>
             <p>Tennisverein 77 Niederbiel e.V.<br></br>
               c/o Uwe Schneider<br></br>

@@ -7,6 +7,7 @@ import { FacebookProvider, Page } from 'react-facebook';
 import Galery from "../components/Carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
+import Calendar from "../components/Calendar"
 import Banner from "../components/Banner"
 import Items from "../items.json"
 
@@ -60,57 +61,43 @@ function Index() {
 
 
   return (
-    <Layout navName="Start" title="Herzlich Willkommen beim TV77 Niederbiel!" pictures={generalGalery.items}
+    <Layout navName="Start" title="Herzlich Willkommen beim TV77 Niederbiel!" pictures={generalGalery.items}>
 
-
-    >      <SocialMedia visible={true}></SocialMedia>
-
-
-
-
-
-
+          <div style={{marginTop: "-50px", marginBottom: "60px"}}>
+           <SocialMedia visible={true}  ></SocialMedia>
+          </div>
 
       <Row className="text-block justify-content-md-center">
-        <Col xs="12"  >
-          <h1>Aktuelles</h1>
 
-        </Col>
-
-        <Col xs="12" md="6" lg="6" >
-
-          <Banner>
-
-
-
-            <h2 className="banner-header" style={{ color: "white" }} >Schnupperangebot</h2>
-            <span>Erst probieren, dann entscheiden!</span><br></br>
-            <span>Erhalten Sie eine gratis Trainerstunde. Entscheiden Sie sich für eine Mitgliedschaft, zahlen Sie für das Beitrittsjahr nur die Hälfte!</span><br></br>
-
-            <a href={process.env.assetPrefix + "/mitglied"} className="offer-link">zum angebot</a>
-
-          </Banner>
-          <Banner>
-
-            <h2 className="banner-header" style={{ color: "white" }}> Vereinsheim mieten</h2>
-            <span>Auch Nicht-Mitglieder können unser Vereinsheim mieten. Dieses hat Platz für ca. 50 Personen.</span><br></br>
-            <span>Mit eigener Küche und moderner Theke!</span><br></br>
-            <a href={process.env.assetPrefix + "/vereinsheim"} className="offer-link">Zum Angebot</a>
-          </Banner>
-        </Col>
         <Col xs="12" md="6" lg="5" >
-          <center>
-            <div style={{ opacity: 0.9 }}>
-              <FacebookProvider appId="716448928794798" >
+        <h1>Aktuelles</h1>
+          <FacebookProvider appId="716448928794798" >
                 <Page href="https://www.facebook.com/TV-77-Niederbiel-612990049042372/" tabs="timeline" />
               </FacebookProvider>
-            </div>
-
-          </center>
-
 
 
         </Col>
+        <Col xs="12" md="6" lg="7" >
+        <Calendar />
+
+        <Banner>
+          <h2 >Schnupperangebot</h2>
+          <span>Erst probieren, dann entscheiden!</span><br></br>
+          <span>Erhalten Sie eine gratis Trainerstunde. Entscheiden Sie sich für eine Mitgliedschaft, zahlen Sie für das Beitrittsjahr nur die Hälfte!</span><br></br>
+
+          <a href={process.env.assetPrefix + "/mitglied"} className="offer-link">zum angebot</a>
+
+          </Banner>
+          <Banner>
+
+          <h2  > Vereinsheim mieten</h2>
+          <span>Auch Nicht-Mitglieder können unser Vereinsheim mieten. Dieses hat Platz für ca. 50 Personen.</span><br></br>
+          <span>Mit eigener Küche und moderner Theke!</span><br></br>
+          <a href={process.env.assetPrefix + "/vereinsheim"} className="offer-link">Zum Angebot</a>
+          </Banner>
+
+        </Col>
+
 
         <Col xs="12" style={{ paddingTop: 10 }}>
         </Col>
@@ -118,13 +105,10 @@ function Index() {
 
 
       <Row className="justify-content-md-center">
-        <Col xs="12" >
-          <h1>Über uns</h1>
-
-        </Col>
-
 
         <Col xs="12" md="6" >
+        <h1>Über uns</h1>
+
           <p>
             Der TV 77 Niederbiel ist ein Tennisverein mit derzeit rund 135 Mitgliedern, wovon gut 50% aktiven Status besitzen.
                     </p>
@@ -136,38 +120,39 @@ function Index() {
               </p>
 
 
-          <a href={process.env.assetPrefix + "/about"} className="offer-link">Mehr</a>
+          <a href={process.env.assetPrefix + "/about"} className="offer-link left">Mehr</a>
 
           <NavBox items={Items.listItems.aboutItems} />
         </Col>
 
         <Col xs="12" md="6">
 
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6263.746061493361!2d8.397502202711472!3d50.5613233742489!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x37eff8c2874dfbc3!2sTennisverein%2077%20Niederbiel!5e1!3m2!1sen!2sus!4v1576791317531!5m2!1sen!2sus"
-              width="100%"
-              height="300"
-              frameBorder="1" style={{ border: 0 }} allowFullScreen=""></iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6263.746061493361!2d8.397502202711472!3d50.5613233742489!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x37eff8c2874dfbc3!2sTennisverein%2077%20Niederbiel!5e1!3m2!1sen!2sus!4v1576791317531!5m2!1sen!2sus"
+                width="100%"
+                height="300"
+                frameBorder="1" style={{ border: 0 }} allowFullScreen=""></iframe>
 
 
         </Col>
+
+
 
 
       </Row>
 
 
       <Row className="justify-content-md-center">
-        <Col xs="12" >
-          <h1>Teams</h1>
 
-        </Col>
 
         <Col xs="12" md="6" >
+        <h1>Teams</h1>
+
           <div >
             <p>
               Jede Saison stellen wir einige Mannschaften unterschiedlicher Altersklassen.
               Hier können Sie sich einen Überblick verschaffen und aktuelle Ergebnisse einsehen.
                   </p>
-            <a href={process.env.assetPrefix + "/teams"} className="offer-link">Übersicht</a><br></br>
+            <a href={process.env.assetPrefix + "/teams"} className="offer-link left">Übersicht</a><br></br>
 
           </div>
 
@@ -249,7 +234,6 @@ function Index() {
 
 
             a {
-              width:100%;
               color: black
             }
             a:hover {
@@ -266,6 +250,9 @@ function Index() {
 
               .offer-link:hover {
                 text-decoration: underline;
+              }
+              .offer-link.left {
+                float: left !important;
               }
             
 

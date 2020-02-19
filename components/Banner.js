@@ -4,7 +4,7 @@ function Banner(props) {
     return (
         <>          
         <div className="banner">
-            <div className="infos ripple">
+            <div className="infos">
                 {props.children}
             </div>
         </div>
@@ -14,33 +14,37 @@ function Banner(props) {
                 width: 100%;
                 height: auto; 
                 margin: 0 auto; 
+                color: black;
             }
 
             .ripple {
+
                     background-position: center;
                     transition: background 0.8s;
                 }
             .ripple:hover {
-                background: #222 radial-gradient(circle, transparent 1%, #222 1%) center/15000%;
+                background: rgb(200,200,200, 0.4) radial-gradient(circle, transparent 1%, rgb(200,200,200, 0.4)  1%) center/15000%;
             }
             .ripple:active {
-                background-color: #111;
                 background-size: 100%;
                 transition: background 0s;
+                background:  #fff;
             }
             .infos {
-                background-color: #222;
-                margin: 5px 0px;
+                background-color: rgb(255,255,255,1);
+                margin: 10px 0px;
                 border-radius: 2px;
                 float: left;
                 text-align: left;
                 width: 100%; 
                 height: 100%;
                 padding: 20px;
-                -webkit-box-shadow:  4px 3px 14px -5px #000000; 
-                -moz-box-shadow:  4px 3px 14px -5px #000000; 
-                box-shadow:  4px 3px 14px -5px #000000;
-                                
+                -webkit-box-shadow:  4px 3px 14px -5px #fff; 
+                -moz-box-shadow:  4px 3px 14px -5px #fff; 
+                box-shadow:  4px 3px 14px -5px #fff;        
+            }
+            .infos:hover {
+                transform: scale(1.01);
             }
 
             `}

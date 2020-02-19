@@ -65,7 +65,7 @@ Zunächst legte man auf dem vereinseigenen Gelände etwas abseits der Wohngebiet
       </p>
       <Banner>
 
-<h2 style={{ color: "white" }}> Vereinsheim mieten</h2>
+<h2 > Vereinsheim mieten</h2>
 <span>Auch Nicht-Mitglieder können unser Vereinsheim mieten. Dieses hat Platz für ca. 50 Personen.</span><br></br>
 <span>Mit eigener Küche und moderner Theke!</span><br></br>
 <a href={process.env.assetPrefix + "/vereinsheim"} className="offer-link">Zum Angebot</a>
