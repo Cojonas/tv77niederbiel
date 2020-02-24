@@ -23,7 +23,7 @@ function Banner(props) {
                 transition: background 0.8s;
             }
             .ripple:hover {
-                background: rgb(200,200,200, 0.4) radial-gradient(circle, transparent 1%, rgb(200,200,200, 0.4)  1%) center/15000%;
+                background: rgba(200,200,200, 0.4) radial-gradient(circle, transparent 1%, rgba(200,200,200, 0.4)  1%) center/15000%;
             }
             .ripple:active {
                 background-size: 100%;
@@ -31,7 +31,7 @@ function Banner(props) {
                 background:  #fff;
             }
             .infos {
-                background-color: rgb(255,255,255,1);
+                background-color: rgba(255,255,255,1);
                 margin: 10px 0px;
                 border-radius: 2px;
                 float: left;

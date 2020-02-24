@@ -71,7 +71,7 @@ function Header(props) {
 
             {`
                 .header{
-                    background: rgb(34, 34, 34, 0.2);
+                    background: rgba(34, 34, 34, 1);
                     width: 100%;
                     height: auto;
                     z-index:1000;
@@ -81,14 +81,14 @@ function Header(props) {
                     -webkit-transition: background-color 200ms ease-out;
                     -moz-transition: background-color 200ms ease-out;
                     -o-transition: background-color 200ms ease-out;
-                    transition: background 200ms ease-out:
+                    transition: background-color 200ms ease-out:
                                 }
                  .opacity  {
-                    background-color: rgb(34, 34, 34, 0.2);
+                    background-color: rgba(34, 34, 34, 1);
                  }
 
                  .noOpacity {
-                    background-color: rgb(34,34,34, 1) !important; 
+                    background: rgba(34,34,34, 1) !important; 
                     -webkit-box-shadow: 0px 7px 5px 0px rgba(34,34,34,1);
                     -moz-box-shadow: 0px 7px 5px 0px rgba(34,34,34,1);
                     box-shadow: 0px 7px 5px 0px rgba(34,34,34,1);
