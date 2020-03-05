@@ -41,11 +41,13 @@ function Banner(props) {
                 padding: 20px;
                 -webkit-box-shadow:  4px 3px 14px -5px #fff; 
                 -moz-box-shadow:  4px 3px 14px -5px #fff; 
-                box-shadow:  4px 3px 14px -5px #fff;        
+                box-shadow:  4px 3px 14px -5px #fff;
+                transform: scale(1);
             }
              .infos:hover {
-                transform: scale(1.01);
+                transform: scale(0.99);
             }
+            
 
             `}
         </style>

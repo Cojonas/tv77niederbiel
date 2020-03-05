@@ -14,45 +14,39 @@ function Calendar() {
 
 
 
-    const ics_data = async () => {
-        const res = await fetch(api_link)
-        if (!res.ok) throw new Error(res.statusText)
-        return res.json()
-    }
-
     const [data, setData] = useState({})
 
-    const [isLoading, setIsLoading] = useState(true)
 
     const options = {
         url: api_link, 
         method: "GET"
          
     }
+
     useEffect(() => {
-        axios(options)
-        .then(response => {
-            console.log("got a response: " + JSON.stringify(response))
-            setData(response.data)
-        })
-        .catch(function(error){console.log(error.message)})
-
-
-
-    })
-
+        async function fetchData() {
+            const res = await fetch(api_link);
+            res
+              .json()
+              .then(res => {
+                  setData(res);
+                })
+              .catch(err => console.log(err))
+              }
+        fetchData()
+    }, [])
 
 
     return <>
         <Banner>
             <h2>Termine</h2>
-            <p>Unsere nächsten öffentlichen Events und Termine:</p>
+            <p>Unsere nächsten Events und Termine:</p>
 
             
                         {
                             
                             data.items ? data.items.map((item) => <div style={{ padding: 10 }}>
-                                <span style={{ fontWeight: "bold" }}>{new Date(item.start.dateTime).toLocaleDateString("de-DE", { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}: </span>
+                                <span style={{ fontWeight: "bold" }}>{item.start.date ? new Date(item.start.date).toLocaleDateString("de-DE", { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }) : new Date(item.start.dateTime).toLocaleDateString("de-DE", { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}: </span>
                                 <br></br
                                 ><span>{item.summary}</span>
                             </div>)  :  <LoadingSpinner />
@@ -84,7 +78,6 @@ function Calendar() {
                     text-size: 10px;
                 }
                 `
-
             }
         </style>
 
