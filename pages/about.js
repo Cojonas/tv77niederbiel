@@ -33,7 +33,7 @@ export default function About() {
   }
 
   return (
-    <Layout title="Über uns" pictures={[{picture: "/static/teamfoto_herren.jpeg"}]}>
+    <Layout title="Über uns" pictures={[{picture: "/static/tennisplatz_platz1.jpeg"}]}>
 
             <Row className="justify-content-md-center">
 
@@ -63,15 +63,12 @@ Zunächst legte man auf dem vereinseigenen Gelände etwas abseits der Wohngebiet
       <p>
         Das Vereinsheim ist Montags, Dienstags, Freitags, Samstags und Sonntags ab 18 Uhr bewirtet.
       </p>
-      <Banner>
-
-<h2 > Vereinsheim mieten</h2>
-<span>Auch Nicht-Mitglieder können unser Vereinsheim mieten. Dieses hat Platz für ca. 50 Personen.</span><br></br>
-<span>Mit eigener Küche und moderner Theke!</span><br></br>
-<a href={process.env.assetPrefix + "/vereinsheim"} className="offer-link">Zum Angebot</a>
-
-
-</Banner>
+      <Banner >
+        <h2 > Vereinsheim mieten</h2>
+        <span>Auch Nicht-Mitglieder können unser Vereinsheim mieten. Dieses hat Platz für ca. 50 Personen.</span><br></br>
+        <span>Mit eigener Küche und moderner Theke!</span><br></br>
+        <a href={process.env.assetPrefix + "/vereinsheim"} className="offer-link">Zum Angebot</a>
+      </Banner>
 
 <p style={{fontWeight: "bold"}}>Ein Besuch bei uns lohnt sich jederzeit und wenn Sie gerne mehr über uns wissen möchten, nehmen Sie einfach Kontakt mit uns auf!
       

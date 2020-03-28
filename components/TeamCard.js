@@ -32,7 +32,7 @@ function TeamCard(props) {
                 </tbody>
             </table>
 
-            <a href={props.data.href} className="offer-link left">Ergebnisse</a>
+            <a href={props.data.href} className="offer-link">Ergebnisse</a>
 
 
         </Banner>
@@ -41,12 +41,6 @@ function TeamCard(props) {
 
         <style jsx>
             {`
-        .container {
-            text-align:left;
-            width: 100%;
-            height: auto;
-            background: red;
-        }
         .important {
             font-weight: bold;
             padding-right: 10px;

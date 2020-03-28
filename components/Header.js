@@ -15,13 +15,13 @@ function Header(props) {
         navLinkSpan = <></>
     }
 
-    const noBgHeader = !props.isDrawerOpen && props.isTop;
+    const noBgHeader = !props.isDrawerOpen && !props.isTop;
      
 
 
     return <>
 
-        <div className={ noBgHeader ? "header" : "header noOpacity"}>
+        <div className={ noBgHeader ? "header" : "header"}>
                 <Row className="justify-content-between" noGutters>
                     <Col xs={{ span: 1 }}>
                         <img onClick={() => window.location.href= process.env.assetPrefix + "/" } className="logo-img" src={process.env.assetPrefix + "static/logo_white.png"} />
@@ -29,7 +29,7 @@ function Header(props) {
                      {
                          !props.mobile ?                     
 
-                         <Col className="justify-content-center" xs={{ span: 10 }} xl={{ span: 8}}
+                         <Col style={{maxWidth: 1024}} className="justify-content-center" xs={{ span: 10 }} xl={{ span: 8}}
                          >
                              <div className="nav-container">
                                  {
@@ -53,15 +53,9 @@ function Header(props) {
                                         <Icon  type="facebook" style={{ fontSize: '40px', color: 'white', float: "right", paddingRight: 15}} theme="outlined" />
                                     </div>
                                     : <></>
-            
                             }
                         </div>
-
                     </Col>
-
-
-
-
                 </Row>
 
 
@@ -71,27 +65,20 @@ function Header(props) {
 
             {`
                 .header{
-                    background: rgba(34, 34, 34, 1);
+                    background:#222;
                     width: 100%;
                     height: auto;
                     z-index:1000;
                     position: -webkit-sticky; /* Safari */
                     position: fixed;
                     top: 0;
-                    -webkit-transition: background-color 200ms ease-out;
-                    -moz-transition: background-color 200ms ease-out;
-                    -o-transition: background-color 200ms ease-out;
-                    transition: background-color 200ms ease-out:
-                                }
+                }
                  .opacity  {
                     background-color: rgba(34, 34, 34, 1);
                  }
 
                  .noOpacity {
-                    background: rgba(34,34,34, 1) !important; 
-                    -webkit-box-shadow: 0px 7px 5px 0px rgba(34,34,34,1);
-                    -moz-box-shadow: 0px 7px 5px 0px rgba(34,34,34,1);
-                    box-shadow: 0px 7px 5px 0px rgba(34,34,34,1);
+                    background: rgba(34,34,34, 0) !important; 
 
                  }
                 .show {

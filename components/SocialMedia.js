@@ -7,6 +7,7 @@ function SocialMedia(props) {
         <div>
             <center>
                 <a href="https://m.facebook.com/TV-77-Niederbiel-612990049042372/" className={!props.visible ? "fa fa-facebook notExpanded" : "fa fa-facebook expanded"}></a>
+                <a href="https://instagram.com/tv77niederbiel?igshid=dswzw3vjvzz3" className={!props.visible ? "fa fa-instagram notExpanded" : "fa fa-instagram expanded"}></a>
                 <a href="https://goo.gl/maps/gRBMY1v6G6oGcsi69" className="fa fa-google" className={!props.visible ? "fa fa-google notExpanded" : "fa fa-google expanded"}></a>
                 <a href="mailto:info@tv-niederbiel.de" className="fa fa-envelope" className={!props.visible ? "fa fa-envelope notExpanded" : "fa fa-envelope expanded"}></a>
             </center>
@@ -15,7 +16,7 @@ function SocialMedia(props) {
         <style jsx>
             {`
                 div {
-                    padding: 30px 0px;
+                    padding-top: 10px;
                 }
                 /* Style all font awesome icons */
                 .fa {
@@ -51,19 +52,21 @@ function SocialMedia(props) {
 
                 /* Facebook */
                 .fa-facebook {
-                background: #3B5998;
-                color: white;
+                background: #DDD;
                 }
 
+                .fa-instagram {
+                    background:#DDD;
+                    }
+    
+
                 .fa-google {
-                    background: #dd4b39;
-                    color: white;
+                    background: #DDD;
                   }
 
                 /* Twitter */
                 .fa-envelope {
-                background: #55ACEE;
-                color: white;
+                background: #DDD;
                 }
 
 

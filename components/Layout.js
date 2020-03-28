@@ -14,6 +14,7 @@ import "../App.css"
 import VisibilitySensor from "react-visibility-sensor";
 import { useState } from "react";
 import BurgerIcon from "./BurgerIcon";
+import SocialMedia from "./SocialMedia"
 
 
 
@@ -61,6 +62,8 @@ function Layout(props) {
     const [current, setCurrent] = React.useState(0);
 
     var backgroundStyle = {}
+
+    /*
     if (props.pictures) {
         backgroundStyle = {
             backgroundImage: 'url(\"' + props.pictures[current].picture + '\"'
@@ -80,6 +83,7 @@ function Layout(props) {
 
         }
     }
+    */
 
 
 
@@ -119,14 +123,23 @@ function Layout(props) {
                 <VisibilitySensor onChange={(isVisible) => setIsTop(isVisible)}>
                     <div className="top-background-tiny" />
                 </VisibilitySensor>
+                <center>
 
                 <div className="stickyBottom">
-                    <center>
+                        {/*
                         <div className="topTextWrapper">
                             <span className="bigger">{props.title}</span>
                         </div>
-                    </center>
+                    */}
+                        <div className="title" >
+                            <h1>{props.title}</h1>
+    
+                        </div>
+
+
+
                 </div>
+                </center>
 
             </div>
         </div>
@@ -158,20 +171,36 @@ function Layout(props) {
 
 
                 .backgroundGallery {
-                    background : url("/static/clubheim_draussen.jpg");
+                    background : url("/static/tennis_court_sand.jpg");
                     background-size: cover;
                     background-repeat: no-repeat;
                     background-position: center;
-                    min-height: 600px;
+                    background-attachment: fixed;
+
+                    min-height: 400px;
+
                     position: relative;
                     
                 }
                 .stickyBottom {
-                    width: 100%;
-                    position: absolute; 
                     padding: 30px 10px;
+                    position: absolute;
+                    left: 50%;
                     bottom: 0;
-                    background: linear-gradient(180deg, rgba(17,17,17,0) 0%, rgba(17,17,17,0.4) 8%,  rgba(17,17,17,1) 100%);
+                    -webkit-transform: translateX(-50%);
+                    transform: translateX(-50%)
+                    margin: auto
+                }
+                .gradientBackground {
+                    background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.1) 4%, rgba(255,255,255,0.1) 8%,    rgba(255,255,255,1) 100%);
+                }
+                .title {
+                    max-width: 1024px;
+                    min-width: 200px;
+                    background: white;
+                    margin: 0px 30px; 
+                    padding: 20px; 
+                    font-size: 30px;
                 }
                 .topTextWrapper {
                     max-width: 1024px;
@@ -196,7 +225,7 @@ function Layout(props) {
                     background-attachment: fixed;
                     height: auto     ;
                     width: 100%;
-                    color: white;
+                    color: black;
                     text-align: left;
     
                 }
@@ -218,14 +247,12 @@ function Layout(props) {
 
                 }
                 .content-box {
-                    background: #111;
                     position: relative;
-                    top: -0px;
-                    padding: 10px;
+                    padding: 0px 5px;
                     z-index: 500;
                     
                 }
-                  
+         
 
                 `}
         </style>

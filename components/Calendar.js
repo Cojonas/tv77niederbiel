@@ -2,26 +2,13 @@ import LoadingSpinner from "./LoadingSpinner"
 import fetch from 'isomorphic-fetch'
 import Banner from "./Banner"
 import React, {useState, useEffect} from "react"
-import axios from "axios";
 
 
 function Calendar() {
-    const TV77_GOOGLE_LINK = "https://calendar.google.com/calendar/ical/qon9spr0t5bgpjhle96hplu2r0%40group.calendar.google.com/public/basic.ics"
-    const cal_id = "qon9spr0t5bgpjhle96hplu2r0@group.calendar.google.com";
-    const api_key = "AIzaSyAeFY2tXUCqkNuMp5wIN2hrotK4mnvZgqk"
 
     const api_link = "https://www.googleapis.com/calendar/v3/calendars/qon9spr0t5bgpjhle96hplu2r0@group.calendar.google.com/events?key=AIzaSyAeFY2tXUCqkNuMp5wIN2hrotK4mnvZgqk&singleEvents=true&orderBy=startTime&maxResults=5"
 
-
-
     const [data, setData] = useState({})
-
-
-    const options = {
-        url: api_link, 
-        method: "GET"
-         
-    }
 
     useEffect(() => {
         async function fetchData() {
@@ -36,6 +23,25 @@ function Calendar() {
         fetchData()
     }, [])
 
+    var yesterday = new Date() - 1440000
+
+    const timeline = data.items ? data.items.map((item, index) => {
+        let upcoming = item.start.date ? new Date(item.start.date) > yesterday : new Date(item.start.dateTime) > yesterday
+         return upcoming ? (
+            <div key={index} style={{ padding: "5px 0px" }}>
+                <span style={{ fontWeight: "bold" }}>{item.start.date ? new Date(item.start.date).toLocaleDateString("de-DE", { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }) : new Date(item.start.dateTime).toLocaleDateString("de-DE", { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}: </span>
+                <br></br
+                ><span>{item.summary}</span>
+            </div>
+
+        ) : <></>
+    }
+     ) : ""
+        
+
+
+
+
 
     return <>
         <Banner>
@@ -44,12 +50,7 @@ function Calendar() {
 
             
                         {
-                            
-                            data.items ? data.items.map((item) => <div style={{ padding: 10 }}>
-                                <span style={{ fontWeight: "bold" }}>{item.start.date ? new Date(item.start.date).toLocaleDateString("de-DE", { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }) : new Date(item.start.dateTime).toLocaleDateString("de-DE", { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}: </span>
-                                <br></br
-                                ><span>{item.summary}</span>
-                            </div>)  :  <LoadingSpinner />
+                            timeline
                             
                         }
                     

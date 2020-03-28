@@ -14,7 +14,7 @@ function Banner(props) {
                 width: 100%;
                 height: auto; 
                 margin: 0 auto; 
-                color: black;
+                color: #333;
             }
 
             .ripple {
@@ -31,7 +31,7 @@ function Banner(props) {
                 background:  #fff;
             }
             .infos {
-                background-color: rgba(255,255,255,1);
+                background: #DDD;
                 margin: 10px 0px;
                 border-radius: 2px;
                 float: left;
@@ -39,13 +39,10 @@ function Banner(props) {
                 width: 100%; 
                 height: 100%;
                 padding: 20px;
-                -webkit-box-shadow:  4px 3px 14px -5px #fff; 
-                -moz-box-shadow:  4px 3px 14px -5px #fff; 
-                box-shadow:  4px 3px 14px -5px #fff;
+                -webkit-box-shadow:  4px 3px 8px -5px #000; 
+                -moz-box-shadow:  4px 3px 8px -5px #000; 
+                box-shadow:  4px 3px 8px -5px #000;
                 transform: scale(1);
-            }
-             .infos:hover {
-                transform: scale(0.99);
             }
             
 

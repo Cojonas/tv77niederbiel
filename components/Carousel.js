@@ -2,12 +2,12 @@ import { Carousel } from 'react-responsive-carousel';
 
 
 function Galery  (props){
-    return  <div >
-        <Carousel >
+    return  <div  >
+        <Carousel  >
 
             {
-                props.data.items.map((item) => (           
-                <div key={item.picture}>
+                props.data.items.map((item, index) => (           
+                <div key={index}>
                     <img src={ process.env.assetPrefix + item.picture} />
                     <p className="legend">{item.legend}</p>
                 </div>

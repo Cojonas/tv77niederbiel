@@ -46,17 +46,19 @@ function Footer(props) {
                 height: auto; 
                 width: 100%; 
                 background: #222;
-                color: #888; 
+                color: #FFF; 
                 padding: 30px;
 
-            }
+            }   
+                
             .footer-content {
                 max-width: 1024px;
                 text-align: center;
             }
-            a{
-                color: #888; 
-            }               
+            .a-footer {
+                color: #fff;
+            }
+           
             img {
                 width: 50px;
                 margin: 10px;
