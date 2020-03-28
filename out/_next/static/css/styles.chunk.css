@@ -7,17 +7,16 @@
 /*# sourceMappingURL=bootstrap.min.css.map */
   body {
     font-family: 'Montserrat', sans-serif;
-    color: white; 
+    font-size: 14px;
+    color: rgba(0,0,0,0.8); 
     text-align: left;
-    background: #222;
-  }
-
-  .row {
-    margin-right: 0px !important; 
-    margin-left: 0px !important;
   }
   .content-container .row {
-    margin: 0px 0px 80px 0px !important;
+    margin: 20px 0px !important;
+  }
+
+  .content-container h1 {
+    padding: 10px 0px;
   }
 
   .butn {
@@ -46,8 +45,8 @@
 }
 
 .offer-link {
-  padding: 0px 10px 0px 0px;
-  font-size: 20px ; 
+  
+  font-size: 14px ; 
   color:  #ff5c00 !important;
   text-transform: uppercase;
   letter-spacing: -1px;
@@ -65,13 +64,12 @@ ul.thumbs.animated{
   color: white;
   height: 100%; 
   margin: auto;
-  padding-top: 20px;  
+  padding: 30px 0px;  
   background-color: transparent;
   text-transform: uppercase;
   font-weight: bold;
   font-size: 1.2em;
   letter-spacing: -1.4px;
-
 }
 
 
