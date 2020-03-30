@@ -14,7 +14,6 @@ import "../App.css"
 import VisibilitySensor from "react-visibility-sensor";
 import { useState } from "react";
 import BurgerIcon from "./BurgerIcon";
-import SocialMedia from "./SocialMedia"
 
 
 
@@ -125,20 +124,23 @@ function Layout(props) {
                 </VisibilitySensor>
                 <center>
 
-                <div className="stickyBottom">
+                    <div className="stickyBottom">
                         {/*
                         <div className="topTextWrapper">
                             <span className="bigger">{props.title}</span>
                         </div>
                     */}
-                        <div className="title" >
-                            <h1>{props.title}</h1>
-    
-                        </div>
+                            <div className="title animated rollIn" >
+                                <div className="titleText">
+                                    <h1>{props.title}</h1>
+                                </div>
+
+                            </div>
 
 
 
-                </div>
+
+                    </div>
                 </center>
 
             </div>
@@ -176,32 +178,81 @@ function Layout(props) {
                     background-repeat: no-repeat;
                     background-position: center;
                     background-attachment: fixed;
-
                     min-height: 400px;
 
                     position: relative;
                     
                 }
                 .stickyBottom {
-                    padding: 30px 10px;
-                    position: absolute;
-                    left: 50%;
-                    bottom: 0;
-                    -webkit-transform: translateX(-50%);
-                    transform: translateX(-50%)
-                    margin: auto
                 }
                 .gradientBackground {
                     background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.1) 4%, rgba(255,255,255,0.1) 8%,    rgba(255,255,255,1) 100%);
                 }
                 .title {
-                    max-width: 1024px;
-                    min-width: 200px;
-                    background: white;
-                    margin: 0px 30px; 
-                    padding: 20px; 
-                    font-size: 30px;
+                    background: url("static/tennisball.png");
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: 300px 300px;
+                    height: 300px;
+                    margin-left: -150px;
+                    padding: 30px;
+                    width: 100%;
+
+                    position: absolute;
+                    width: 300px;
+
+
+                    text-align: center !important;
+
+
+                    left: 50vw;
+                    bottom: 0 ;
+                    -webkit-transform: translateX(-50%);
+                    transform: translateX(-50%);
+
                 }
+
+                .titleText {
+
+                }
+  
+
+                .animated {
+                    -webkit-animation-duration: 2s;
+                    animation-duration: 2s;
+                    -webkit-animation-fill-mode: both;
+                    animation-fill-mode: both;
+                 }
+                 
+                 @-webkit-keyframes rollIn {
+
+                    0% { 
+                        opacity: 0.1;
+                       -webkit-transform: translateX(-100%) scale(0.1) rotate(-3000deg); 
+                    }
+                    100% { 
+                        opacity: 1;
+                       -webkit-transform: translateX(0px) scale(1) rotate(0deg); 
+                    }
+                 }
+                 
+                 @keyframes rollIn {
+                    0% { 
+                        opacity: 0.1;
+                       transform: translateX(-100%) scale(0.1) rotate(-3000deg); 
+                    }
+                    100% { 
+                        opacity: 1;
+                       transform: translateX(0px) scale(1) rotate(0deg); 
+                    }
+                 }
+                         .rollIn {
+                    -webkit-animation-name: rollIn;
+                    animation-name: rollIn;
+                 }
+
+
+
                 .topTextWrapper {
                     max-width: 1024px;
                 }
