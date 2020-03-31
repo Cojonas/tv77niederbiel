@@ -131,11 +131,13 @@ function Layout(props) {
                         </div>
                     */}
                             <div className="title animated rollIn" >
-                                <div className="titleText">
+
+                            </div>
+
+                            <div className="titleText">
                                     <h1>{props.title}</h1>
                                 </div>
 
-                            </div>
 
 
 
@@ -184,26 +186,26 @@ function Layout(props) {
                     
                 }
                 .stickyBottom {
+                    background: white;
                 }
                 .gradientBackground {
                     background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.1) 4%, rgba(255,255,255,0.1) 8%,    rgba(255,255,255,1) 100%);
                 }
                 .title {
-                    background: url("static/tennisball.png");
+                    background: url("static/Bier.png");
                     background-repeat: no-repeat;
                     background-position: center;
-                    background-size: 300px 300px;
+                    background-size: 300px 200px;
                     height: 300px;
                     margin-left: -150px;
                     padding: 30px;
                     width: 100%;
-
+                    z-index: 1000;
                     position: absolute;
                     width: 300px;
 
 
                     text-align: center !important;
-
 
                     left: 50vw;
                     bottom: 0 ;
@@ -213,45 +215,73 @@ function Layout(props) {
                 }
 
                 .titleText {
+                    color: black;
+                    font-size: 15px;
+
+                    background: white;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: 300px 200px;
+                    padding: 30px;
+                    width: 100%;
+                    
+                    position: absolute;
+                    width: 300px;
+
+
+                    text-align: center !important;
+
+
+                    left: 50vw;
+                    bottom: 19px ;
+                    -webkit-transform: translateX(-50%);
+                    transform: translateX(-50%);
+
 
                 }
   
 
                 .animated {
-                    -webkit-animation-duration: 2s;
-                    animation-duration: 2s;
-                    -webkit-animation-fill-mode: both;
-                    animation-fill-mode: both;
                  }
                  
                  @-webkit-keyframes rollIn {
-
                     0% { 
-                        opacity: 0.1;
-                       -webkit-transform: translateX(-100%) scale(0.1) rotate(-3000deg); 
-                    }
-                    100% { 
-                        opacity: 1;
-                       -webkit-transform: translateX(0px) scale(1) rotate(0deg); 
-                    }
+                        -webkit-transform: translateX(-100%) scale(0.001) rotate(-3000deg); 
+                     }
+                     50% { 
+                        -webkit-transform: translateX(200%) scale(1.6) rotate(0deg); 
+                     }
+                     100% { 
+                        -webkit-transform: translateX(-100%) scale(0.1) rotate(-3000deg); 
+                      }
+  
+ 
                  }
                  
                  @keyframes rollIn {
                     0% { 
-                        opacity: 0.1;
                        transform: translateX(-100%) scale(0.1) rotate(-3000deg); 
                     }
-                    100% { 
-                        opacity: 1;
-                       transform: translateX(0px) scale(1) rotate(0deg); 
+                    50% { 
+                       transform: translateX(200%) scale(1) rotate(0deg); 
                     }
+                    100% { 
+                        transform: translateX(-100%) scale(0.1) rotate(-3000deg); 
+                     }
+ 
                  }
-                         .rollIn {
+                .rollIn {
                     -webkit-animation-name: rollIn;
                     animation-name: rollIn;
+                    -webkit-animation-direction: alternate-reverse;
+                    animation-direction: alternate-reverse;
+                    -webkit-animation-duration: 10s;
+                    animation-duration: 10s;
+                    -webkit-animation-fill-mode: both;
+                    animation-fill-mode: both;
+
+
                  }
-
-
 
                 .topTextWrapper {
                     max-width: 1024px;

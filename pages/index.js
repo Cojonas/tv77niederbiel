@@ -69,14 +69,11 @@ function Index() {
 
       <Row className="text-block justify-content-md-center">
         {/*
-          <FacebookProvider appId="716448928794798" >
-                <Page href="https://www.facebook.com/TV-77-Niederbiel-612990049042372/" tabs="timeline" />
-              </FacebookProvider>
+ 
  */}
+        
         <Col xs="12" md="6" >
           <Calendar />
-        </Col>
-        <Col xs="12" md="6" >
 
           <Banner>
             <h2 >Schnupperangebot</h2>
@@ -95,6 +92,11 @@ function Index() {
           </Banner>
 
         </Col>
+        <Col xs="12" md="6" >
+        <FacebookProvider appId="716448928794798" >
+                <Page href="https://www.facebook.com/TV-77-Niederbiel-612990049042372/" tabs="timeline" smallHeader={true} hideCover={true}/>
+              </FacebookProvider>
+        </Col>
       </Row>
 
       <Row className="justify-content-md-center">
@@ -106,7 +108,7 @@ function Index() {
 
         <Col xs="12" md="6">
           <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6263.746061493361!2d8.397502202711472!3d50.5613233742489!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x37eff8c2874dfbc3!2sTennisverein%2077%20Niederbiel!5e1!3m2!1sen!2sus!4v1576791317531!5m2!1sen!2sus"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2534.6340800385597!2d8.396305965917366!3d50.559574537376655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47bc45eea5e3ac5f%3A0x37eff8c2874dfbc3!2sTennisverein%2077%20Niederbiel!5e0!3m2!1sen!2sus!4v1569541915015!5m2!1sen!2sus"
             width="100%"
             height="300"
             frameBorder="1" 
