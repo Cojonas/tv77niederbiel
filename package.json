@@ -19,7 +19,7 @@
     "bootstrap": "^4.4.1",
     "css-loader": "^3.4.2",
     "jquery": "^1.12.4",
-    "next": "^9.2.2",
+    "next": "^9.3.2",
     "postcss-loader": "^3.0.0",
     "rc-drawer": "^2.1.1",
     "react": "^16.13.0",
