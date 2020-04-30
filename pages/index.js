@@ -9,7 +9,6 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 import Calendar from "../components/Calendar"
 import Banner from "../components/Banner"
-import Items from "../items.json"
 
 function Index() {
 

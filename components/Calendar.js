@@ -28,7 +28,7 @@ function Calendar() {
     const timeline = data.items ? data.items.map((item, index) => {
         let upcoming = item.start.date ? new Date(item.start.date) > yesterday : new Date(item.start.dateTime) > yesterday
          return upcoming ? (
-            <div key={index} style={{ padding: "5px 0px" }}>
+            <div key={"" + index} style={{ padding: "5px 0px" }}>
                 <span style={{ fontWeight: "bold" }}>{item.start.date ? new Date(item.start.date).toLocaleDateString("de-DE", { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }) : new Date(item.start.dateTime).toLocaleDateString("de-DE", { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}: </span>
                 <br></br
                 ><span>{item.summary}</span>

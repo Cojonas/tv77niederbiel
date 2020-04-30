@@ -118,10 +118,7 @@ function Layout(props) {
 
         <div className="top">
             <div style={backgroundStyle} className="backgroundGallery">
-
-                <VisibilitySensor onChange={(isVisible) => setIsTop(isVisible)}>
-                    <div className="top-background-tiny" />
-                </VisibilitySensor>
+                <div className="backgroundOpacity">
                 <center>
 
                     <div className="stickyBottom">
@@ -130,9 +127,6 @@ function Layout(props) {
                             <span className="bigger">{props.title}</span>
                         </div>
                     */}
-                            <div className="title animated rollIn" >
-
-                            </div>
 
                             <div className="titleText">
                                     <h1>{props.title}</h1>
@@ -144,6 +138,12 @@ function Layout(props) {
 
                     </div>
                 </center>
+
+                </div>
+
+                <VisibilitySensor onChange={(isVisible) => setIsTop(isVisible)}>
+                    <div className="top-background-tiny" />
+                </VisibilitySensor>
 
             </div>
         </div>
@@ -185,6 +185,12 @@ function Layout(props) {
                     position: relative;
                     
                 }
+                .backgroundOpacity {
+                    background: rgba(0,0,0,0.5);
+                    position: absolute; 
+                    min-height:400px; 
+                    width: 100%; 
+                }
                 .stickyBottom {
                     background: white;
                 }
@@ -203,7 +209,7 @@ function Layout(props) {
                     z-index: 1000;
                     position: absolute;
                     width: 300px;
-
+                    
 
                     text-align: center !important;
 
@@ -216,9 +222,9 @@ function Layout(props) {
 
                 .titleText {
                     color: black;
-                    font-size: 15px;
+                    font-size: 12px;
 
-                    background: white;
+                    background: rgba(255,255,255,0.8);
                     background-repeat: no-repeat;
                     background-position: center;
                     background-size: 300px 200px;
@@ -227,13 +233,16 @@ function Layout(props) {
                     
                     position: absolute;
                     width: 300px;
+                    -webkit-box-shadow: 10px 10px 85px 0px rgba(0,0,0,0.75);
+                    -moz-box-shadow: 10px 10px 85px 0px rgba(0,0,0,0.75);
+                    box-shadow: 10px 10px 85px 0px rgba(0,0,0,0.75);
 
 
                     text-align: center !important;
 
 
                     left: 50vw;
-                    bottom: 19px ;
+                    bottom: 30px ;
                     -webkit-transform: translateX(-50%);
                     transform: translateX(-50%);
 

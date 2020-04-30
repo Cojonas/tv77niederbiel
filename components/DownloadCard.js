@@ -26,7 +26,7 @@ function DownloadCard (props) {
                 padding: 0px 20px;
                 border-radius: 3px;
                 margin: 10px auto;
-                background-color: #111;
+                background-color: rgba(0,0,0,0.4);
                 position: relative;
                 text-align: center;
             }

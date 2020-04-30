@@ -30,7 +30,7 @@ export default function Impressum() {
         <span>Jonas Strunz</span><br></br>
         <span>Tannenweg 17a</span><br></br>
         <span>35606 Solms</span><br></br>
-        <span>015757118999</span>
+        <span>01716198732</span>
 
           </Col>
           <Col cols="12" md="6">
