@@ -14,10 +14,10 @@ export default function Downloads() {
                     <DownloadCard title={"Datenschutz im TV 77"} href={process.env.assetPrefix + "static/Datenschutz_TV77_Niederbiel.pdf"}/>
                 </Col>
                 <Col xs="6" sm="6" md="6" lg="3">
-                    <DownloadCard title={"Einzugsermächtigung"} href={process.env.assetPrefix + "static/Einzugsermaechtigung2019.pdf"}/>
+                    <DownloadCard title={"Einzugsermächtigung"} href={process.env.assetPrefix + "static/Einzugsermaechtigung2020.pdf"}/>
                 </Col>
                 <Col xs="6" sm="6" md="6" lg="3">
-                    <DownloadCard title={"Beitrittserklärung"} href={process.env.assetPrefix + "static/Beitrittserklaerung2019.pdf"}/>
+                    <DownloadCard title={"Beitrittserklärung"} href={process.env.assetPrefix + "static/Beitrittserklaerung2020.pdf"}/>
                 </Col>
             </Row>
 

@@ -18,10 +18,10 @@ export default function Mitglied() {
             </Row >
             <Row className="justify-content-md-center">
                 <Col xs="12" sm="6" md="5" lg="4">
-                    <DownloadCard title={"Beitrittserklärung"} href={process.env.assetPrefix + "static/Beitrittserklaerung2019.pdf"} />
+                    <DownloadCard title={"Beitrittserklärung"} href={process.env.assetPrefix + "static/Beitrittserklaerung2020.pdf"} />
                 </Col>
                 <Col xs="12" sm="6" md="5" lg="4">
-                    <DownloadCard title={"Einzugsermächtigung"} href={process.env.assetPrefix + "static/Einzugsermaechtigung2019.pdf"} />
+                    <DownloadCard title={"Einzugsermächtigung"} href={process.env.assetPrefix + "static/Einzugsermaechtigung2020.pdf"} />
                 </Col>
             </Row>
 
