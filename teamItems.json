@@ -3,7 +3,7 @@
         {
             "name": "Damen",
             "href": "https://htv.liga.nu/cgi-bin/WebObjects/nuLigaTENDE.woa/wa/teamPortrait?team=2433466&championship=TB+Mittelhessen+20",
-            "liga": "Kreisliga C", 
+            "liga": "Kreisliga B", 
             "leader": "Demi Rauschkolb",
             "phoneNumber": "+49 151 50456755",
             "picture": "static/teamfoto_herren.jpeg",
@@ -41,7 +41,7 @@
             "name": "Herren 60",
             "href": "https://htv.liga.nu/cgi-bin/WebObjects/nuLigaTENDE.woa/wa/teamPortrait?team=2433565&championship=TB+Mittelhessen+20",
             "liga": "Bezirksliga B", 
-            "leader": "Hahn Ernst",
+            "leader": "Ernst Hahn",
             "phoneNumber": "+49 151 15587400",
             "picture": "static/teamfoto_herren.jpeg",
             "training": "Dienstag 18-20 Uhr"
