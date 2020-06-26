@@ -6,7 +6,7 @@ import React, {useState, useEffect} from "react"
 
 function Calendar() {
 
-    const api_link = "https://www.googleapis.com/calendar/v3/calendars/qon9spr0t5bgpjhle96hplu2r0@group.calendar.google.com/events?key=AIzaSyAeFY2tXUCqkNuMp5wIN2hrotK4mnvZgqk&singleEvents=true&orderBy=startTime&maxResults=5"
+    const api_link = "https://www.googleapis.com/calendar/v3/calendars/qon9spr0t5bgpjhle96hplu2r0@group.calendar.google.com/events?key=AIzaSyAeFY2tXUCqkNuMp5wIN2hrotK4mnvZgqk&singleEvents=true&orderBy=startTime&maxResults=5&timeMin=" + (new Date()).toISOString()
 
     const [data, setData] = useState({})
 
@@ -26,15 +26,14 @@ function Calendar() {
     var yesterday = new Date() - 1440000
 
     const timeline = data.items ? data.items.map((item, index) => {
-        let upcoming = item.start.date ? new Date(item.start.date) > yesterday : new Date(item.start.dateTime) > yesterday
-         return upcoming ? (
+         return (
             <div key={"" + index} style={{ padding: "5px 0px" }}>
                 <span style={{ fontWeight: "bold" }}>{item.start.date ? new Date(item.start.date).toLocaleDateString("de-DE", { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }) : new Date(item.start.dateTime).toLocaleDateString("de-DE", { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}: </span>
-                <br></br
-                ><span>{item.summary}</span>
+                <br></br>
+                <span>{item.summary}</span>
             </div>
 
-        ) : <></>
+        ) 
     }
      ) : ""
         
