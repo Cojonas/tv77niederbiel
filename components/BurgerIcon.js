@@ -24,14 +24,14 @@ function BurgerIcon(props) {
                     position: fixed; 
                     top: 5px; 
                     right: 5px;
-                    color: white;
-                    z-index: 2001;
+                    color: black;
+                    z-index: 5000;
                   }
 
                   .hamburger span {
                     width: 30px;
-                    color: white;
-                    background-color: #fff;
+                    color: black;
+                    background-color: #000;
                     border-radius: 3px;
                     content: '';
                     display: block;
@@ -56,7 +56,7 @@ function BurgerIcon(props) {
                   .nav-icon:after, 
                   .nav-icon:before, 
                   .nav-icon div {
-                    background-color: #fff;
+                    background-color: #000;
                     border-radius: 3px;
                     content: '';
                     display: block;

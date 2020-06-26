@@ -52,9 +52,23 @@ ul.thumbs.animated{
 }
   
 
+
+.navbar-icon {
+
+  border: none;
+  color: black;
+  height: 100%; 
+  margin: 0px 0px;
+  padding: 10px 0px;
+  background-color: transparent;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
 .navbar-item {
   border: none;
-  color: white;
+  color: black;
   height: 100%; 
   margin: auto;
   padding: 30px 0px;  
@@ -63,6 +77,19 @@ ul.thumbs.animated{
   font-weight: bold;
   font-size: 1.2em;
   letter-spacing: -1.4px;
+}
+
+
+
+.navbar-item:hover {
+  color: #ff5c00;
+  text-decoration: none;
+}
+.navbar-item > a {
+  color: black;
+  width: 100%; 
+  height: 100%;
+  text-align: center;
 }
 
 

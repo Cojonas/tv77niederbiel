@@ -28,6 +28,16 @@ export default function Vereinsheim() {
                 legend: "Der Außenbereich"
             },
             {
+                id: "8",
+                picture: "/static/kueche.jpeg",
+                legend: "Die Küche"
+            },
+            {
+                id: "9",
+                picture: "/static/tv77_theke.jpeg",
+                legend: "Unsere moderne Theke mit Zapfanlage"
+            },
+            {
                 id: "5",
                 picture: "/static/clubheim_feier.jpg",
                 legend: "Das Vereinsheim"

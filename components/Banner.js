@@ -31,7 +31,8 @@ function Banner(props) {
                 background:  #fff;
             }
             .infos {
-                background: #DDD;
+                background: rgba(0,0,0,0.0);
+                border: 1px solid rgba(0,0,0,0.1);
                 margin: 10px 0px;
                 border-radius: 2px;
                 float: left;

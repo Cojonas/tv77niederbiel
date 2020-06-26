@@ -28,7 +28,7 @@ function Drawer(props) {
                 z-index: 1001;
                 top: 80px;
                 right: 0; 
-                background-color: #222;
+                background-color: white;
                 overflow-x: hidden;
                 transition: 0.5s;
               }
@@ -41,7 +41,7 @@ function Drawer(props) {
               }
               
               .sidenav .closebtn {
-                color: white;
+                color: black;
                 position: absolute;
                 top: 5px;
                 right: 20px;
@@ -55,7 +55,7 @@ function Drawer(props) {
               }
             .drawer-item {
                 border: none;
-                color: white;
+                color: black;
                 height: auto; 
                 width: 100%;
                 margin: auto 0px;
@@ -69,10 +69,10 @@ function Drawer(props) {
 
             .drawer-item:hover {
                 color: #ff5c00;
-                background-color: #444;
+                background-color: rgba(0,0,0,0.2);
             }
             .drawer-item  a {
-                color: white;
+                color: black;
             }
             
             `}

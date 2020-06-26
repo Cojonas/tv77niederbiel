@@ -100,7 +100,6 @@ function Layout(props) {
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 
             <meta name="msapplication-TileColor" content="#ffffff" />
-            <meta name="theme-color" content="#000" />
         </Head>
 
         <Drawer sites={sites} isDrawerOpen={isDrawerOpen} closeDrawer={() => setIsDrawerOpen(false)} />
@@ -109,7 +108,7 @@ function Layout(props) {
         <Media query="(max-width: 922px)" onChange={(matches) => setIsMobile(matches)} />
 
         {
-            isMobile ? <><BurgerIcon isDrawerOpen={isDrawerOpen} toggleDrawer={() => setIsDrawerOpen(!isDrawerOpen)}></BurgerIcon> <NameBadge /> </>
+            isMobile ? <><BurgerIcon isDrawerOpen={isDrawerOpen} toggleDrawer={() => setIsDrawerOpen(!isDrawerOpen)}></BurgerIcon>  </>
 
                 : <></>
         }
@@ -186,7 +185,7 @@ function Layout(props) {
                     
                 }
                 .backgroundOpacity {
-                    background: rgba(0,0,0,0.5);
+                    background: rgba(0,0,0,0.6);
                     position: absolute; 
                     min-height:400px; 
                     width: 100%; 
@@ -221,24 +220,17 @@ function Layout(props) {
                 }
 
                 .titleText {
-                    color: black;
+                    color: white;
                     font-size: 12px;
-
-                    background: rgba(255,255,255,0.8);
-                    background-repeat: no-repeat;
-                    background-position: center;
-                    background-size: 300px 200px;
                     padding: 30px;
                     width: 100%;
                     
                     position: absolute;
                     width: 300px;
-                    -webkit-box-shadow: 10px 10px 85px 0px rgba(0,0,0,0.75);
-                    -moz-box-shadow: 10px 10px 85px 0px rgba(0,0,0,0.75);
-                    box-shadow: 10px 10px 85px 0px rgba(0,0,0,0.75);
 
 
-                    text-align: center !important;
+                    text-align: left !important;
+                    border-bottom: 1px solid white;
 
 
                     left: 50vw;

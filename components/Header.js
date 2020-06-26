@@ -24,7 +24,7 @@ function Header(props) {
         <div className={ noBgHeader ? "header" : "header"}>
                 <Row className="justify-content-between" noGutters>
                     <Col xs={{ span: 1 }}>
-                        <img onClick={() => window.location.href= process.env.assetPrefix + "/" } className="logo-img" src={process.env.assetPrefix + "static/logo_white.png"} />
+                        <img onClick={() => window.location.href= process.env.assetPrefix + "/" } className="logo-img" src={process.env.assetPrefix + "static/logo.png"} />
                     </Col>
                      {
                          !props.mobile ?                     
@@ -65,13 +65,17 @@ function Header(props) {
 
             {`
                 .header{
-                    background:#222;
+                    background:#fff;
                     width: 100%;
                     height: auto;
                     z-index:1000;
                     position: -webkit-sticky; /* Safari */
                     position: fixed;
                     top: 0;
+                    -webkit-box-shadow: 0px 0px 9px 3px rgba(41,41,41,.25);
+                    -moz-box-shadow: 0px 0px 9px 3px rgba(41,41,41,.25);
+                    box-shadow: 0px 0px 9px 3px rgba(41,41,41,.25);
+
                 }
                  .opacity  {
                     background-color: rgba(34, 34, 34, 1);
@@ -106,29 +110,6 @@ function Header(props) {
                     display: flex;
                     text-align: center;
                 }              
-                .navbar-icon {
-
-                    border: none;
-                    color: white;
-                    height: 100%; 
-                    margin: 0px 0px;
-                    padding: 10px 0px;
-                    background-color: transparent;
-                    text-transform: uppercase;
-                    font-weight: bold;
-                    font-size: 1.2em;
-                }
-                .navbar-item:hover {
-                    color: #ff5c00;
-                    text-decoration: none;
-                    border-bottom: 2px solid   #ff5c00;
-                }
-                .navbar-item > a {
-                    color: white;
-                    width: 100%; 
-                    height: 100%;
-                    text-align: center;
-                }
                 .white-text {
                     color: white !important;
                 }
