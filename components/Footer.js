@@ -24,7 +24,7 @@ function Footer(props) {
                         <p><a className="a-footer" href="https://www.facebook.com/TV-77-Niederbiel-612990049042372/">Facebook</a></p>
 
                             <div style={{ position: "relative", bottom: 0, right: 0 }}>
-                                <span >                            © TV 77 Niederbiel 2019
+                                <span >                            © TV 77 Niederbiel 2020
                             </span>
 
                                 <img src={process.env.assetPrefix + "static/logo_white.png"}></img>
