@@ -14,12 +14,12 @@
   "license": "ISC",
   "dependencies": {
     "@zeit/next-css": "^1.0.1",
-    "antd": "^3.26.16",
+    "antd": "^3.26.18",
     "axios": "^0.19.2",
-    "bootstrap": "^4.4.1",
-    "css-loader": "^3.5.3",
+    "bootstrap": "^4.5.0",
+    "css-loader": "^3.6.0",
     "jquery": "^1.12.4",
-    "next": "^9.3.6",
+    "next": "^9.4.4",
     "postcss-loader": "^3.0.0",
     "rc-drawer": "^2.1.1",
     "react": "^16.13.1",
@@ -29,7 +29,7 @@
     "react-dom": "^16.13.1",
     "react-facebook": "^8.1.4",
     "react-media": "^1.10.0",
-    "react-responsive-carousel": "^3.2.5",
+    "react-responsive-carousel": "^3.2.8",
     "react-visibility-sensor": "^5.1.1",
     "style-loader": "^1.2.1"
   }
