@@ -61,7 +61,7 @@ Zunächst legte man auf dem vereinseigenen Gelände etwas abseits der Wohngebiet
           Besonders beliebt im Sommer - nicht nur bei Vereinsmitgliedern! - ist der Freisitz des Vereinsheims im Grünen mit Blick auf die Plätze.
       </p>
       <p>
-        Das Vereinsheim ist Montags, Dienstags, Freitags, Samstags und Sonntags ab 18 Uhr bewirtet.
+        Das Vereinsheim ist Montags, Dienstags, Mittochs, Freitags, Samstags und Sonntags ab 18 Uhr bewirtet.
       </p>
       <Banner >
         <h2 > Vereinsheim mieten</h2>

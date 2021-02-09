@@ -72,7 +72,7 @@ export default function Vereinsheim() {
                         <h2 >
                             Öffnungszeiten
                         </h2>
-                        <p>Montag, Dienstag, Freitag, Samstag und Sonntag ab 18 Uhr mit eigener Bewirtung!</p>
+                        <p>Montag, Dienstag, Mittwoch, Freitag, Samstag und Sonntag ab 18 Uhr mit eigener Bewirtung!</p>
                         <p>Nur in den Monaten Mai bis einschließlich September</p>
                     </Banner>
 
