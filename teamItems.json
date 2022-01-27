@@ -3,7 +3,7 @@
         {
             "name": "Damen",
             "href": "https://htv.liga.nu/cgi-bin/WebObjects/nuLigaTENDE.woa/wa/groupPage?targetFed=HTV&championship=TB+Mittelhessen+21&group=12",
-            "liga": "Kreisliga B", 
+            "liga": "Kreisliga A (4er)", 
             "leader": "Demi Rauschkolb",
             "phoneNumber": "+49 151 50456755",
             "picture": "static/teamfoto_herren.jpeg",
@@ -12,26 +12,26 @@
         {
             "name": "Herren",
             "href": "https://htv.liga.nu/cgi-bin/WebObjects/nuLigaTENDE.woa/wa/groupPage?targetFed=HTV&championship=TB+Mittelhessen+21&group=31",
-            "liga": "Kreisliga A", 
-            "leader": "Simon Rink",
-            "phoneNumber": "+49 151 59408254",
+            "liga": "Bezirksliga B (6er)", 
+            "leader": "Jonas Strunz",
+            "phoneNumber": "+49 171 6198723",
             "picture": "static/teamfoto_herren.jpeg",
             "training": "Freitag 18-20 Uhr"
         },
 
         {
-            "name": "Herren II",
+            "name": "Herren II (4er)",
             "href": "https://htv.liga.nu/cgi-bin/WebObjects/nuLigaTENDE.woa/wa/groupPage?targetFed=HTV&championship=TB+Mittelhessen+21&group=38",
-            "liga": "Kreisliga C", 
-            "leader": "Stephan Herhert",
-            "phoneNumber": "+49 151 61475221",
+            "liga": "Kreisliga B (4er)", 
+            "leader": "Philip Keuser",
+            "phoneNumber": "+49 1573 2059120",
             "picture": "static/teamfoto_herren.jpeg",
             "training": "Montag 18-20 Uhr"
         },
 
 
         {
-            "name": "Herren III",
+            "name": "Herren III (4er)",
             "href": "https://htv.liga.nu/cgi-bin/WebObjects/nuLigaTENDE.woa/wa/groupPage?targetFed=HTV&championship=TB+Mittelhessen+21&group=38",
             "liga": "Kreisliga C", 
             "leader": "Sebastian Mutz",
@@ -40,7 +40,7 @@
             "training": "Montag 18-20 Uhr"
         },
         {
-            "name": "Herren 50",
+            "name": "Herren 50 (4er)",
             "href": "https://htv.liga.nu/cgi-bin/WebObjects/nuLigaTENDE.woa/wa/groupPage?targetFed=HTV&championship=TB+Mittelhessen+21&group=56",
             "liga": "Bezirksoberliga", 
             "leader": "Uwe Schneider",
@@ -49,7 +49,7 @@
             "training": "Freitag 18-20 Uhr"
         },
         {
-            "name": "Herren 60",
+            "name": "Herren 65 (4er)",
             "href": "https://htv.liga.nu/cgi-bin/WebObjects/nuLigaTENDE.woa/wa/groupPage?targetFed=HTV&championship=TB+Mittelhessen+21&group=65",
             "liga": "Bezirksliga B", 
             "leader": "Ernst Hahn",
