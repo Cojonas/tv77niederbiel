@@ -16,7 +16,7 @@ export default function Impressum() {
             </p>
             <span>Vertretungsberechtigter Vorstand: Uwe Schneider (1. Vorsitzender),</span><br></br>
 
-            <span>Stefan Jachwerth (2. Vorsitzender), Simon Rink (Kassierer)</span><br></br>
+            <span>Stefan Jachwerth (2. Vorsitzender), Demi Rauschkolb (Kassiererin)</span><br></br>
 
             <span>Registergericht: Amtsgericht Wetzlar</span><br></br>
             <span>Vereinsregisternummer: 893</span>
