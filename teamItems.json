@@ -3,16 +3,16 @@
         {
             "name": "Damen",
             "href": "https://htv.liga.nu/cgi-bin/WebObjects/nuLigaTENDE.woa/wa/groupPage?targetFed=HTV&championship=TB+Mittelhessen+21&group=12",
-            "liga": "Kreisliga A (4er)", 
+            "liga": "Kreisliga A", 
             "leader": "Demi Rauschkolb",
             "phoneNumber": "+49 151 50456755",
             "picture": "static/teamfoto_herren.jpeg",
             "training": "Donnerstag 18-20 Uhr"
         },
         {
-            "name": "Herren",
+            "name": "Herren (6er)",
             "href": "https://htv.liga.nu/cgi-bin/WebObjects/nuLigaTENDE.woa/wa/groupPage?targetFed=HTV&championship=TB+Mittelhessen+21&group=31",
-            "liga": "Bezirksliga B (6er)", 
+            "liga": "Bezirksliga B", 
             "leader": "Jonas Strunz",
             "phoneNumber": "+49 171 6198723",
             "picture": "static/teamfoto_herren.jpeg",
@@ -20,7 +20,7 @@
         },
 
         {
-            "name": "Herren II (4er)",
+            "name": "Herren II",
             "href": "https://htv.liga.nu/cgi-bin/WebObjects/nuLigaTENDE.woa/wa/groupPage?targetFed=HTV&championship=TB+Mittelhessen+21&group=38",
             "liga": "Kreisliga B (4er)", 
             "leader": "Philip Keuser",
@@ -31,7 +31,7 @@
 
 
         {
-            "name": "Herren III (4er)",
+            "name": "Herren III",
             "href": "https://htv.liga.nu/cgi-bin/WebObjects/nuLigaTENDE.woa/wa/groupPage?targetFed=HTV&championship=TB+Mittelhessen+21&group=38",
             "liga": "Kreisliga C", 
             "leader": "Sebastian Mutz",
@@ -40,7 +40,7 @@
             "training": "Montag 18-20 Uhr"
         },
         {
-            "name": "Herren 50 (4er)",
+            "name": "Herren 50",
             "href": "https://htv.liga.nu/cgi-bin/WebObjects/nuLigaTENDE.woa/wa/groupPage?targetFed=HTV&championship=TB+Mittelhessen+21&group=56",
             "liga": "Bezirksoberliga", 
             "leader": "Uwe Schneider",
@@ -49,7 +49,7 @@
             "training": "Freitag 18-20 Uhr"
         },
         {
-            "name": "Herren 65 (4er)",
+            "name": "Herren 65",
             "href": "https://htv.liga.nu/cgi-bin/WebObjects/nuLigaTENDE.woa/wa/groupPage?targetFed=HTV&championship=TB+Mittelhessen+21&group=65",
             "liga": "Bezirksliga B", 
             "leader": "Ernst Hahn",
